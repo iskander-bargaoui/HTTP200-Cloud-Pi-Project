@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,4 +23,12 @@ public class Publication implements Serializable {
     private Visibilite vis;
     @Temporal(TemporalType.DATE)
     private Date dateCreationPub;
+
+    @JsonIgnore
+    @ManyToOne
+    private User user;
+    @JsonIgnore
+    @ManyToOne
+    private Commentaire commentaire;
+
 }

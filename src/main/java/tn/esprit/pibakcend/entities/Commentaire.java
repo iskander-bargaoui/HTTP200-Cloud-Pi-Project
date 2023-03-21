@@ -4,7 +4,9 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.*;
 
 @Getter
@@ -22,4 +24,7 @@ public class Commentaire implements Serializable {
     private String imageComm;
     @Temporal(TemporalType.DATE)
     private Date dateCreationComm;
+
+    @OneToMany(mappedBy = "commentaire", cascade = CascadeType.ALL)
+    private List<Publication> publications = new ArrayList<>();
 }
