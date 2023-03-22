@@ -1,6 +1,8 @@
 package tn.esprit.pibakcend.entities;
 
 public enum Categorie {
-    TEsssst
+    plombier,
+    electricien,
+    jardinier
     
 }

@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -29,5 +30,9 @@ public class User implements Serializable {
     private Date birthDate ;
     @ManyToMany
     private Set<Role> roles;
+
+    @ManyToMany
+    @JsonIgnore
+    private Set<Evenement> evenements;
 
 }

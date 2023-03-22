@@ -15,20 +15,24 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Profile implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     private String username;
     private String sexe;
     @Enumerated(EnumType.STRING)
     private Categorie categorie;
-    private boolean isVerified;
+    private boolean isVerified=false;
     private String photoprofile;
 
     // One Profile can have Many Feedbacks
     @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Feedback> feedbackList = new ArrayList<>();
-
 }
