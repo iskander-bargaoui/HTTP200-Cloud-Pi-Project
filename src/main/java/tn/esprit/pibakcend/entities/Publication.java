@@ -5,7 +5,9 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -13,22 +15,26 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @Entity
+@Table(name = "publication")
 public class Publication implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPub;
+    @Column(nullable = false)
     private String contenuPub;
+    @Column(nullable = false)
     private String titrePub;
     @Enumerated(EnumType.STRING)
     private Visibilite vis;
-    @Temporal(TemporalType.DATE)
-    private Date dateCreationPub;
+    //@Temporal(TemporalType.DATE)
+    @Column(name = "date_posted")
+    private LocalDate dateCreationPub;
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private User user;
     @JsonIgnore
-    @ManyToOne
-    private Commentaire commentaire;
+    @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
+    private List<Commentaire> commentaires;
 
 }

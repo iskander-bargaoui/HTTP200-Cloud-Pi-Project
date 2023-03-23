@@ -33,6 +33,9 @@ public class User implements Serializable {
     private Set<Role> roles;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Publication> publications = new ArrayList<>();
+    private List<Publication> publications ;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Commentaire> commentaires;
 
 }

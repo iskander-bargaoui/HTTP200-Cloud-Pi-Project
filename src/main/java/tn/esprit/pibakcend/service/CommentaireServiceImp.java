@@ -18,9 +18,10 @@ public class CommentaireServiceImp implements ICommentaire{
     }
 
     @Override
-    public Commentaire retrieveCommentaireById(Integer id) {
+    public Commentaire retrieveCommentaireById(long id) {
         return commentaireRepository.findById(id).orElse(null);
     }
+
 
     @Override
     public List<Commentaire> retrieveAllCommentaire() {
@@ -28,7 +29,10 @@ public class CommentaireServiceImp implements ICommentaire{
     }
 
     @Override
-    public void deleteCommentaire(Integer id) {
+    public void deleteCommentaire(long id) {
     commentaireRepository.deleteById(id);
     }
+
+
 }
+

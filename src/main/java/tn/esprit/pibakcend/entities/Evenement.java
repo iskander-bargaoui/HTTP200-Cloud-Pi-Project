@@ -27,12 +27,12 @@ public class Evenement implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateFin;
     private String Lieu;
-
+/*
     @ManyToMany (mappedBy = "evenements")
     @JsonIgnore
     private Set<User> utilisateurs;
 
     @ManyToMany
     private Set<Formation> formations;
-
+*/
 }

@@ -8,9 +8,9 @@ public interface ICommentaire {
     Commentaire addComm(Commentaire comm);
     Commentaire updateComm(Commentaire comm);
 
-    Commentaire retrieveCommentaireById(Integer id );
+    Commentaire retrieveCommentaireById(long id );
 
     List<Commentaire> retrieveAllCommentaire();
 
-    void deleteCommentaire(Integer id);
+    void deleteCommentaire(long id);
 }
