@@ -6,6 +6,7 @@ import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.repository.PublicationRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -34,5 +35,9 @@ public class PublicationServiceImp implements IPublication{
     @Override
     public void deletePublication(Integer id) {
     publicationRepository.deleteById(id);
+    }
+    @Override
+    public List<Publication> retrievePublicationUserById(Long id) {
+        return publicationRepository.findAll().stream().filter(x -> x.getUser().getId() == id).collect(Collectors.toList());
     }
 }

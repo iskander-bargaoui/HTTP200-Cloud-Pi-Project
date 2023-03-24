@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+
 public class PublicationRestController {
     IPublication iPublication;
     @PostMapping("/AddPublication")
@@ -25,7 +26,6 @@ public class PublicationRestController {
     public Publication retrievePublicationById(@PathVariable("id") Integer id) {
         return iPublication.retrievePublicationById(id);
     }
-
     @GetMapping("/GetAllPublication")
     public List<Publication> retrieveAllPublication() {
         return iPublication.retrieveAllPublication();
@@ -34,5 +34,10 @@ public class PublicationRestController {
     @DeleteMapping("/DeletePublication/{id}")
     public void deletePublication(@PathVariable("id") Integer id) {
         iPublication.deletePublication(id);
+    }
+
+    @GetMapping("/RetrievePublicationUserById/{id}")
+    public List<Publication> retrievePublicationUserById (@PathVariable ("id") Long id){
+    return iPublication.retrievePublicationUserById(id);
     }
 }

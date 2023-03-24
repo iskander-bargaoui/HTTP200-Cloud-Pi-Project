@@ -1,10 +1,14 @@
 package tn.esprit.pibakcend.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.pibakcend.entities.Commentaire;
 import tn.esprit.pibakcend.repository.CommentaireRepository;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class CommentaireServiceImp implements ICommentaire{
     CommentaireRepository commentaireRepository;
     @Override

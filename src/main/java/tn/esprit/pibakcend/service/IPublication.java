@@ -10,8 +10,11 @@ public interface IPublication {
     Publication updatePub(Publication pub);
     Publication retrievePublicationById(Integer id);
     List<Publication> retrieveAllPublication();
-
     void deletePublication(Integer id);
+    List<Publication> retrievePublicationUserById (Long id);
+
+
+
 
 
 }

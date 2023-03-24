@@ -1,11 +1,14 @@
 package tn.esprit.pibakcend.restController;
 
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.entities.Commentaire;
 import tn.esprit.pibakcend.service.ICommentaire;
 
 import java.util.List;
-
+@RestController
+@AllArgsConstructor
 public class CommentaireRestController {
     ICommentaire iCommentaire;
 
@@ -23,7 +26,6 @@ public class CommentaireRestController {
     public Commentaire retrieveCommentaireById(@PathVariable("id") Integer id) {
         return iCommentaire.retrieveCommentaireById(id);
     }
-
     @GetMapping("/GetAllCommentaire")
     public List<Commentaire> retrieveAllCommentaire() {
         return iCommentaire.retrieveAllCommentaire();

@@ -30,6 +30,8 @@ public class Publication implements Serializable {
     @Column(name = "date_posted")
     private LocalDate dateCreationPub;
 
+    private String image;
+
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
