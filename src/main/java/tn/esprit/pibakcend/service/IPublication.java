@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.service;
 
+import tn.esprit.pibakcend.entities.Like;
 import tn.esprit.pibakcend.entities.Publication;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public interface IPublication {
     List<Publication> retrieveAllPublication();
     void deletePublication(Integer id);
     List<Publication> retrievePublicationUserById (Long id);
+
 
 
 

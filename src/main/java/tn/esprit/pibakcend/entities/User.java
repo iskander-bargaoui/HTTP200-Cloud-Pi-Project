@@ -32,7 +32,7 @@ public class User implements Serializable {
     @ManyToMany
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Publication> publications ;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

@@ -16,12 +16,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
+@Table(name = "commentaire")
 @Entity
 public class Commentaire implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idComm; // Clé primaire
+    private Integer idComm; // Clé primaire
     @Column(nullable = false)
     private String contenuComm;
 
@@ -38,4 +38,10 @@ public class Commentaire implements Serializable {
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "commentaire", cascade = CascadeType.ALL)
+    private List<Like> likes;
+
+
 }

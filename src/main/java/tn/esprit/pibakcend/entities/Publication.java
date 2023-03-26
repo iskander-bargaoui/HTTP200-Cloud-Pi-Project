@@ -34,9 +34,14 @@ public class Publication implements Serializable {
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
     private User user;
     @JsonIgnore
     @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
     private List<Commentaire> commentaires;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
+    private List<Like> likes;
 
 }
