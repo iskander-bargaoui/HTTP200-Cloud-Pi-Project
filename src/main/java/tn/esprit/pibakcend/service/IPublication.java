@@ -14,6 +14,9 @@ public interface IPublication {
     void deletePublication(Integer id);
     List<Publication> retrievePublicationUserById (Long id);
 
+    Publication assignPublicationToUser (Integer idPub, Long idUser);
+
+
 
 
 

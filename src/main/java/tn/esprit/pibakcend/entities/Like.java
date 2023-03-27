@@ -12,10 +12,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @ToString
-@Table(name = "like")
+@Table(name = "likes")
 public class Like implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +24,15 @@ public class Like implements Serializable {
     private Boolean dislikeStatus;
 
     @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="id_pub")
     private Publication publication;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="id_comm")
     private Commentaire commentaire;
 

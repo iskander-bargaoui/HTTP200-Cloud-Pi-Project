@@ -40,4 +40,9 @@ public class PublicationRestController {
     public List<Publication> retrievePublicationUserById (@PathVariable ("id") Long id){
     return iPublication.retrievePublicationUserById(id);
     }
+
+    @PostMapping("/assignPublicationToUser/{idPub}/{idUser}")
+    public Publication assignPublicationToUser(@PathVariable("idPub") Integer idPub,@PathVariable("idUser") Long idUser) {
+        return iPublication.assignPublicationToUser(idPub,idUser);
+    }
 }

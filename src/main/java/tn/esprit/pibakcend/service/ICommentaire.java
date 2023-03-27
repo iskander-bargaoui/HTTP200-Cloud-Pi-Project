@@ -1,7 +1,6 @@
 package tn.esprit.pibakcend.service;
 
 import tn.esprit.pibakcend.entities.Commentaire;
-import tn.esprit.pibakcend.entities.Like;
 
 import java.util.List;
 
@@ -14,5 +13,10 @@ public interface ICommentaire {
     List<Commentaire> retrieveAllCommentaire();
 
     void deleteCommentaire(Integer id);
+
+    Commentaire assignCommentaireToUser (Integer idComm, Long idUser);
+
+    Commentaire assignCommentaireToPub (Integer idComm, Integer idPub);
+
 
 }
