@@ -38,8 +38,10 @@ public class Reservation implements Serializable {
     public int idUser ;
 
     @ManyToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
+    @JsonIgnore
     public List<Profile> profileList = new ArrayList<>();
 
     @ManyToOne
+    @JsonIgnore
     public Notification notification;
 }

@@ -29,6 +29,7 @@ public class Profile implements Serializable {
 
     // One Profile can have Many Feedbacks
     @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Feedback> feedbackList = new ArrayList<>();
 
 }

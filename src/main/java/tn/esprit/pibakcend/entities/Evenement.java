@@ -33,6 +33,7 @@ public class Evenement implements Serializable {
     private Set<User> utilisateurs;
 
     @ManyToMany
+    @JsonIgnore
     private Set<Formation> formations;
 
 }
