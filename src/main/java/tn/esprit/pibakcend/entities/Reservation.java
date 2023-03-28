@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.entities;
 
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,14 +33,9 @@ import java.util.Set;
 public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int idReservation ;
+    public long idReservation ;
     @Temporal(TemporalType.DATE)
+    @NotNull
     public Date dateReservetion;
-    public int idUser ;
 
-    @ManyToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
-    public List<Profile> profileList = new ArrayList<>();
-
-    @ManyToOne
-    public Notification notification;
 }

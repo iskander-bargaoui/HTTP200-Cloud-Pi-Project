@@ -7,15 +7,19 @@ import tn.esprit.pibakcend.Service.IReservation;
 import tn.esprit.pibakcend.entities.Notification;
 import tn.esprit.pibakcend.entities.Reservation;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 @RestController
+
 @AllArgsConstructor
 public class ReservationRestController {
     IReservation iReservation;
 
     @PostMapping("/AddRes")
-    public Reservation addRes(@RequestBody Reservation A) {
+
+    public Reservation addRes(@RequestBody Reservation A) throws MessagingException {
+        iReservation.sendHtmlEmail(A);
         return iReservation.addRes(A);
     }
 
@@ -30,7 +34,10 @@ public class ReservationRestController {
     }
 
     @GetMapping("/GetAllRes")
-    public List<Reservation> retrieveAllRes() {
+
+    public List<Reservation> retrieveAllRes()  {
+
+
         return iReservation.retrieveAllRes();
     }
 

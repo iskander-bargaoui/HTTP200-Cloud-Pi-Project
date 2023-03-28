@@ -15,18 +15,21 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-@Entity
 
+@Entity
+@Getter
+@Setter
+//// Constructor par defaults
+@NoArgsConstructor
+@ToString
 public class Notification implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    public long idnotification ;
     public String message ;
+    public long idsender ;
+    public long idreciver ;
     @Temporal(TemporalType.DATE)
     public  Date dateNotification ;
-    public int idSource ;
 
-
-    @OneToMany(mappedBy = "notification", cascade = CascadeType.ALL)
-    public List<Reservation> reservationList = new ArrayList<>();
 }
