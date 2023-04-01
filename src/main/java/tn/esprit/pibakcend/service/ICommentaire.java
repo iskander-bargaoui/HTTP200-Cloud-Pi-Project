@@ -7,24 +7,25 @@ import tn.esprit.pibakcend.entities.Publication;
 import java.util.List;
 
 public interface ICommentaire {
-    Commentaire addComm(Commentaire comm);
-    Commentaire updateComm(Commentaire comm);
+   // Commentaire addComm(Commentaire comm);
+    Commentaire updateComm(Commentaire comm,Integer idComm);
 
-    Commentaire retrieveCommentaireById(Integer idComm );
+    List<Commentaire> retrieveCommentaireByPubId(Integer idPub);
 
-    List<Commentaire> retrieveAllCommentaire();
+    Commentaire assignCommentaireToPub (Commentaire comm, Integer idPub, Long idUser);
 
     void deleteCommentaire(Integer idComm);
 
-    List<Commentaire> retrieveCommentaireUserById (Long idUser);
+    Integer countByPublicationId(Integer idPub);
+
+    //List<Commentaire> retrieveAllCommentaire();
+
+    //List<Commentaire> retrieveCommentaireUserById (Long idUser);
 
 
-    Commentaire assignCommentaireToUser (Integer idComm, Long idUser);
-
-    Commentaire assignCommentaireToPub (Integer idComm, Integer idPub);
+    //Commentaire assignCommentaireToUser (Integer idComm, Long idUser);
 
     /*@Query("SELECT COUNT(comm) FROM Commentaire comm")
     Integer countCommentsByPublicationId(Integer idPub);*/
 
-    Integer countByPublicationId(Integer idPub);
 }

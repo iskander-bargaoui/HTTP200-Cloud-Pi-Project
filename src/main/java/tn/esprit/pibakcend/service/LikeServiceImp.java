@@ -13,6 +13,8 @@ import tn.esprit.pibakcend.repository.PublicationRepository;
 import tn.esprit.pibakcend.repository.UserRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @AllArgsConstructor
 public class LikeServiceImp implements  ILike{
@@ -24,7 +26,31 @@ public class LikeServiceImp implements  ILike{
 
     CommentaireRepository commentaireRepository;
 
+
+
     @Override
+    public Publication ToggleLikes(Integer idPub, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub).orElse(null);
+        User user = userRepository.findById(idUser).orElse(null);
+        if (publication != null && user != null) {
+            List<Like> Likes = likeRepository.findAll().stream()
+                    .filter(x -> x.getPublication().getIdPub() == idPub)
+                    .filter(x -> x.getUser().getId() == idUser)
+                    .collect(Collectors.toList());
+            if (Likes.size() > 0) {
+                likeRepository.deleteById(Likes.get(0).getIdlike());
+            }
+            else {
+                Like like = new Like();
+                like.setUser(user);
+                like.setPublication(publication);
+                likeRepository.save(like);
+            }
+             }
+            return publication;
+        }
+
+   /* @Override
     public Like updateLikeDislike(Like likeDislike) {
         return likeRepository.save(likeDislike);
     }
@@ -107,5 +133,5 @@ public class LikeServiceImp implements  ILike{
 
     @Override
     public Like findByCommentaireAndUser(Commentaire commentaire, User user) {
-        return likeRepository.findByCommentaireAndUser(commentaire, user);    }
+        return likeRepository.findByCommentaireAndUser(commentaire, user);    }*/
 }

@@ -20,28 +20,18 @@ public class Like implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idlike;
 
-    private Boolean likeStatus;
-    private Boolean dislikeStatus;
-
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name="id_pub")
+    @JoinColumn(name = "id_pub")
     private Publication publication;
 
     @ManyToOne
-    @JoinColumn(name="id_comm")
+    @JoinColumn(name = "id_comm")
     private Commentaire commentaire;
 
-    public Like(Boolean likeStatus, Boolean dislikeStatus, User user, Publication publication, Commentaire commentaire) {
-        this.likeStatus = likeStatus;
-        this.dislikeStatus = dislikeStatus;
-        this.user = user;
-        this.publication = publication;
-        this.commentaire = commentaire;
-    }
 }
 

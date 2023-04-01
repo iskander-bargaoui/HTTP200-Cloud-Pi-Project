@@ -28,7 +28,7 @@ public class LikeRestController {
     ILike iLike;
 
     // Endpoint for liking a publication
-    @PostMapping("/AddLikeToPublication/{idPub}")
+   /* @PostMapping("/AddLikeToPublication/{idPub}")
     public ResponseEntity<Like> addLikeToPublication(@PathVariable Integer idPub, @RequestParam Long idUser) {
         Like like = iLike.addLikeToPublication(idPub, idUser);
         return ResponseEntity.ok(like);
@@ -64,6 +64,12 @@ public class LikeRestController {
     @GetMapping("/GetAllLikeDislike")
     public List<Like> retrieveAllLikeDislike() {
         return iLike.retrieveAllLikeDislike();
+    }*/
+
+    @PostMapping("/ToggleLikes/{idPub}/{idUser}")
+    public Publication ToggleLikes (@PathVariable("idPub") Integer idPub ,@PathVariable("idUser") Long idUser){
+        return iLike.ToggleLikes(idPub,idUser);
     }
+
 
 }

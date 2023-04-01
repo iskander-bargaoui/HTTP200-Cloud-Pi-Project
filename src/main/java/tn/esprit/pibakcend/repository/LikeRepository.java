@@ -14,9 +14,9 @@ public interface LikeRepository extends JpaRepository<Like,Integer> {
     List<Like> findAllByPublicationAndLikeStatusIsTrue(Publication publication);
     List<Like> findAllByPublicationAndDislikeStatusIsTrue(Publication publication);
     List<Like> findAllByCommentaireAndLikeStatusIsTrue(Commentaire commentaire);
-    List<Like> findAllByCommentaireAndDislikeStatusIsTrue(Commentaire commentaire);*/
+    List<Like> findAllByCommentaireAndDislikeStatusIsTrue(Commentaire commentaire);
 
     Like findByPublicationAndUser(Publication publication, User user);
-    Like findByCommentaireAndUser(Commentaire commentaire, User user);
+    Like findByCommentaireAndUser(Commentaire commentaire, User user);*/
 
 }

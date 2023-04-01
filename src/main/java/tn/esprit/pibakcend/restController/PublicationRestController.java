@@ -12,14 +12,14 @@ import java.util.List;
 
 public class PublicationRestController {
     IPublication iPublication;
-    @PostMapping("/AddPublication")
-    public Publication addPub(@RequestBody Publication pub) {
-        return iPublication.addPub(pub);
+    @PostMapping("/AddPublication/{idUser}")
+    public Publication addPub(@RequestBody Publication pub,@PathVariable("idUser") Long idUser) {
+        return iPublication.addPub(pub,idUser);
     }
 
-    @PutMapping("/UpdatePublication")
-    public Publication updatePub(@RequestBody Publication pub) {
-        return iPublication.updatePub(pub);
+    @PutMapping("/UpdatePublication/{idPub}")
+    public Publication updatePub(@RequestBody Publication pub, @PathVariable ("idPub") Integer idPub) {
+        return iPublication.updatePub(pub,idPub);
     }
 
     @GetMapping("/GetPublicationByID/{idPub}")
@@ -41,8 +41,8 @@ public class PublicationRestController {
     return iPublication.retrievePublicationUserById(idUser);
     }
 
-    @PostMapping("/AssignPublicationToUser/{idPub}/{idUser}")
+    /*@PostMapping("/AssignPublicationToUser/{idPub}/{idUser}")
     public Publication assignPublicationToUser(@PathVariable("idPub") Integer idPub,@PathVariable("idUser") Long idUser) {
         return iPublication.assignPublicationToUser(idPub,idUser);
-    }
+    }*/
 }

@@ -20,55 +20,38 @@ public class CommentaireServiceImp implements ICommentaire{
     UserRepository userRepository;
 
     PublicationRepository publicationRepository;
+
     @Override
-    public Commentaire addComm(Commentaire comm) {
+    public Commentaire updateComm(Commentaire comm,Integer idComm) {
+        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);
+        comm.setIdComm(idComm);
+        comm.setUser(commentaire.getUser());
+        comm.setPublication(commentaire.getPublication());
         return commentaireRepository.save(comm);
     }
 
     @Override
-    public Commentaire updateComm(Commentaire comm) {
-        return commentaireRepository.save(comm);
+    public List<Commentaire> retrieveCommentaireByPubId(Integer idPub) {
+        return commentaireRepository.findAll().stream().filter(x -> x.getPublication().getIdPub() == idPub).collect(Collectors.toList());
     }
 
     @Override
-    public Commentaire retrieveCommentaireById(Integer idComm) {
-        return commentaireRepository.findById(idComm).orElse(null);
-    }
+    public Commentaire assignCommentaireToPub(Commentaire comm, Integer idPub, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub).orElse(null);
+        User user = userRepository.findById(idUser).orElse(null);
+        if (publication != null && user !=null){
+            comm.setPublication(publication);
+            comm.setUser(user);
+            commentaireRepository.save(comm);
+            return comm;
+        }
+        return null;
 
-
-    @Override
-    public List<Commentaire> retrieveAllCommentaire() {
-        return commentaireRepository.findAll();
     }
 
     @Override
     public void deleteCommentaire(Integer idComm) {
     commentaireRepository.deleteById(idComm);
-    }
-
-    @Override
-    public List<Commentaire> retrieveCommentaireUserById(Long idUser) {
-        return commentaireRepository.findAll().stream().filter(x -> x.getUser().getId() == idUser).collect(Collectors.toList());
-
-    }
-
-    @Override
-    public Commentaire assignCommentaireToUser(Integer idComm, Long idUser) {
-        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);
-        User user = userRepository.findById(idUser).orElse(null);
-
-        user.getCommentaires().add(commentaire);
-        return commentaireRepository.save(commentaire);
-
-    }
-
-    @Override
-    public Commentaire assignCommentaireToPub(Integer idComm, Integer idPub) {
-        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);
-        Publication publication = publicationRepository.findById(idPub).orElse(null);
-
-        publication.getCommentaires().add(commentaire);
-        return commentaireRepository.save(commentaire);
     }
 
     @Override

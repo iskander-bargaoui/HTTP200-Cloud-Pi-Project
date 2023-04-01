@@ -7,14 +7,13 @@ import java.util.List;
 
 public interface IPublication {
 
-    Publication addPub(Publication pub);
-    Publication updatePub(Publication pub);
+    Publication addPub(Publication pub , Long idUser);
+    Publication updatePub(Publication pub, Integer idPub);
     Publication retrievePublicationById(Integer idPub);
     List<Publication> retrieveAllPublication();
     void deletePublication(Integer idPub);
     List<Publication> retrievePublicationUserById (Long idUser);
-
-    Publication assignPublicationToUser (Integer idPub, Long idUser);
+    //Publication assignPublicationToUser (Integer idPub, Long idUser);
 
 
 

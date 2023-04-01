@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.service;
 
+import javafx.scene.control.Toggle;
 import tn.esprit.pibakcend.entities.Commentaire;
 import tn.esprit.pibakcend.entities.Like;
 import tn.esprit.pibakcend.entities.Publication;
@@ -8,7 +9,7 @@ import tn.esprit.pibakcend.entities.User;
 import java.util.List;
 
 public interface ILike {
-    //Like addLikeDislike(Like likeDislike);
+   /* //Like addLikeDislike(Like likeDislike);
     Like updateLikeDislike(Like likeDislike);
     Like retrieveLikeDislikeById(Integer id);
     List<Like> retrieveAllLikeDislike();
@@ -25,10 +26,12 @@ public interface ILike {
     Like findByPublicationAndUser(Publication publication, User user);
     Like findByCommentaireAndUser(Commentaire commentaire, User user);
 
-    /*List<Like> retrieveAllLikesByPublicationId(long publicationId);
+    List<Like> retrieveAllLikesByPublicationId(long publicationId);
     List<Like> retrieveAllDislikesByPublicationId(long publicationId);
     List<Like> retrieveAllLikesByCommentaireId(long commentaireId);
     List<Like> retrieveAllDislikesByCommentaireId(long commentaireId);
     Like retrieveLikeDislikeByUserIdAndPublicationId(long userId, long publicationId);
     Like retrieveLikeDislikeByUserIdAndCommentaireId(long userId, long commentaireId);*/
+
+    public Publication ToggleLikes (Integer idPub , Long idUser);
 }

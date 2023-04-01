@@ -13,45 +13,27 @@ import java.util.List;
 public class CommentaireRestController {
     ICommentaire iCommentaire;
 
-    @PostMapping("/AddCommentaire")
-    public Commentaire addComm(@RequestBody Commentaire Comm) {
-        return iCommentaire.addComm(Comm);
+    @PutMapping("/UpdateCommentaire/{idComm}")
+    Commentaire updateComm(@RequestBody Commentaire comm,@PathVariable Integer idComm){
+        return iCommentaire.updateComm(comm,idComm);
     }
 
-    @PutMapping("/UpdateCommentaire")
-    public Commentaire updateComm(@RequestBody Commentaire Comm) {
-        return iCommentaire.updateComm(Comm);
+    @GetMapping("RetrieveCommentaireByPubId/{idPub}")
+    List<Commentaire> retrieveCommentaireByPubId(@PathVariable ("idPub") Integer idPub){
+    return iCommentaire.retrieveCommentaireByPubId(idPub);
     }
 
-    @GetMapping("/GetCommentaireByID/{idComm}")
-    public Commentaire retrieveCommentaireById(@PathVariable("idComm") Integer idComm) {
-        return iCommentaire.retrieveCommentaireById(idComm);
-    }
-    @GetMapping("/GetAllCommentaire")
-    public List<Commentaire> retrieveAllCommentaire() {
-        return iCommentaire.retrieveAllCommentaire();
+    @PostMapping("/AssignCommentaireToPub/{idPub}/{idUser}")
+    Commentaire assignCommentaireToPub (@RequestBody Commentaire comm,@PathVariable ("idPub") Integer idPub,@PathVariable ("idUser") Long idUser){
+    return iCommentaire.assignCommentaireToPub(comm,idPub,idUser);
     }
 
-    @DeleteMapping("/DeleteCommentaire/{id}")
-    public void deleteCommentaire(@PathVariable("id") Integer id) {
-        iCommentaire.deleteCommentaire(id);
-    }
-
-    @PostMapping("/AssignCommentaireToUser/{idComm}/{idUser}")
-    public Commentaire assignCommentaireToUser(@PathVariable("idComm") Integer idComm, @PathVariable("idUser") Long idUser) {
-        return iCommentaire.assignCommentaireToUser(idComm,idUser);
-    }
-    @PostMapping("/AssignCommentaireToPub/{idComm}/{idPub}")
-    public Commentaire assignCommentaireToPub(@PathVariable("idComm") Integer idComm, @PathVariable("idPub") Integer idPub) {
-        return iCommentaire.assignCommentaireToPub(idComm,idPub);
+    @DeleteMapping("/DeleteCommentaire/{idComm}")
+    void deleteCommentaire(@PathVariable Integer idComm){
+    iCommentaire.deleteCommentaire(idComm);
     }
     @GetMapping("/CountCommentsInPublication/{idPub}/count")
     public Integer countCommentsInPublication(@PathVariable("idPub") Integer idPub) {
         return iCommentaire.countByPublicationId(idPub);
-    }
-
-    @GetMapping("/RetrieveCommentaireUserById/{idUser}")
-    public List<Commentaire> retrieveCommentaireUserById (@PathVariable ("idUser") Long idUser){
-        return iCommentaire.retrieveCommentaireUserById(idUser);
     }
 }
