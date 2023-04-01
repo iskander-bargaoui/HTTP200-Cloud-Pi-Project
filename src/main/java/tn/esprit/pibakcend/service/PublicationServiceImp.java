@@ -26,8 +26,8 @@ public class PublicationServiceImp implements IPublication{
     }
 
     @Override
-    public Publication retrievePublicationById(Integer id) {
-        return publicationRepository.findById(id).orElse(null);
+    public Publication retrievePublicationById(Integer idPub) {
+        return publicationRepository.findById(idPub).orElse(null);
     }
 
     @Override
@@ -36,12 +36,12 @@ public class PublicationServiceImp implements IPublication{
     }
 
     @Override
-    public void deletePublication(Integer id) {
-    publicationRepository.deleteById(id);
+    public void deletePublication(Integer idPub) {
+    publicationRepository.deleteById(idPub);
     }
     @Override
-    public List<Publication> retrievePublicationUserById(Long id) {
-        return publicationRepository.findAll().stream().filter(x -> x.getUser().getId() == id).collect(Collectors.toList());
+    public List<Publication> retrievePublicationUserById(Long idUser) {
+        return publicationRepository.findAll().stream().filter(x -> x.getUser().getId() == idUser).collect(Collectors.toList());
     }
     @Override
     public Publication assignPublicationToUser(Integer idPub, Long idUser) {

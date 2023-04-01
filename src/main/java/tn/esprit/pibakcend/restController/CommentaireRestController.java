@@ -23,9 +23,9 @@ public class CommentaireRestController {
         return iCommentaire.updateComm(Comm);
     }
 
-    @GetMapping("/GetCommentaireByID/{id}")
-    public Commentaire retrieveCommentaireById(@PathVariable("id") Integer id) {
-        return iCommentaire.retrieveCommentaireById(id);
+    @GetMapping("/GetCommentaireByID/{idComm}")
+    public Commentaire retrieveCommentaireById(@PathVariable("idComm") Integer idComm) {
+        return iCommentaire.retrieveCommentaireById(idComm);
     }
     @GetMapping("/GetAllCommentaire")
     public List<Commentaire> retrieveAllCommentaire() {
@@ -37,12 +37,21 @@ public class CommentaireRestController {
         iCommentaire.deleteCommentaire(id);
     }
 
-    @PostMapping("/assignCommentaireToUser/{idComm}/{idUser}")
+    @PostMapping("/AssignCommentaireToUser/{idComm}/{idUser}")
     public Commentaire assignCommentaireToUser(@PathVariable("idComm") Integer idComm, @PathVariable("idUser") Long idUser) {
         return iCommentaire.assignCommentaireToUser(idComm,idUser);
     }
-    @PostMapping("/assignCommentaireToPub/{idComm}/{idPub}")
+    @PostMapping("/AssignCommentaireToPub/{idComm}/{idPub}")
     public Commentaire assignCommentaireToPub(@PathVariable("idComm") Integer idComm, @PathVariable("idPub") Integer idPub) {
         return iCommentaire.assignCommentaireToPub(idComm,idPub);
+    }
+    @GetMapping("/CountCommentsInPublication/{idPub}/count")
+    public Integer countCommentsInPublication(@PathVariable("idPub") Integer idPub) {
+        return iCommentaire.countByPublicationId(idPub);
+    }
+
+    @GetMapping("/RetrieveCommentaireUserById/{idUser}")
+    public List<Commentaire> retrieveCommentaireUserById (@PathVariable ("idUser") Long idUser){
+        return iCommentaire.retrieveCommentaireUserById(idUser);
     }
 }

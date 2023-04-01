@@ -10,6 +10,7 @@ import tn.esprit.pibakcend.repository.PublicationRepository;
 import tn.esprit.pibakcend.repository.UserRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -30,8 +31,8 @@ public class CommentaireServiceImp implements ICommentaire{
     }
 
     @Override
-    public Commentaire retrieveCommentaireById(Integer id) {
-        return commentaireRepository.findById(id).orElse(null);
+    public Commentaire retrieveCommentaireById(Integer idComm) {
+        return commentaireRepository.findById(idComm).orElse(null);
     }
 
 
@@ -41,8 +42,14 @@ public class CommentaireServiceImp implements ICommentaire{
     }
 
     @Override
-    public void deleteCommentaire(Integer id) {
-    commentaireRepository.deleteById(id);
+    public void deleteCommentaire(Integer idComm) {
+    commentaireRepository.deleteById(idComm);
+    }
+
+    @Override
+    public List<Commentaire> retrieveCommentaireUserById(Long idUser) {
+        return commentaireRepository.findAll().stream().filter(x -> x.getUser().getId() == idUser).collect(Collectors.toList());
+
     }
 
     @Override
@@ -62,6 +69,11 @@ public class CommentaireServiceImp implements ICommentaire{
 
         publication.getCommentaires().add(commentaire);
         return commentaireRepository.save(commentaire);
+    }
+
+    @Override
+    public Integer countByPublicationId(Integer idPub) {
+        return commentaireRepository.countByPublicationId(idPub);
     }
 
 

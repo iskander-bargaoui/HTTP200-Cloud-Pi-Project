@@ -1,20 +1,29 @@
 package tn.esprit.pibakcend.service;
 
+import tn.esprit.pibakcend.entities.Commentaire;
 import tn.esprit.pibakcend.entities.Like;
+import tn.esprit.pibakcend.entities.Publication;
+import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
 
 public interface ILike {
-    Like addLikeDislike(Like likeDislike);
+    //Like addLikeDislike(Like likeDislike);
     Like updateLikeDislike(Like likeDislike);
     Like retrieveLikeDislikeById(Integer id);
     List<Like> retrieveAllLikeDislike();
     void deleteLikeDislike(Integer id);
 
-    Like addLikeToPublication(Integer publicationId, Long userId);
-    Like addLikeToCommentaire(Integer commentaireId, Long userId);
-    Like addDisLikeToPublication(Integer publicationId, Long userId);
-    Like addDisLikeToCommentaire(Integer commentaireId, Long userId);
+    Like addLikeToPublication(Integer idPub, Long idUser);
+    Like addLikeToCommentaire(Integer idComm, Long idUser);
+    Like addDisLikeToPublication(Integer idPub, Long idUser);
+    Like addDisLikeToCommentaire(Integer idComm, Long idUser);
+
+    public void removeLikeFromPublication(Integer idPub, Long idUser);
+    public void removeLikeFromCommentaire(Integer idComm, Long idUser);
+
+    Like findByPublicationAndUser(Publication publication, User user);
+    Like findByCommentaireAndUser(Commentaire commentaire, User user);
 
     /*List<Like> retrieveAllLikesByPublicationId(long publicationId);
     List<Like> retrieveAllDislikesByPublicationId(long publicationId);

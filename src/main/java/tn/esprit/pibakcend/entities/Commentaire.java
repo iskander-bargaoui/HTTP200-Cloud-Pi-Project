@@ -32,10 +32,12 @@ public class Commentaire implements Serializable {
     private LocalDate dateCreationComm;
 
     @JsonIgnore
+    @JoinColumn(name="id_pub")
     @ManyToOne (fetch = FetchType.LAZY)
     private Publication publication;
 
     @JsonIgnore
+    @JoinColumn(name="user_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 

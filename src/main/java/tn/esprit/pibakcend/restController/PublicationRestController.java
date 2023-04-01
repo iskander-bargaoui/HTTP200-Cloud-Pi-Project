@@ -22,26 +22,26 @@ public class PublicationRestController {
         return iPublication.updatePub(pub);
     }
 
-    @GetMapping("/GetPublicationByID/{id}")
-    public Publication retrievePublicationById(@PathVariable("id") Integer id) {
-        return iPublication.retrievePublicationById(id);
+    @GetMapping("/GetPublicationByID/{idPub}")
+    public Publication retrievePublicationById(@PathVariable("idPub") Integer idPub) {
+        return iPublication.retrievePublicationById(idPub);
     }
     @GetMapping("/GetAllPublication")
     public List<Publication> retrieveAllPublication() {
         return iPublication.retrieveAllPublication();
     }
 
-    @DeleteMapping("/DeletePublication/{id}")
-    public void deletePublication(@PathVariable("id") Integer id) {
-        iPublication.deletePublication(id);
+    @DeleteMapping("/DeletePublication/{idPub}")
+    public void deletePublication(@PathVariable("idPub") Integer idPub) {
+        iPublication.deletePublication(idPub);
     }
 
-    @GetMapping("/RetrievePublicationUserById/{id}")
-    public List<Publication> retrievePublicationUserById (@PathVariable ("id") Long id){
-    return iPublication.retrievePublicationUserById(id);
+    @GetMapping("/RetrievePublicationUserById/{idUser}")
+    public List<Publication> retrievePublicationUserById (@PathVariable ("idUser") Long idUser){
+    return iPublication.retrievePublicationUserById(idUser);
     }
 
-    @PostMapping("/assignPublicationToUser/{idPub}/{idUser}")
+    @PostMapping("/AssignPublicationToUser/{idPub}/{idUser}")
     public Publication assignPublicationToUser(@PathVariable("idPub") Integer idPub,@PathVariable("idUser") Long idUser) {
         return iPublication.assignPublicationToUser(idPub,idUser);
     }

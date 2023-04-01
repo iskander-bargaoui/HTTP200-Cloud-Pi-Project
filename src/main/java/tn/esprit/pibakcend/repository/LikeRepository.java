@@ -9,10 +9,14 @@ import tn.esprit.pibakcend.entities.User;
 import java.util.List;
 
 public interface LikeRepository extends JpaRepository<Like,Integer> {
-   /* Like findByUserAndPublication(User user, Publication publication);
+   /*
     Like findByUserAndCommentaire(User user, Commentaire commentaire);
     List<Like> findAllByPublicationAndLikeStatusIsTrue(Publication publication);
     List<Like> findAllByPublicationAndDislikeStatusIsTrue(Publication publication);
     List<Like> findAllByCommentaireAndLikeStatusIsTrue(Commentaire commentaire);
     List<Like> findAllByCommentaireAndDislikeStatusIsTrue(Commentaire commentaire);*/
+
+    Like findByPublicationAndUser(Publication publication, User user);
+    Like findByCommentaireAndUser(Commentaire commentaire, User user);
+
 }

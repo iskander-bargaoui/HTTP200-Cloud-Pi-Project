@@ -25,11 +25,6 @@ public class LikeServiceImp implements  ILike{
     CommentaireRepository commentaireRepository;
 
     @Override
-    public Like addLikeDislike(Like likeDislike) {
-        return likeRepository.save(likeDislike);
-    }
-
-    @Override
     public Like updateLikeDislike(Like likeDislike) {
         return likeRepository.save(likeDislike);
     }
@@ -50,34 +45,67 @@ public class LikeServiceImp implements  ILike{
     }
 
     @Override
-    public Like addLikeToPublication(Integer publicationId, Long userId) {
-        Publication publication = publicationRepository.findById(publicationId).orElseThrow(() -> new NotFoundException("Publication not found"));
-        User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("User not found"));
+    public Like addLikeToPublication(Integer idPub, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub).orElse(null);;
+        User user = userRepository.findById(idUser).orElse(null);;
         Like likeDislike = new Like(true, false, user, publication, null);
         return likeRepository.save(likeDislike);
     }
 
     @Override
-    public Like addLikeToCommentaire(Integer commentaireId, Long userId) {
-        Commentaire commentaire = commentaireRepository.findById(commentaireId).orElseThrow(() -> new NotFoundException("Commentaire not found"));
-        User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("User not found"));
+    public Like addLikeToCommentaire(Integer idComm, Long idUser) {
+        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);;
+        User user = userRepository.findById(idUser).orElse(null);;
         Like likeDislike = new Like(true, false, user, null, commentaire);
         return likeRepository.save(likeDislike);
     }
 
     @Override
-    public Like addDisLikeToPublication(Integer publicationId, Long userId) {
-        Publication publication = publicationRepository.findById(publicationId).orElseThrow(() -> new NotFoundException("Publication not found"));
-        User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("User not found"));
+    public Like addDisLikeToPublication(Integer idPub, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub).orElse(null);;
+        User user = userRepository.findById(idUser).orElse(null);;
         Like likeDislike = new Like(false, true, user, publication, null);
         return likeRepository.save(likeDislike);
     }
 
     @Override
-    public Like addDisLikeToCommentaire(Integer commentaireId, Long userId) {
-        Commentaire commentaire = commentaireRepository.findById(commentaireId).orElseThrow(() -> new NotFoundException("Commentaire not found"));
-        User user = userRepository.findById(userId).orElseThrow(() -> new NotFoundException("User not found"));
+    public Like addDisLikeToCommentaire(Integer idComm, Long idUser) {
+        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);
+        User user = userRepository.findById(idUser).orElse(null);;
         Like likeDislike = new Like(false, true, user, null, commentaire);
         return likeRepository.save(likeDislike);
     }
+
+    @Override
+    public void removeLikeFromPublication(Integer idPub, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub).orElse(null);
+        User user = userRepository.findById(idUser).orElse(null);
+        if (publication != null && user != null) {
+            Like like = likeRepository.findByPublicationAndUser(publication, user);
+            if (like != null) {
+                likeRepository.delete(like);
+            }
+        }
+    }
+
+    @Override
+    public void removeLikeFromCommentaire(Integer idComm, Long idUser) {
+        Commentaire commentaire =commentaireRepository.findById(idComm).orElse(null);
+        User user = userRepository.findById(idUser).orElse(null);
+        if (commentaire != null && user != null) {
+            Like like = likeRepository.findByCommentaireAndUser(commentaire, user);
+            if (like != null) {
+                likeRepository.delete(like);
+            }
+        }
+    }
+
+    @Override
+    public Like findByPublicationAndUser(Publication publication, User user) {
+        return likeRepository.findByPublicationAndUser(publication, user);
+    }
+
+    @Override
+    public Like findByCommentaireAndUser(Commentaire commentaire, User user) {
+        return likeRepository.findByCommentaireAndUser(commentaire, user);    }
 }
