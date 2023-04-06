@@ -27,7 +27,8 @@ public class Profile implements Serializable {
     private boolean isVerified;
     private String photoprofile;
 
-    // One Profile can have Many Feedbacks
+
+
     @OneToMany
     @JsonIgnore
     private List<Feedback> feedbackList = new ArrayList<>();

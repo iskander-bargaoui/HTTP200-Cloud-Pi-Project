@@ -38,4 +38,10 @@ public class Reservation implements Serializable {
     @NotNull
     public Date dateReservetion;
 
+
+    @ManyToMany
+    public List<Profile> profileList = new ArrayList<>();
+
+    @ManyToOne
+    public Notification notification;
 }

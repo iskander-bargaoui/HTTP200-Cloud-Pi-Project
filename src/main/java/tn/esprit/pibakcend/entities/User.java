@@ -32,4 +32,7 @@ public class User implements Serializable {
     @JsonIgnore
     private Set<Role> roles;
 
+    @ManyToOne
+    public ChatMessage message ;
+
 }
