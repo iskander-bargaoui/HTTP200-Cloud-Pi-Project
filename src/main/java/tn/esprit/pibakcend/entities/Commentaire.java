@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import java.util.Set;
+
 
 @Getter
 @Setter
@@ -22,28 +25,22 @@ public class Commentaire implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idComm; // Clé primaire
-    @Column(nullable = false)
+    @NotEmpty
     private String contenuComm;
-
-    private String imageComm;
-    //@Temporal(TemporalType.DATE)
 
     @Column(name = "date_commented")
     private LocalDate dateCreationComm;
 
-    @JsonIgnore
     @JoinColumn(name="id_pub")
     @ManyToOne (fetch = FetchType.LAZY)
     private Publication publication;
 
-    @JsonIgnore
     @JoinColumn(name="user_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "commentaire", cascade = CascadeType.ALL)
-    private List<Like> likes;
+    private Set<Like> likes;
 
 
 }

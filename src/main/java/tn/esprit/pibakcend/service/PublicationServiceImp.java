@@ -49,6 +49,28 @@ public class PublicationServiceImp implements IPublication{
     public List<Publication> retrievePublicationUserById(Long idUser) {
         return publicationRepository.findAll().stream().filter(x -> x.getUser().getId() == idUser).collect(Collectors.toList());
     }
+
+    @Override
+    public Publication setFavoritePublication(Integer idPub, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub).orElse(null);
+        User user = userRepository.findById(idUser).orElse(null);
+
+
+        return publication;
+    }
+
+    @Override
+    public List<Publication> PubHistory(Integer idPub, Long idUser) {
+        return null;
+    }
+
+    @Override
+    public boolean checkForProfanity(String text) {
+        return false;
+    }
+
+
+}
    /* @Override
     public Publication assignPublicationToUser(Integer idPub, Long idUser) {
         Publication publication = publicationRepository.findById(idPub).orElse(null);
@@ -58,4 +80,4 @@ public class PublicationServiceImp implements IPublication{
         return publicationRepository.save(publication);
 
     }*/
-}
+

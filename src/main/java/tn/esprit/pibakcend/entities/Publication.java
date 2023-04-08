@@ -2,12 +2,17 @@ package tn.esprit.pibakcend.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 
 @Getter
 @Setter
@@ -20,28 +25,35 @@ public class Publication implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPub;
-    @Column(nullable = false)
+
     private String contenuPub;
-    @Column(nullable = false)
+
     private String titrePub;
     @Enumerated(EnumType.STRING)
     private Visibilite vis;
     //@Temporal(TemporalType.DATE)
     @Column(name = "date_posted")
     private LocalDate dateCreationPub;
-
+    @Nullable
     private String image;
+    private Integer likeCount;
+    private Integer dislikeCount;
 
+    private boolean isFavorite;
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
     @JsonIgnore
+
     @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
-    private List<Commentaire> commentaires;
+    private Set<Commentaire> commentaires;
 
     @JsonIgnore
     @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
-    private List<Like> likes;
+    private Set<Like> likes;
+    @JsonIgnore
+    @ManyToMany(mappedBy = "favoritePublications")
+    private Set<User> favoriteUsers = new HashSet<>();
 
 }

@@ -15,6 +15,11 @@ public interface IPublication {
     List<Publication> retrievePublicationUserById (Long idUser);
     //Publication assignPublicationToUser (Integer idPub, Long idUser);
 
+    public Publication setFavoritePublication(Integer idPub, Long idUser) ;
+
+    List<Publication> PubHistory(Integer idPub, Long idUser);
+
+     boolean checkForProfanity(String text);
 
 
 

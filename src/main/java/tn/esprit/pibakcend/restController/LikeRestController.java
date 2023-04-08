@@ -3,10 +3,7 @@ package tn.esprit.pibakcend.restController;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.pibakcend.entities.Commentaire;
-import tn.esprit.pibakcend.entities.Like;
-import tn.esprit.pibakcend.entities.Publication;
-import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.entities.*;
 import tn.esprit.pibakcend.repository.CommentaireRepository;
 import tn.esprit.pibakcend.repository.LikeRepository;
 import tn.esprit.pibakcend.repository.PublicationRepository;
@@ -19,9 +16,9 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 public class LikeRestController {
-   LikeRepository likeRepository;
+    LikeRepository likeRepository;
 
-   PublicationRepository publicationRepository;
+    PublicationRepository publicationRepository;
 
     //LikeServiceImp likeServiceImp;
 
@@ -66,10 +63,14 @@ public class LikeRestController {
         return iLike.retrieveAllLikeDislike();
     }*/
 
-    @PostMapping("/ToggleLikes/{idPub}/{idUser}")
+    /*@PostMapping("/ToggleLikes/{idPub}/{idUser}")
     public Publication ToggleLikes (@PathVariable("idPub") Integer idPub ,@PathVariable("idUser") Long idUser){
         return iLike.ToggleLikes(idPub,idUser);
+    }*/
+
+    @PostMapping("/ToggleLikes/{idPub}/{idUser}")
+    public Publication ToggleLikes(@PathVariable("idPub") Integer idPub, @RequestParam LikeType likeType, @PathVariable("idUser") Long idUser) {
+        return iLike.ToggleLikesP(idPub, likeType, idUser);
+
     }
-
-
 }

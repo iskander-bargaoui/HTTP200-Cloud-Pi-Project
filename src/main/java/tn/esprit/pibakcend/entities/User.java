@@ -1,13 +1,11 @@
 package tn.esprit.pibakcend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Getter
@@ -32,10 +30,20 @@ public class User implements Serializable {
     @ManyToMany
     private Set<Role> roles;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<Publication> publications ;
+    private Set<Publication> publications ;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Commentaire> commentaires;
+    private Set<Commentaire> commentaires;
+
+    @ManyToMany
+    @JsonIgnore
+    @JoinTable(
+            name = "favorite_publications",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "idPub"))
+    private Set<Publication> favoritePublications = new HashSet<>();
 
 }

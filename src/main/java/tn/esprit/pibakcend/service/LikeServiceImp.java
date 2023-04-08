@@ -3,16 +3,14 @@ package tn.esprit.pibakcend.service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.webjars.NotFoundException;
-import tn.esprit.pibakcend.entities.Commentaire;
-import tn.esprit.pibakcend.entities.Like;
-import tn.esprit.pibakcend.entities.Publication;
-import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.entities.*;
 import tn.esprit.pibakcend.repository.CommentaireRepository;
 import tn.esprit.pibakcend.repository.LikeRepository;
 import tn.esprit.pibakcend.repository.PublicationRepository;
 import tn.esprit.pibakcend.repository.UserRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -26,9 +24,70 @@ public class LikeServiceImp implements  ILike{
 
     CommentaireRepository commentaireRepository;
 
-
-
     @Override
+
+    public Publication ToggleLikesP(Integer idPub, LikeType likeType, Long idUser) {
+        Publication publication = publicationRepository.findById(idPub)
+                .orElseThrow(() -> new IllegalArgumentException("Publication Not Found with ID - " + idPub));
+        User user = userRepository.findById(idUser)
+                .orElseThrow(() -> new IllegalArgumentException("User Not Found with ID - " + idUser));
+
+        // Retrieve existing like for the given publication and user (if any)
+        Optional<Like> likeOptional = likeRepository.findByPublicationAndUser(publication, user);
+
+        if (likeOptional.isPresent()) { // Existing like found
+            Like existingLike = likeOptional.get();
+
+            if (existingLike.getLikeType().equals(likeType)) {
+                // Delete existing like
+                likeRepository.delete(existingLike);
+                if (likeType.equals(LikeType.LIKE)) {
+                    publication.setLikeCount(publication.getLikeCount() - 1);
+                } else {
+                    publication.setDislikeCount(publication.getDislikeCount() - 1);
+                }
+
+            } else {
+                existingLike.setLikeType(likeType);
+                likeRepository.save(existingLike);
+                if (likeType.equals(LikeType.LIKE)) {
+                    publication.setLikeCount(publication.getLikeCount() + 1);
+                    publication.setDislikeCount(publication.getDislikeCount() - 1);
+                } else {
+                    publication.setLikeCount(publication.getLikeCount() - 1);
+                    publication.setDislikeCount(publication.getDislikeCount() + 1);
+                }
+            }
+        } else { // No existing like found
+            // Create new like and save it to the database
+            Like newLike = mapToLike(publication, likeType, user);
+            likeRepository.save(newLike);
+
+            // Update publication's like count
+            if (likeType.equals(LikeType.LIKE)) {
+                publication.setLikeCount(publication.getLikeCount() + 1);
+            } else {
+                publication.setDislikeCount(publication.getDislikeCount() + 1);
+            }
+        }
+
+        publicationRepository.save(publication);
+        return publication;
+    }
+
+    private Like mapToLike(Publication publication, LikeType likeType, User user) {
+        return Like.builder()
+                .likeType(likeType)
+                .publication(publication)
+                .user(user)
+                .build();
+    }
+    }
+
+
+
+
+  /*  @Override
     public Publication ToggleLikes(Integer idPub, Long idUser) {
         Publication publication = publicationRepository.findById(idPub).orElse(null);
         User user = userRepository.findById(idUser).orElse(null);
@@ -48,90 +107,4 @@ public class LikeServiceImp implements  ILike{
             }
              }
             return publication;
-        }
-
-   /* @Override
-    public Like updateLikeDislike(Like likeDislike) {
-        return likeRepository.save(likeDislike);
-    }
-
-    @Override
-    public Like retrieveLikeDislikeById(Integer id) {
-        return likeRepository.findById(id).orElse(null);
-    }
-
-    @Override
-    public List<Like> retrieveAllLikeDislike() {
-        return likeRepository.findAll();
-    }
-
-    @Override
-    public void deleteLikeDislike(Integer id) {
-        likeRepository.deleteById(id);
-    }
-
-    @Override
-    public Like addLikeToPublication(Integer idPub, Long idUser) {
-        Publication publication = publicationRepository.findById(idPub).orElse(null);;
-        User user = userRepository.findById(idUser).orElse(null);;
-        Like likeDislike = new Like(true, false, user, publication, null);
-        return likeRepository.save(likeDislike);
-    }
-
-    @Override
-    public Like addLikeToCommentaire(Integer idComm, Long idUser) {
-        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);;
-        User user = userRepository.findById(idUser).orElse(null);;
-        Like likeDislike = new Like(true, false, user, null, commentaire);
-        return likeRepository.save(likeDislike);
-    }
-
-    @Override
-    public Like addDisLikeToPublication(Integer idPub, Long idUser) {
-        Publication publication = publicationRepository.findById(idPub).orElse(null);;
-        User user = userRepository.findById(idUser).orElse(null);;
-        Like likeDislike = new Like(false, true, user, publication, null);
-        return likeRepository.save(likeDislike);
-    }
-
-    @Override
-    public Like addDisLikeToCommentaire(Integer idComm, Long idUser) {
-        Commentaire commentaire = commentaireRepository.findById(idComm).orElse(null);
-        User user = userRepository.findById(idUser).orElse(null);;
-        Like likeDislike = new Like(false, true, user, null, commentaire);
-        return likeRepository.save(likeDislike);
-    }
-
-    @Override
-    public void removeLikeFromPublication(Integer idPub, Long idUser) {
-        Publication publication = publicationRepository.findById(idPub).orElse(null);
-        User user = userRepository.findById(idUser).orElse(null);
-        if (publication != null && user != null) {
-            Like like = likeRepository.findByPublicationAndUser(publication, user);
-            if (like != null) {
-                likeRepository.delete(like);
-            }
-        }
-    }
-
-    @Override
-    public void removeLikeFromCommentaire(Integer idComm, Long idUser) {
-        Commentaire commentaire =commentaireRepository.findById(idComm).orElse(null);
-        User user = userRepository.findById(idUser).orElse(null);
-        if (commentaire != null && user != null) {
-            Like like = likeRepository.findByCommentaireAndUser(commentaire, user);
-            if (like != null) {
-                likeRepository.delete(like);
-            }
-        }
-    }
-
-    @Override
-    public Like findByPublicationAndUser(Publication publication, User user) {
-        return likeRepository.findByPublicationAndUser(publication, user);
-    }
-
-    @Override
-    public Like findByCommentaireAndUser(Commentaire commentaire, User user) {
-        return likeRepository.findByCommentaireAndUser(commentaire, user);    }*/
-}
+        }*/

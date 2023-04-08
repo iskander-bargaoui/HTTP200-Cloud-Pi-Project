@@ -12,13 +12,16 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @ToString
 @Table(name = "likes")
+@Builder
 public class Like implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idlike;
+    private LikeType likeType;
 
     @JsonIgnore
     @ManyToOne
@@ -29,6 +32,7 @@ public class Like implements Serializable {
     @JoinColumn(name = "id_pub")
     private Publication publication;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_comm")
     private Commentaire commentaire;

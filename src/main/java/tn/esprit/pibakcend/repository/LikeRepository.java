@@ -7,6 +7,7 @@ import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface LikeRepository extends JpaRepository<Like,Integer> {
    /*
@@ -16,7 +17,9 @@ public interface LikeRepository extends JpaRepository<Like,Integer> {
     List<Like> findAllByCommentaireAndLikeStatusIsTrue(Commentaire commentaire);
     List<Like> findAllByCommentaireAndDislikeStatusIsTrue(Commentaire commentaire);
 
-    Like findByPublicationAndUser(Publication publication, User user);
     Like findByCommentaireAndUser(Commentaire commentaire, User user);*/
+
+    Optional<Like> findByPublicationAndUser(Publication publication, User user);
+
 
 }
