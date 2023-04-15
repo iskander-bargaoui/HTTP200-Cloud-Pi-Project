@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.security.Timestamp;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,12 +36,11 @@ public class Reservation implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long idReservation ;
     @Temporal(TemporalType.DATE)
-    @NotNull
     public Date dateReservetion;
 
 
-    @ManyToMany
-    public List<Profile> profileList = new ArrayList<>();
+    @ManyToOne
+    public User UserR ;
 
     @ManyToOne
     public Notification notification;

@@ -21,6 +21,7 @@ import java.util.Set;
 @Setter
 //// Constructor par defaults
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Notification implements Serializable {
     @Id

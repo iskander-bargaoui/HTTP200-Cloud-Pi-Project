@@ -13,4 +13,6 @@ public interface IReservation  {
     public List<Reservation> retrieveAllRes();
 
     public void deleteRes(long id) ;
+
+    public List<Reservation> findReservationsBefore24Hours () ;
 }

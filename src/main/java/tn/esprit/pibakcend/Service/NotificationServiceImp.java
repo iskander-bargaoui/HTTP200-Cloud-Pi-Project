@@ -13,7 +13,9 @@ public class NotificationServiceImp  implements INotification {
     NotificationRepository notificationRepository;
 
     @Override
+
     public Notification addNot(Notification N) {
+
         return notificationRepository.save(N);
     }
 

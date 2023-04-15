@@ -3,9 +3,8 @@ package tn.esprit.pibakcend.entities;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -15,17 +14,17 @@ import java.util.List;
 @ToString
 @Entity
 public class ChatMessage {
-@Id public int idmessage ;
-    private MessageType type;
-    private String content;
-    private String sender;
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+public long idmessage ;
 
-    public enum MessageType {
-        CHAT,
-        JOIN,
-        LEAVE
-    }
+    public String content;
+    public String sender;
 
+    public Long senderId;
+    public Long receiverId;
+
+    public LocalDateTime time;
     @OneToMany
     public List<User> users ;
 
