@@ -1,11 +1,12 @@
-package project.management.usersmanagement.RestController;
+package project.management.usersmanagement.controllers;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.Services.IUser;
+import project.management.usersmanagement.repository.UserRepository;
+import project.management.usersmanagement.security.services.IUser;
 import project.management.usersmanagement.entities.User;
 
 import java.util.List;
@@ -20,14 +21,14 @@ public class UserRestController {
 
     @Autowired
     IUser iUser;
+    @Autowired
+    UserRepository userRepository;
 
     @PostMapping("/addUser")
-    public User addSkieur(@RequestBody User user){
-        return iUser.addUser(user);
-    }
+    public User addUser(@RequestBody User user){ return iUser.addUser(user); }
 
     @PutMapping("/updateUser")
-    public User updateSkieur(@RequestBody User user ){
+    public User updateUser(@RequestBody User user ){
         return iUser.updateUser(user);
     }
 
@@ -38,7 +39,7 @@ public class UserRestController {
 
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping("/getAllUsers")
-    public List<User> retrieveAllSkieurs(){
+    public List<User> retrieveAllUsers(){
         return iUser.retrieveAllUsers();
     }
 
@@ -46,5 +47,6 @@ public class UserRestController {
     public void deleteUser(@PathVariable("id") Long id){
         iUser.deleteUser(id);
     }
+
 
 }

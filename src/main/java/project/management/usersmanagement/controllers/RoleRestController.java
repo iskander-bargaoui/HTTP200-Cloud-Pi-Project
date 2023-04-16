@@ -1,9 +1,11 @@
-package project.management.usersmanagement.RestController;
+package project.management.usersmanagement.controllers;
 
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.Services.IRole;
+import project.management.usersmanagement.security.services.IRole;
 import project.management.usersmanagement.entities.Role;
 
 import java.util.List;
@@ -18,6 +20,7 @@ public class RoleRestController {
     @Autowired
     IRole iRole;
 
+    // URL : http://localhost:8080/role/addRole
     @PostMapping("/addRole")
     public Role addRole(@RequestBody Role role){
         return iRole.addRole(role);
@@ -42,5 +45,13 @@ public class RoleRestController {
     public void deleteRole (@PathVariable("id") Long id){
         iRole.deleteRole(id);
     }
+
+    // Affecter un rôle à un utilisasteur
+    @PostMapping("/assignRoleToUser/{username}/{roleName}")
+    public Role assignSkieurToPiste(@PathVariable("username") String username, @PathVariable("roleName") String roleName)
+    {
+        return iRole.assignRoleToUser(username,roleName);
+    }
+
 
 }

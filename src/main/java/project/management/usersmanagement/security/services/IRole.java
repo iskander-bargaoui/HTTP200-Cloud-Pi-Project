@@ -1,4 +1,4 @@
-package project.management.usersmanagement.Services;
+package project.management.usersmanagement.security.services;
 
 import project.management.usersmanagement.entities.Role;
 
@@ -12,6 +12,7 @@ public interface IRole {
 
     List<Role> retrieveAllRoles();
     void deleteRole(Long id);
+    Role assignRoleToUser(String username, String roleName);
     /* Role assignRoleToUser(Long idUser, Long idRole); */
 
 }

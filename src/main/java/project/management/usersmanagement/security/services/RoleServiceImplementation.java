@@ -1,13 +1,14 @@
-package project.management.usersmanagement.Services;
+package project.management.usersmanagement.security.services;
 
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import project.management.usersmanagement.Repository.RoleRepository;
-import project.management.usersmanagement.Config.UserRepository;
-import project.management.usersmanagement.entities.Role;
+import project.management.usersmanagement.entities.ERole;
 import project.management.usersmanagement.entities.User;
+import project.management.usersmanagement.repository.RoleRepository;
+import project.management.usersmanagement.repository.UserRepository;
+import project.management.usersmanagement.entities.Role;
 
 import java.util.List;
 
@@ -44,6 +45,14 @@ public class RoleServiceImplementation implements IRole {
     @Override
     public void deleteRole(Long id) {
         roleRepository.deleteById(id);
+    }
+
+    @Override
+    public Role assignRoleToUser(String username, String roleName) {
+        User u = userRepository.findByUsername(username).orElse(null);
+        Role r = roleRepository.findByName(ERole.valueOf(roleName)).orElse(null);
+        u.getRoles().add(r);
+        return roleRepository.save(r);
     }
 
     /* @Override
