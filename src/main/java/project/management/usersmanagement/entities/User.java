@@ -59,6 +59,8 @@ public class User {
 
     private boolean connected;
 
+   // private boolean isEnabled;
+
     // Relation Many to Many with
 
     @ManyToMany(fetch = FetchType.LAZY)
