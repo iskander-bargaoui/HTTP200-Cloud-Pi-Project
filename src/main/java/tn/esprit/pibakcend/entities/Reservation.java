@@ -38,7 +38,6 @@ public class Reservation implements Serializable {
     @Temporal(TemporalType.DATE)
     public Date dateReservetion;
 
-
     @ManyToOne
     public User UserR ;
 
