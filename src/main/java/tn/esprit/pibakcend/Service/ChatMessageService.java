@@ -23,9 +23,16 @@ public class ChatMessageService implements IChatMessageService {
 
     private final DataSource dataSource;
     public ChatMessageRepository messageRepository;
-    @Override
+    public List<ChatMessage> a ;
     public ChatMessage saveMessage(ChatMessage ChatMessage) {
        return messageRepository.save(ChatMessage);
+    }
+
+    @Override
+    public List<ChatMessage> getAllMessagesBySenderAndReceiverIds(long senderId, long receiverId) {
+        String query = "SELECT * FROM messages WHERE (sender_id=senderId AND receiver_id=receiverId) ORDER BY time ASC;";
+        List<ChatMessage> messages = new ArrayList<>();
+        return messages;
     }
 
     @Override
