@@ -8,8 +8,5 @@ import java.util.List;
 
 public interface IChatMessageService  {
     public ChatMessage saveMessage(ChatMessage ChatMessage);
-
-    public List <ChatMessage> getAllMessagesBySenderAndReceiverIds(long senderId, long receiverId);
-
     public List<ChatMessage> retrieveByIds (Long senderId ,Long receiverId ) ;
 }
