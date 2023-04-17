@@ -38,6 +38,10 @@ public class Reservation implements Serializable {
     @Temporal(TemporalType.DATE)
     public Date dateReservetion;
 
+<<<<<<< HEAD
+=======
+//ksdhgcxvb lcsjhdxc kjsl,d
+>>>>>>> 4e7d8629538f887d954f74c40af909d2a5f2f5a8
     @ManyToOne
     public User UserR ;
 

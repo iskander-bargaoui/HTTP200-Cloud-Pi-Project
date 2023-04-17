@@ -25,7 +25,7 @@ public class ReservationRestController {
     @PostMapping("/AddRes")
 
     public Reservation addRes(@RequestBody Reservation A) throws MessagingException {
-        iReservation.sendHtmlEmail(A);
+       // iReservation.sendHtmlEmail(A);
         return iReservation.addRes(A);
     }
 
