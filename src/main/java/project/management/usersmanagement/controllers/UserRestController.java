@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import project.management.usersmanagement.payload.request.PasswordRequest;
 import project.management.usersmanagement.repository.UserRepository;
 import project.management.usersmanagement.security.services.IUser;
 import project.management.usersmanagement.entities.User;
@@ -15,15 +16,13 @@ import java.util.List;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
-@Slf4j
-
 public class UserRestController {
 
     @Autowired
     IUser iUser;
-    @Autowired
-    UserRepository userRepository;
 
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user){ return iUser.addUser(user); }
 
@@ -32,15 +31,17 @@ public class UserRestController {
         return iUser.updateUser(user);
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/getUserById/{id}")
     public User retrieveUserById(@PathVariable("id") Long id){
         return iUser.retrieveUserById(id);
     }
 
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    @GetMapping("/getAllUsers")
-    public List<User> retrieveAllUsers(){
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @GetMapping("/allUsers")
+    public List<User> retrieveAllUsers() {
         return iUser.retrieveAllUsers();
+
     }
 
     @DeleteMapping("/delUser/{id}")
@@ -48,5 +49,13 @@ public class UserRestController {
         iUser.deleteUser(id);
     }
 
+    @PutMapping("/updatepassword/{emailUser}")
+    String updatePassword(@PathVariable("emailUser") String emailUser, @RequestBody PasswordRequest Password) {
+      return  iUser.updatePassword(emailUser, Password.getCurrentPassword(), Password.getNewPassword());
+    }
 
+    @GetMapping("/sendme/{emailUser}")
+    public void forgotpass(@PathVariable("emailUser") String emailUser) {
+        iUser.forgotpass(emailUser);
+    }
 }

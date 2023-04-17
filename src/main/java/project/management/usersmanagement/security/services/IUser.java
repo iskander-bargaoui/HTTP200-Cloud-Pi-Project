@@ -21,4 +21,10 @@ public interface IUser {
     //**********Partie Statistiques***********
     List<User> retrieveUserByAddress(String adressUser);
     public long retrieveUserByCount();
+
+    // Mot de passe à jour
+    String updatePassword(String emailUser, String newPassword, String confirmPassword);
+    // Mot de passe oublié
+    void forgotpass(String emailuser);
+
 }

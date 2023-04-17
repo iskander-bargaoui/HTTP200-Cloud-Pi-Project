@@ -9,8 +9,6 @@ import java.io.Serializable;
 
 @Data // @Getter + Setter + ToString + Equals and HashCode + RequiredArgsConstructor
 @Table(name = "roles")
-@Getter
-@Setter
 @AllArgsConstructor
 @Entity
 

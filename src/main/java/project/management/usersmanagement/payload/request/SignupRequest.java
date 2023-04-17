@@ -14,7 +14,6 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 // Classe qui contient les paramétres du SignUp  : Création d'un nouveau compte Utilisateur
 
 public class SignupRequest {
@@ -30,11 +29,9 @@ public class SignupRequest {
   private Set<String> role;
 
   @NotBlank
-  @NonNull
   private String nom;
 
   @NotBlank
-  @NonNull
   private String prenom;
 
   @NotBlank
@@ -49,4 +46,6 @@ public class SignupRequest {
   private String password;
 
   private Date birthDate;
+
+  //    private String verificationCode;
 }

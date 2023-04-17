@@ -11,8 +11,6 @@ import javax.validation.constraints.Size;
 import java.util.*;
 
 @Data // @Getter + Setter + ToString + Equals and HashCode + RequiredArgsConstructor
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -46,6 +44,7 @@ public class User {
     @NotNull
     @Size(min = 4 , max = 20 )
     private String password;
+    //protected String confirmPasswordUser;
 
     @Size (max = 50)
     private String address;

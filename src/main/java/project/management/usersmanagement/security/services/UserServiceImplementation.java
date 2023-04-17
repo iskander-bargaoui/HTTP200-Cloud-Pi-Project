@@ -1,6 +1,7 @@
 package project.management.usersmanagement.security.services;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import project.management.usersmanagement.entities.ERole;
@@ -17,20 +19,20 @@ import project.management.usersmanagement.repository.RoleRepository;
 import project.management.usersmanagement.repository.UserRepository;
 import project.management.usersmanagement.entities.User;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.*;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Slf4j
 
     public class UserServiceImplementation implements IUser, UserDetailsService{
 
     UserRepository userRepository;
     RoleRepository roleRepository;
-    private final PasswordEncoder passwordEncoder;
+
     @Override
     public User addUser(User user) { return userRepository.save(user); }
 
@@ -44,6 +46,8 @@ import java.util.Optional;
 
     @Override
     public List<User> retrieveAllUsers() {
+        List<User> l=userRepository.findAll();
+        System.out.println(l.size());
         return userRepository.findAll();
     }
 
@@ -78,9 +82,65 @@ import java.util.Optional;
     @Scheduled(fixedDelay = 1000)
 
     public long retrieveUserByCount() {
-        log.info("nb users : "+userRepository.count());
+       log.info("nb users : "+userRepository.count());
         return userRepository.count();
     }
+
+    @Override
+    public String updatePassword(String emailUser, String CurrentPassword, String confirmPassword) {
+        Optional<User> u = userRepository.findByEmail(emailUser);
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        if (passwordEncoder.matches(CurrentPassword,u.get().getPassword()))
+        {
+            System.out.println("Pass Matches");
+            String encodedPassword = passwordEncoder.encode(confirmPassword);
+            u.get().setPassword(encodedPassword);
+        }
+        else
+        {return "Password Doesn't Match";}
+            userRepository.save(u.get());
+        return "User Password Updated";
+    }
+
+    @Override
+    public void forgotpass(String emailuser) {
+        Optional<User> d = userRepository.findByEmail(emailuser);
+
+        final String username = "http200pi@gmail.com";
+        final String password = "kmeswtcspgqigwsh";
+
+        Properties prop = new Properties();
+        prop.put("mail.smtp.host", "smtp.gmail.com");
+        prop.put("mail.smtp.port", "587");
+        prop.put("mail.smtp.auth", "true");
+        prop.put("mail.smtp.starttls.enable", "true"); // TLS
+        prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+
+        Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
+            }
+        });
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("http200pi@gmail.com"));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(emailuser));
+            message.setSubject("Reset Your Password");
+            message.setText("This a non reply message from CareerTN\n " + "Dear Client \n"
+                    + "Please click on the following link to reset your password: \n" + "http://localhost:8080/updatepassword/");
+
+            Transport.send(message);
+
+            log.info("Done");
+
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
