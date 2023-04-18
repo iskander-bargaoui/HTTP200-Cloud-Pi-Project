@@ -2,6 +2,7 @@ package tn.esprit.pibakcend.RestController;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.Service.IFormation;
 import tn.esprit.pibakcend.entities.Formation;
@@ -15,6 +16,7 @@ public class FormationRestController {
 
     @PostMapping("addFormation")
     public Formation addFormation(@RequestBody Formation Fo){
+
         return iFormation.addFormation(Fo);
     }
 
@@ -36,6 +38,12 @@ public class FormationRestController {
     @DeleteMapping("deleteFormation/{id}")
     public void deleteFormation(@PathVariable("id") Integer id){
         iFormation.deleteFormation(id);
+    }
+
+    @PostMapping("/Formation/{idFormation}/rate")
+    public ResponseEntity<Void> rateEvent(@PathVariable Integer idFormation, @RequestParam int value) {
+        iFormation.rateEvent(idFormation, value);
+        return ResponseEntity.ok().build();
     }
 
 }

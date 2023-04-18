@@ -29,5 +29,7 @@ public class User implements Serializable {
     private Date birthDate ;
     @ManyToMany
     private Set<Role> roles;
+    @ManyToMany
+    private Set<Evenement> evenements;
 
 }

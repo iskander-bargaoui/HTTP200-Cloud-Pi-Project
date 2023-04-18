@@ -11,4 +11,6 @@ public interface IFormation {
     Formation retrieveFormationById(Integer id);
     List<Formation> retrieveAllFormation();
     void deleteFormation(Integer id);
+    void rateEvent(Integer id, int value);
+
 }
