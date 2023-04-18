@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.config.documentation;
+package tn.esprit.pibakcend.config.documentation;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,13 +20,13 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
         		.apiInfo(getApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.webtutsplus.ecommerce"))
+                .apis(RequestHandlerSelectors.basePackage("com.http.200"))
                 .paths(PathSelectors.any())
                 .build();
     }
 	
 	private ApiInfo getApiInfo() {
-        Contact contact = new Contact("webtutsplus", "http://webtutsplus.com", "contact.webtutsplus@gmail.com");
+        Contact contact = new Contact("Http200", "http://http200.com", "contact.http200@gmail.com");
         return new ApiInfoBuilder()
                 .title("Ecommerce API")
                 .description("Documentation Ecommerce api")

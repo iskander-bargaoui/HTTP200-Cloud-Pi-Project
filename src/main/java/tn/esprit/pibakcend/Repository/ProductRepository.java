@@ -1,8 +1,8 @@
-package com.webtutsplus.ecommerce.repository;
+package tn.esprit.pibakcend.Repository;
 
-import com.webtutsplus.ecommerce.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import tn.esprit.pibakcend.entities.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {

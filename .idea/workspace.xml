@@ -4,6 +4,146 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="b6e2388c-99ac-4f56-9a7a-48446e415ab9" name="Changes" comment="" />
+    <list default="true" id="cd0da826-5dfa-4fd0-9e8e-fa8237c3815e" name="Changes" comment="Initial commit">
+      <changelist_data name="iskander" email="92636106+iskander-bargaoui@users.noreply.github.com" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/Categoryrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/Categoryrepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/OrderItemsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/OrderItemsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/TokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/TokenRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/WishListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/WishListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/OrderItemsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/OrderItemsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/WishListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/WishListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/common/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/common/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/MessageStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/MessageStrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/Webconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/Webconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/documentation/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/documentation/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/WishListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/WishListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/ResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/cart/AddToCartDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/cart/AddToCartDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/cart/CartDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/cart/CartDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/cart/CartItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/cart/CartItemDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/checkout/CheckoutItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/checkout/CheckoutItemDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/checkout/StripeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/checkout/StripeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/AuthenticationFailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/AuthenticationFailException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CartItemNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CartItemNotExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionHandlerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionHandlerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/OrderNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/OrderNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ProductNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ProductNotExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/StorageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/StorageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/UpdateFailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/UpdateFailException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/order/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/order/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/order/OrderItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/order/OrderItemsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/product/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/product/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/AuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/AuthenticationToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/FileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/WishList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/WishList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/utils/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/EcommerceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/AuthenticationToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Cart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Commentaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Evenement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Feedback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/FileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Formation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Notification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/OrderItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/Entity/WishList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/ServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/common/ApiResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/config/MessageStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/config/Webconfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/config/Webconfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/config/documentation/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/controller/CartController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/controller/WishListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/ResponseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/cart/AddToCartDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/cart/CartDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/cart/CartItemDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/checkout/CheckoutItemDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/checkout/StripeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/order/OrderDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/order/OrderItemsDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/product/ProductDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/user/SignInDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/user/SignInResponseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/user/SignupDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/user/UserCreateDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/dto/user/UserUpdateDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/enums/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/AuthenticationFailException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/CartItemNotExistException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/CustomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/ExceptionControllerAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/ExceptionHandlerAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/OrderNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/ProductNotExistException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/StorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/UpdateFailException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/exceptions/ValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/AuthenticationToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/Cart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/FileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/OrderItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/model/WishList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/CartRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/Categoryrepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/OrderItemsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/OrderRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/TokenRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/repository/WishListRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/AuthenticationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/CartService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/OrderItemsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/service/WishListService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/utils/Helper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+    </list>
     <list default="true" id="cd0da826-5dfa-4fd0-9e8e-fa8237c3815e" name="Changes" comment="Initial commit">
       <changelist_data name="iskander" email="92636106+iskander-bargaoui@users.noreply.github.com" />
       <change afterPath="$PROJECT_DIR$/.idea/$PROJECT_FILE$" afterDir="false" />
@@ -194,6 +334,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"></component>{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Gestion de commande/ecommerce-backend-master&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
@@ -206,6 +352,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/user/Downloads/QueriesSpring",
     "last_opened_file_path": "C:/Users/user/GitHUBB/HTTP200-Cloud-Pi-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -221,7 +368,8 @@
       "mysql"
     ]
   }
-}]]></component>
+}]]>
+  </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -324,6 +472,7 @@
       <workItem from="1681763641056" duration="2415000" />
       <workItem from="1681780111247" duration="110000" />
       <workItem from="1681780288731" duration="820000" />
+      <workItem from="1681793294308" duration="9620000" />
       <workItem from="1681793294308" duration="6094000" />
     </task>
     <servers />

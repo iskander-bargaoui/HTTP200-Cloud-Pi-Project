@@ -1,9 +1,9 @@
-package com.webtutsplus.ecommerce.repository;
+package tn.esprit.pibakcend.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import tn.esprit.pibakcend.entities.Category;
 
-import com.webtutsplus.ecommerce.model.Category;
 
 @Repository
 public interface Categoryrepository extends JpaRepository<Category, Integer> {

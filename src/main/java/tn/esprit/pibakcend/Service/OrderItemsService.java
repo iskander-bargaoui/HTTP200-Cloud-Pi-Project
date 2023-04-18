@@ -1,9 +1,9 @@
-package com.webtutsplus.ecommerce.service;
+package tn.esprit.pibakcend.Service;
 
-import com.webtutsplus.ecommerce.model.OrderItem;
-import com.webtutsplus.ecommerce.repository.OrderItemsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.OrderItemsRepository;
+import tn.esprit.pibakcend.entities.OrderItem;
 
 import javax.transaction.Transactional;
 

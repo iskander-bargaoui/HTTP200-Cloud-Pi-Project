@@ -1,13 +1,14 @@
-package com.webtutsplus.ecommerce.Entity;
+package tn.esprit.pibakcend.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.webtutsplus.ecommerce.dto.product.ProductDto;
+import tn.esprit.pibakcend.dto.product.ProductDto;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@Entity(name = "products")
+@Entity
+@Table(name = "products")
 public class Product {
 
     @Id
@@ -32,9 +33,6 @@ public class Product {
     @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     private List<Cart> carts;
-
-
-
 
 
     public Product(ProductDto productDto, Category category) {

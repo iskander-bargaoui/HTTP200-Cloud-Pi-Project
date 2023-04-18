@@ -1,3 +1,4 @@
+package tn.esprit.pibakcend.dto.exceptions;
 package com.webtutsplus.ecommerce.exceptions;
 
 import org.springframework.http.HttpStatus;

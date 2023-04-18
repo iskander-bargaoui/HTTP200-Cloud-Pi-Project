@@ -1,19 +1,18 @@
-package com.webtutsplus.ecommerce.controller;
-
-
-import com.webtutsplus.ecommerce.common.ApiResponse;
-import com.webtutsplus.ecommerce.dto.product.ProductDto;
-import com.webtutsplus.ecommerce.model.Product;
-import com.webtutsplus.ecommerce.model.WishList;
-import com.webtutsplus.ecommerce.service.AuthenticationService;
-import com.webtutsplus.ecommerce.service.ProductService;
-import com.webtutsplus.ecommerce.service.WishListService;
+package tn.esprit.pibakcend.controllers;;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.pibakcend.Service.AuthenticationService;
+import tn.esprit.pibakcend.Service.ProductService;
+import tn.esprit.pibakcend.Service.WishListService;
+import tn.esprit.pibakcend.common.ApiResponse;
+import tn.esprit.pibakcend.dto.product.ProductDto;
+import tn.esprit.pibakcend.entities.Product;
+import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.entities.WishList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +29,8 @@ public class WishListController {
 
         @GetMapping("/{token}")
         public ResponseEntity<List<ProductDto>> getWishList(@PathVariable("token") String token) {
-                int user_id = authenticationService.getUser(token).getId();
-                List<WishList> body = wishListService.readWishList(user_id);
+                Long user_id = authenticationService.getUser(token).getId();
+                List<WishList> body = wishListService.readWishList(Math.toIntExact(user_id));
                 List<ProductDto> products = new ArrayList<ProductDto>();
                 for (WishList wishList : body) {
                         products.add(ProductService.getDtoFromProduct(wishList.getProduct()));

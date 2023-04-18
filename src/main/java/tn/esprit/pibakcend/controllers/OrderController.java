@@ -1,15 +1,7 @@
-package com.webtutsplus.ecommerce.controller;
+package tn.esprit.pibakcend.controllers;
 
 import com.stripe.exception.StripeException;
 import com.stripe.model.checkout.Session;
-import com.webtutsplus.ecommerce.common.ApiResponse;
-import com.webtutsplus.ecommerce.dto.checkout.CheckoutItemDto;
-import com.webtutsplus.ecommerce.dto.checkout.StripeResponse;
-import com.webtutsplus.ecommerce.exceptions.AuthenticationFailException;
-import com.webtutsplus.ecommerce.exceptions.OrderNotFoundException;
-import com.webtutsplus.ecommerce.model.Order;
-import com.webtutsplus.ecommerce.service.AuthenticationService;
-import com.webtutsplus.ecommerce.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +12,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import tn.esprit.pibakcend.Service.AuthenticationService;
+import tn.esprit.pibakcend.Service.OrderService;
+import tn.esprit.pibakcend.common.ApiResponse;
+import tn.esprit.pibakcend.dto.checkout.CheckoutItemDto;
+import tn.esprit.pibakcend.dto.checkout.StripeResponse;
+import tn.esprit.pibakcend.dto.exceptions.OrderNotFoundException;
+import tn.esprit.pibakcend.entities.Order;
+import tn.esprit.pibakcend.entities.User;
 
+import javax.mail.AuthenticationFailedException;
 import java.util.List;
 
 @RestController
@@ -46,7 +47,7 @@ public class OrderController {
     // place order after checkout
     @PostMapping("/add")
     public ResponseEntity<ApiResponse> placeOrder(@RequestParam("token") String token, @RequestParam("sessionId") String sessionId)
-            throws AuthenticationFailException {
+            throws AuthenticationFailedException {
         // validate token
         authenticationService.authenticate(token);
         // retrieve user
@@ -58,7 +59,7 @@ public class OrderController {
 
     // get all orders
     @GetMapping("/")
-    public ResponseEntity<List<Order>> getAllOrders(@RequestParam("token") String token) throws AuthenticationFailException {
+    public ResponseEntity<List<Order>> getAllOrders(@RequestParam("token") String token) throws AuthenticationFailedException {
         // validate token
         authenticationService.authenticate(token);
         // retrieve user
@@ -73,7 +74,7 @@ public class OrderController {
     // get orderitems for an order
     @GetMapping("/{id}")
     public ResponseEntity<Object> getOrderById(@PathVariable("id") Integer id, @RequestParam("token") String token)
-            throws AuthenticationFailException {
+            throws AuthenticationFailedException {
         // validate token
         authenticationService.authenticate(token);
         try {

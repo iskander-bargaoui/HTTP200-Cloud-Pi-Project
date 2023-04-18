@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.config;
+package tn.esprit.pibakcend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

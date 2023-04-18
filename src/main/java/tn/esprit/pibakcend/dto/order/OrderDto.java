@@ -1,6 +1,7 @@
-package com.webtutsplus.ecommerce.dto.order;
+package tn.esprit.pibakcend.dto.order;
 
-import com.webtutsplus.ecommerce.model.Order;
+import tn.esprit.pibakcend.entities.Order;
+
 import javax.validation.constraints.NotNull;
 
 public class OrderDto {

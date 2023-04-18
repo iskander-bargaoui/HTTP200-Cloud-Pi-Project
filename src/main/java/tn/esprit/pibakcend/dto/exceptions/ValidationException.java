@@ -1,3 +1,4 @@
+package tn.esprit.pibakcend.dto.exceptions;
 package com.webtutsplus.ecommerce.exceptions;
 
 public class ValidationException extends RuntimeException{

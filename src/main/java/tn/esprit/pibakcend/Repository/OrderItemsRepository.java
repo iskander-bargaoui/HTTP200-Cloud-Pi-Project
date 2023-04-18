@@ -1,7 +1,7 @@
-package com.webtutsplus.ecommerce.repository;
+package tn.esprit.pibakcend.Repository;
 
-import com.webtutsplus.ecommerce.model.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;
+import tn.esprit.pibakcend.entities.OrderItem;
 
 public interface OrderItemsRepository extends JpaRepository<OrderItem,Integer> {
 }

@@ -1,13 +1,16 @@
-package com.webtutsplus.ecommerce.service;
+package tn.esprit.pibakcend.Service;
 
-import com.webtutsplus.ecommerce.dto.cart.AddToCartDto;
-import com.webtutsplus.ecommerce.dto.cart.CartDto;
-import com.webtutsplus.ecommerce.dto.cart.CartItemDto;
-import com.webtutsplus.ecommerce.exceptions.CartItemNotExistException;
-import com.webtutsplus.ecommerce.model.*;
-import com.webtutsplus.ecommerce.repository.CartRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.CartRepository;
+import tn.esprit.pibakcend.dto.cart.AddToCartDto;
+import tn.esprit.pibakcend.dto.cart.CartDto;
+import tn.esprit.pibakcend.dto.cart.CartItemDto;
+import tn.esprit.pibakcend.dto.exceptions.CartItemNotExistException;
+import tn.esprit.pibakcend.entities.Cart;
+import tn.esprit.pibakcend.entities.Product;
+import tn.esprit.pibakcend.entities.User;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -19,7 +22,7 @@ import java.util.List;
 public class CartService {
 //carta
     @Autowired
-    private  CartRepository cartRepository;
+    private CartRepository cartRepository;
 
     public CartService(){}
 
