@@ -1,7 +1,6 @@
 package tn.esprit.pibakcend.entities;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -28,12 +27,10 @@ public class Evenement implements Serializable {
     private Date dateFin;
     private String Lieu;
 
-    @ManyToMany
-    @JsonIgnore
+
+    @ManyToMany (mappedBy = "evenements")
     private Set<User> utilisateurs;
 
     @ManyToMany
-    @JsonIgnore
     private Set<Formation> formations;
-
 }

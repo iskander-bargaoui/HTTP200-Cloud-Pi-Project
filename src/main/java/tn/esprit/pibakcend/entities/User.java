@@ -13,6 +13,11 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import lombok.*;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.*;
 
 @Data // @Getter + Setter + ToString + Equals and HashCode + RequiredArgsConstructor
 @AllArgsConstructor
@@ -94,4 +99,25 @@ public class User {
         this.birthDate=birthDate;
 
     }
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Set<Publication> publications ;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Commentaire> commentaires;
+
+    @ManyToMany
+    @JsonIgnore
+    @JoinTable(
+            name = "favorite_publications",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "id_Pub"))//badlt houni
+    private Set<Publication> favoritePublications = new HashSet<>();
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Activity> activities = new HashSet<>();
+
 }

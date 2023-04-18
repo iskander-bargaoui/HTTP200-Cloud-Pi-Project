@@ -28,9 +28,9 @@ public class Formation implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateFinFor;
 
-    @ManyToMany (mappedBy = "formations")
+  /*  @ManyToMany (mappedBy = "formations")
     @JsonIgnore
     private Set<Evenement> evenementss;
-
+*/
 
 }
