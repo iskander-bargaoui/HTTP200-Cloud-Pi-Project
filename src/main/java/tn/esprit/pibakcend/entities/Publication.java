@@ -8,6 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -40,6 +41,9 @@ public class Publication implements Serializable {
     private Integer dislikeCount;
 
     private boolean isFavorite;
+
+    @Column(name = "favorite_date")
+    private LocalDateTime favoriteDate;
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
@@ -55,5 +59,8 @@ public class Publication implements Serializable {
     @JsonIgnore
     @ManyToMany(mappedBy = "favoritePublications")
     private Set<User> favoriteUsers = new HashSet<>();
+    @JsonIgnore
+    @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
+    private Set<Activity> activities = new HashSet<>();
 
 }

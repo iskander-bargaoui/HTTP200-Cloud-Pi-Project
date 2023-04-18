@@ -75,10 +75,67 @@ public class LikeServiceImp implements  ILike{
         return publication;
     }
 
+    @Override
+    public Commentaire ToggleLikesC(Integer idComm, LikeType likeType, Long idUser) {
+        Commentaire commentaire = commentaireRepository.findById(idComm)
+                .orElseThrow(() -> new IllegalArgumentException("Publication Not Found with ID - " + idComm));
+        User user = userRepository.findById(idUser)
+                .orElseThrow(() -> new IllegalArgumentException("User Not Found with ID - " + idUser));
+
+        // Retrieve existing like for the given publication and user (if any)
+        Optional<Like> likeOptional = likeRepository.findByCommentaireAndUser(commentaire, user);
+
+        if (likeOptional.isPresent()) { // Existing like found
+            Like existingLike = likeOptional.get();
+
+            if (existingLike.getLikeType().equals(likeType)) {
+                // Delete existing like
+                likeRepository.delete(existingLike);
+                if (likeType.equals(LikeType.LIKE)) {
+                    commentaire.setLikeCount(commentaire.getLikeCount() - 1);
+                } else {
+                    commentaire.setDislikeCount(commentaire.getDislikeCount() - 1);
+                }
+
+            } else {
+                existingLike.setLikeType(likeType);
+                likeRepository.save(existingLike);
+                if (likeType.equals(LikeType.LIKE)) {
+                    commentaire.setLikeCount(commentaire.getLikeCount() + 1);
+                    commentaire.setDislikeCount(commentaire.getDislikeCount() - 1);
+                } else {
+                    commentaire.setLikeCount(commentaire.getLikeCount() - 1);
+                    commentaire.setDislikeCount(commentaire.getDislikeCount() + 1);
+                }
+            }
+        } else { // No existing like found
+            // Create new like and save it to the database
+            Like newLike = mapToLikeC(commentaire, likeType, user);
+            likeRepository.save(newLike);
+
+            // Update publication's like count
+            if (likeType.equals(LikeType.LIKE)) {
+                commentaire.setLikeCount(commentaire.getLikeCount() + 1);
+            } else {
+                commentaire.setDislikeCount(commentaire.getDislikeCount() + 1);
+            }
+        }
+
+        commentaireRepository.save(commentaire);
+        return commentaire;
+    }
+
     private Like mapToLike(Publication publication, LikeType likeType, User user) {
         return Like.builder()
                 .likeType(likeType)
                 .publication(publication)
+                .user(user)
+                .build();
+    }
+    private Like mapToLikeC(Commentaire commentaire, LikeType likeType, User user) {
+        return Like.builder()
+                .likeType(likeType)
+                .commentaire(commentaire)
                 .user(user)
                 .build();
     }

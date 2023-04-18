@@ -43,7 +43,11 @@ public class User implements Serializable {
     @JoinTable(
             name = "favorite_publications",
             joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "idPub"))
+            inverseJoinColumns = @JoinColumn(name = "id_Pub"))//badlt houni
     private Set<Publication> favoritePublications = new HashSet<>();
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Activity> activities = new HashSet<>();
 
 }

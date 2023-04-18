@@ -2,12 +2,12 @@ package tn.esprit.pibakcend.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.pibakcend.entities.Commentaire;
-import tn.esprit.pibakcend.entities.Publication;
-import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.entities.*;
+import tn.esprit.pibakcend.repository.ActivityRepository;
 import tn.esprit.pibakcend.repository.PublicationRepository;
 import tn.esprit.pibakcend.repository.UserRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,10 +17,16 @@ public class PublicationServiceImp implements IPublication{
     PublicationRepository publicationRepository;
     UserRepository userRepository;
 
+    IActivity iActivity;
+    ActivityRepository activityRepository;
+
     @Override
     public Publication addPub(Publication pub, Long idUser) {
-        pub.setUser(userRepository.findById(idUser).orElse(null));
-        return publicationRepository.save(pub);
+        User user = userRepository.findById(idUser).orElse(null);
+        pub.setUser(user);
+        Publication createdPub= publicationRepository.save(pub);
+       // iActivity.logActivity(user, ActivityType.CREATE_PUBLICATION, createdPub, null);
+        return  createdPub;
     }
 
     @Override
@@ -50,34 +56,6 @@ public class PublicationServiceImp implements IPublication{
         return publicationRepository.findAll().stream().filter(x -> x.getUser().getId() == idUser).collect(Collectors.toList());
     }
 
-    @Override
-    public Publication setFavoritePublication(Integer idPub, Long idUser) {
-        Publication publication = publicationRepository.findById(idPub).orElse(null);
-        User user = userRepository.findById(idUser).orElse(null);
-
-
-        return publication;
-    }
-
-    @Override
-    public List<Publication> PubHistory(Integer idPub, Long idUser) {
-        return null;
-    }
-
-    @Override
-    public boolean checkForProfanity(String text) {
-        return false;
-    }
-
 
 }
-   /* @Override
-    public Publication assignPublicationToUser(Integer idPub, Long idUser) {
-        Publication publication = publicationRepository.findById(idPub).orElse(null);
-        User user = userRepository.findById(idUser).orElse(null);
-
-        user.getPublications().add(publication);
-        return publicationRepository.save(publication);
-
-    }*/
 

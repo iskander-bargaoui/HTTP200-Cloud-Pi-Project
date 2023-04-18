@@ -31,5 +31,6 @@ public interface ILike {
     Like retrieveLikeDislikeByUserIdAndCommentaireId(long userId, long commentaireId);*/
 
     public Publication ToggleLikesP (Integer idPub , LikeType likeType , Long idUser);
+    public Commentaire ToggleLikesC (Integer idComm , LikeType likeType , Long idUser);
 
 }

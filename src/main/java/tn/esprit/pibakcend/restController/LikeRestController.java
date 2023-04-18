@@ -19,58 +19,17 @@ public class LikeRestController {
     LikeRepository likeRepository;
 
     PublicationRepository publicationRepository;
-
-    //LikeServiceImp likeServiceImp;
-
     ILike iLike;
 
-    // Endpoint for liking a publication
-   /* @PostMapping("/AddLikeToPublication/{idPub}")
-    public ResponseEntity<Like> addLikeToPublication(@PathVariable Integer idPub, @RequestParam Long idUser) {
-        Like like = iLike.addLikeToPublication(idPub, idUser);
-        return ResponseEntity.ok(like);
-    }
-    @PostMapping("/AddDislikeToPublication/{idPub}")
-    public ResponseEntity<Like> addDislikeToPublication(@PathVariable Integer idPub, @RequestParam Long idUser) {
-        Like dislike = iLike.addDisLikeToPublication(idPub, idUser);
-        return ResponseEntity.ok(dislike);
-    }
 
-    @PostMapping("/AddLikeToCommentaire/{idComm}")
-    public ResponseEntity<Like> addLikeToCommentaire(@PathVariable Integer idComm, @RequestParam Long idUser) {
-        Like like = iLike.addLikeToCommentaire(idComm, idUser);
-        return ResponseEntity.ok(like);
-    }
-
-    @PostMapping("/AddDislikeToCommentaire/{idComm}")
-    public ResponseEntity<Like> addDislikeToCommentaire(@PathVariable Integer idComm, @RequestParam Long idUser) {
-        Like dislike = iLike.addDisLikeToCommentaire(idComm, idUser);
-        return ResponseEntity.ok(dislike);
-    }
-    @DeleteMapping("/RemoveLikeFromPublication/{idPub}/{idUser}")
-    public ResponseEntity<String> removeLikeFromPublication(@PathVariable Integer idPub, @PathVariable Long idUser) {
-        iLike.removeLikeFromPublication(idPub, idUser);
-        return ResponseEntity.ok("Like removed successfully");
-    }
-    @DeleteMapping("/RemoveLikeFromCommentaire/{idComm}/{idUser}")
-    public ResponseEntity<String> removeLikeFromCommentaire(@PathVariable Integer idComm, @PathVariable Long idUser) {
-        iLike.removeLikeFromCommentaire(idComm, idUser);
-        return ResponseEntity.ok("Like removed successfully");
-    }
-
-    @GetMapping("/GetAllLikeDislike")
-    public List<Like> retrieveAllLikeDislike() {
-        return iLike.retrieveAllLikeDislike();
-    }*/
-
-    /*@PostMapping("/ToggleLikes/{idPub}/{idUser}")
-    public Publication ToggleLikes (@PathVariable("idPub") Integer idPub ,@PathVariable("idUser") Long idUser){
-        return iLike.ToggleLikes(idPub,idUser);
-    }*/
-
-    @PostMapping("/ToggleLikes/{idPub}/{idUser}")
-    public Publication ToggleLikes(@PathVariable("idPub") Integer idPub, @RequestParam LikeType likeType, @PathVariable("idUser") Long idUser) {
+    @PostMapping("/ToggleLikesP/{idPub}/{idUser}")
+    public Publication ToggleLikesP(@PathVariable("idPub") Integer idPub, @RequestParam LikeType likeType, @PathVariable("idUser") Long idUser) {
         return iLike.ToggleLikesP(idPub, likeType, idUser);
+
+    }
+    @PostMapping("/Comms/{idComm}/{idUser}")
+    public Commentaire ToggleLikesC(@PathVariable("idComm") Integer idComm, @RequestParam LikeType likeType, @PathVariable("idUser") Long idUser) {
+        return iLike.ToggleLikesC(idComm, likeType, idUser);
 
     }
 }

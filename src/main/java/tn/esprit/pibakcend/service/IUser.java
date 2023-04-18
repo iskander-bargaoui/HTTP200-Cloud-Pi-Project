@@ -10,4 +10,8 @@ public interface IUser {
 
     public List<Publication> getFavoritePublicationsByUserId(Long idUser);
 
-    }
+    public void deleteExpiredFavoritePublications();
+
+
+
+}
