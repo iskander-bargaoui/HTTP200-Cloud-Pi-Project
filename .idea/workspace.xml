@@ -4,12 +4,332 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="b6e2388c-99ac-4f56-9a7a-48446e415ab9" name="Changes" comment="" />
+=======
+    <list default="true" id="cd0da826-5dfa-4fd0-9e8e-fa8237c3815e" name="Changes" comment="Initial commit">
+      <changelist_data name="iskander" email="92636106+iskander-bargaoui@users.noreply.github.com" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/Pi-bakcend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/GestionDeCommandeApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Repository/CartItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Repository/CommandeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Repository/LivreurRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Repository/PanierRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Repository/ShoppingCartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/RestController/CateItemRestcontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/RestController/CommandeRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/RestController/LivreurRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/RestController/PanierRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/CartItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/CartItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/CommandeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/Icommande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/Ilivreur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/Ipanier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/LivreurService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/Service/PanierService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Categorie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/CategorieProduit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Commande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/CommandeStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Commentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Countstatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Evenement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Formation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Livreur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Panier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Produit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Publication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/RoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/java/com/example/pi/entities/Visibilite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/GestionDeCommandeApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Repository/CartItemRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Repository/CommandeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Repository/LivreurRepo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Repository/PanierRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Repository/ShoppingCartRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/RestController/CommandeRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/RestController/LivreurRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/RestController/PanierRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/CommandeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/Icommande.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/Ilivreur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/Ipanier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/LivreurService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/PanierService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/ShoppingCartService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/Service/ShoppingCartServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/CartItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Categorie.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/CategorieProduit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Commande.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/CommandeStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Commentaire.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Countstatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Evenement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Feedback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Formation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Livreur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Notification.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Panier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Produit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Profile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Publication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Reservation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/RoleEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/ShoppingCart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/classes/com/example/pi/entities/Visibilite.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/gestion de commande/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/PiBakcendApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Categorie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/CategorieProduit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Commande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Commentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Evenement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Formation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Panier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Produit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Publication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/RoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/java/tn/esprit/pibakcend/entities/Visibilite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/src/test/java/tn/esprit/pibakcend/PiBakcendApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/PiBakcendApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/Repository/EvenementRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/Repository/FormationRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/RestController/EvenementRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/RestController/FormationRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/Service/EvenementServiceImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/Service/FormationServiceImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/Service/IEvenement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/Service/IFormation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/entities/Evenement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/entities/Formation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/entities/TypeUtilisateur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/classes/tn/esprit/pibakcend/entities/Utilisateur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/surefire-reports/TEST-tn.esprit.pibakcend.PiBakcendApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/surefire-reports/tn.esprit.pibakcend.PiBakcendApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pi-bakcend/target/test-classes/tn/esprit/pibakcend/PiBakcendApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/EcommerceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/AuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Commentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Evenement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/FileInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Formation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/Entity/WishList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/common/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/config/MessageStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/config/Webconfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/config/documentation/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/controller/WishListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/ResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/cart/AddToCartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/cart/CartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/cart/CartItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/checkout/CheckoutItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/checkout/StripeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/order/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/order/OrderItemsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/product/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/user/SignInDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/user/SignInResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/user/SignupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/user/UserCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/dto/user/UserUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/enums/ResponseStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/AuthenticationFailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/CartItemNotExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/CustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/ExceptionControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/ExceptionHandlerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/OrderNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/ProductNotExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/StorageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/UpdateFailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/exceptions/ValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/AuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/FileInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/model/WishList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/Categoryrepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/OrderItemsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/TokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/repository/WishListRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/OrderItemsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/service/WishListService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/utils/Helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/EcommerceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Commentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Evenement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/FileInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Formation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/Entity/WishList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/common/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/config/MessageStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/config/Webconfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/config/documentation/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/controller/WishListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/ResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/cart/AddToCartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/cart/CartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/cart/CartItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/checkout/CheckoutItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/checkout/StripeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/order/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/order/OrderItemsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/dto/product/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/enums/ResponseStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/FileInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/model/WishList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/Categoryrepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/OrderItemsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/TokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/repository/WishListRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/OrderItemsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/service/WishListService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webtutsplus/ecommerce/utils/Helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql-connector-java-8.0.27.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="GestionUsers-_Iskander" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="iskander &lt;92636106+iskander-bargaoui@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/HTTP200-Cloud-Pi-Project" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d0204588-a0a0-43a7-a289-a1f99509fb7c" />
+        <option name="url" value="https://github.com/iskander-bargaoui/HTTP200-Cloud-Pi-Project.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+>>>>>>> Stashed changes
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -20,11 +340,17 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+<<<<<<< Updated upstream
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+=======
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectId" id="2OZrAZXw8VllLmBqZZHWKhZXvYD" />
   <component name="ProjectViewState">
@@ -41,21 +367,33 @@
 }</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
+<<<<<<< Updated upstream
       <module name="ecommerce-backend-master" />
+=======
+>>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+<<<<<<< Updated upstream
       <module name="ecommerce-backend-master" />
+=======
+>>>>>>> Stashed changes
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="EcommerceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ecommerce-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.webtutsplus.ecommerce.EcommerceApplication" />
+=======
+    <configuration name="UsersManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="usersManagement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="project.management.usersmanagement.UsersManagementApplication" />
+>>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -68,7 +406,40 @@
       <created>1681778802738</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< Updated upstream
       <updated>1681778802738</updated>
+=======
+      <updated>1680066178807</updated>
+      <workItem from="1680066179919" duration="14986000" />
+      <workItem from="1680121036929" duration="3133000" />
+      <workItem from="1680125222460" duration="933000" />
+      <workItem from="1680127176613" duration="625000" />
+      <workItem from="1680219019495" duration="2263000" />
+      <workItem from="1680309175134" duration="248000" />
+      <workItem from="1680326522724" duration="7000" />
+      <workItem from="1680326555675" duration="1000" />
+      <workItem from="1680332193086" duration="98000" />
+      <workItem from="1680332787730" duration="66000" />
+      <workItem from="1680333556765" duration="1027000" />
+      <workItem from="1680483504166" duration="1863000" />
+      <workItem from="1680485846934" duration="826000" />
+      <workItem from="1680594989323" duration="911000" />
+      <workItem from="1680596632748" duration="218000" />
+      <workItem from="1680603488752" duration="2108000" />
+      <workItem from="1680671621844" duration="328000" />
+      <workItem from="1680672073708" duration="309000" />
+      <workItem from="1680673861698" duration="13000" />
+      <workItem from="1680681550798" duration="2705000" />
+      <workItem from="1681048110451" duration="26000" />
+      <workItem from="1681575428900" duration="6720000" />
+      <workItem from="1681596304528" duration="6727000" />
+      <workItem from="1681620425074" duration="24216000" />
+      <workItem from="1681697916538" duration="5266000" />
+      <workItem from="1681704210513" duration="5907000" />
+      <workItem from="1681757383239" duration="3243000" />
+      <workItem from="1681763641056" duration="2415000" />
+      <workItem from="1681776523061" duration="704000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
