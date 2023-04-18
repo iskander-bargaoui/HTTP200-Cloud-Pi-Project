@@ -1,6 +1,6 @@
-package com.webtutsplus.ecommerce.dto.product;
+package tn.esprit.pibakcend.dto.product;
 
-import com.webtutsplus.ecommerce.model.Product;
+import tn.esprit.pibakcend.entities.Product;
 
 import javax.validation.constraints.NotNull;
 

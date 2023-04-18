@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.Entity;
+package tn.esprit.pibakcend.entities;
 
 public class FileInfo {
   private String name;

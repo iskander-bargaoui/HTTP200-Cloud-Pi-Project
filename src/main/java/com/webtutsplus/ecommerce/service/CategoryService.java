@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.service;
+package tn.esprit.pibakcend.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,8 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
-
-import com.webtutsplus.ecommerce.model.Category;
-import com.webtutsplus.ecommerce.repository.Categoryrepository;
+import tn.esprit.pibakcend.Repository.Categoryrepository;
+import tn.esprit.pibakcend.entities.Category;
 
 @Service
 @Transactional

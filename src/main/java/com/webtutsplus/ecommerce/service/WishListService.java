@@ -1,10 +1,11 @@
-package com.webtutsplus.ecommerce.service;
+package tn.esprit.pibakcend.Service;
 
 import java.util.List;
 import javax.transaction.Transactional;
-import com.webtutsplus.ecommerce.model.WishList;
-import com.webtutsplus.ecommerce.repository.WishListRepository;
+
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.WishListRepository;
+import tn.esprit.pibakcend.entities.WishList;
 
 
 @Service

@@ -1,8 +1,9 @@
-package com.webtutsplus.ecommerce.repository;
+package tn.esprit.pibakcend.Repository;
 
-import com.webtutsplus.ecommerce.model.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import tn.esprit.pibakcend.entities.Cart;
+import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
 @Repository

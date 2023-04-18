@@ -1,12 +1,12 @@
-package com.webtutsplus.ecommerce.service;
+package tn.esprit.pibakcend.Service;
 
-import com.webtutsplus.ecommerce.dto.product.ProductDto;
-import com.webtutsplus.ecommerce.exceptions.ProductNotExistException;
-import com.webtutsplus.ecommerce.model.Category;
-import com.webtutsplus.ecommerce.model.Product;
-import com.webtutsplus.ecommerce.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.ProductRepository;
+import tn.esprit.pibakcend.dto.exceptions.ProductNotExistException;
+import tn.esprit.pibakcend.dto.product.ProductDto;
+import tn.esprit.pibakcend.entities.Category;
+import tn.esprit.pibakcend.entities.Product;
 
 import java.util.ArrayList;
 import java.util.List;

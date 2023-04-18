@@ -1,14 +1,14 @@
-package com.webtutsplus.ecommerce.controller;
+package tn.esprit.pibakcend.controllers;
 
-import com.webtutsplus.ecommerce.common.ApiResponse;
-import com.webtutsplus.ecommerce.dto.product.ProductDto;
-import com.webtutsplus.ecommerce.model.Category;
-import com.webtutsplus.ecommerce.service.CategoryService;
-import com.webtutsplus.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.pibakcend.Service.CategoryService;
+import tn.esprit.pibakcend.Service.ProductService;
+import tn.esprit.pibakcend.common.ApiResponse;
+import tn.esprit.pibakcend.dto.product.ProductDto;
+import tn.esprit.pibakcend.entities.Category;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -17,7 +17,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-    @Autowired ProductService productService;
+    @Autowired
+    ProductService productService;
     @Autowired
     CategoryService categoryService;
 

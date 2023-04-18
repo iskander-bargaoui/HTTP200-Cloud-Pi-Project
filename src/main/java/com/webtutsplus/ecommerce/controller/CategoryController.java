@@ -1,18 +1,18 @@
-package com.webtutsplus.ecommerce.controller;
+package tn.esprit.pibakcend.controllers;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.webtutsplus.ecommerce.utils.Helper;
+import tn.esprit.pibakcend.Service.CategoryService;
+import tn.esprit.pibakcend.common.ApiResponse;
+import tn.esprit.pibakcend.entities.Category;
+import tn.esprit.pibakcend.utils.Helper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.webtutsplus.ecommerce.common.ApiResponse;
-import com.webtutsplus.ecommerce.model.Category;
-import com.webtutsplus.ecommerce.service.CategoryService;
 
 @RestController
 @RequestMapping("/category")

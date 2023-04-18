@@ -1,19 +1,20 @@
-package com.webtutsplus.ecommerce.controller;
+package tn.esprit.pibakcend.controllers;
 
-import com.webtutsplus.ecommerce.common.ApiResponse;
-import com.webtutsplus.ecommerce.dto.cart.AddToCartDto;
-import com.webtutsplus.ecommerce.dto.cart.CartDto;
-import com.webtutsplus.ecommerce.exceptions.AuthenticationFailException;
-import com.webtutsplus.ecommerce.exceptions.CartItemNotExistException;
-import com.webtutsplus.ecommerce.exceptions.ProductNotExistException;
-import com.webtutsplus.ecommerce.model.*;
-import com.webtutsplus.ecommerce.service.AuthenticationService;
-import com.webtutsplus.ecommerce.service.CartService;
-import com.webtutsplus.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.pibakcend.Service.AuthenticationService;
+import tn.esprit.pibakcend.Service.CartService;
+import tn.esprit.pibakcend.Service.ProductService;
+import tn.esprit.pibakcend.common.ApiResponse;
+import tn.esprit.pibakcend.dto.cart.AddToCartDto;
+import tn.esprit.pibakcend.dto.cart.CartDto;
+import tn.esprit.pibakcend.dto.exceptions.AuthenticationFailException;
+import tn.esprit.pibakcend.dto.exceptions.CartItemNotExistException;
+import tn.esprit.pibakcend.dto.exceptions.ProductNotExistException;
+import tn.esprit.pibakcend.entities.Product;
+import tn.esprit.pibakcend.entities.User;
 
 import javax.validation.Valid;
 
@@ -58,10 +59,11 @@ public class CartController {
     }
 
     @DeleteMapping("/delete/{cartItemId}")
-    public ResponseEntity<ApiResponse> deleteCartItem(@PathVariable("cartItemId") int itemID,@RequestParam("token") String token) throws AuthenticationFailException, CartItemNotExistException {
+    public ResponseEntity<ApiResponse> deleteCartItem(@PathVariable("cartItemId") int itemID,
+                                                      @RequestParam("token") String token) throws AuthenticationFailException, CartItemNotExistException {
         authenticationService.authenticate(token);
-        int userId = authenticationService.getUser(token).getId();
-        cartService.deleteCartItem(itemID, userId);
+        Long userId = authenticationService.getUser(token).getId();
+        cartService.deleteCartItem(itemID, Math.toIntExact(userId));
         return new ResponseEntity<ApiResponse>(new ApiResponse(true, "Item has been removed"), HttpStatus.OK);
     }
 

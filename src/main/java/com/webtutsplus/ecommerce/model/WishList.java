@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream:src/main/java/com/webtutsplus/ecommerce/model/WishList.java
 package com.webtutsplus.ecommerce.model;
 
 
+=======
+package tn.esprit.pibakcend.entities;
+import tn.esprit.pibakcend.entities.User;
+>>>>>>> Stashed changes:src/main/java/tn/esprit/pibakcend/entities/AuthenticationToken.java
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

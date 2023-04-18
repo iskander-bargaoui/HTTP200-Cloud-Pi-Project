@@ -1,7 +1,8 @@
-package com.webtutsplus.ecommerce.dto.cart;
+package tn.esprit.pibakcend.dto.cart;
 
-import com.webtutsplus.ecommerce.model.Cart;
-import com.webtutsplus.ecommerce.model.Product;
+
+import tn.esprit.pibakcend.entities.Cart;
+import tn.esprit.pibakcend.entities.Product;
 
 import javax.validation.constraints.NotNull;
 

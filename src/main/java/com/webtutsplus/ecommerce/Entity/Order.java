@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.Entity;
+package tn.esprit.pibakcend.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

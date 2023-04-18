@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.dto.order;
+package tn.esprit.pibakcend.dto.order;
 
 import javax.validation.constraints.NotNull;
 

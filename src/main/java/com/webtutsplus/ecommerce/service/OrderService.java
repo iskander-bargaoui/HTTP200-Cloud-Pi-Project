@@ -1,21 +1,22 @@
-package com.webtutsplus.ecommerce.service;
+package tn.esprit.pibakcend.Service;
 
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.checkout.Session;
 import com.stripe.param.checkout.SessionCreateParams;
-import com.webtutsplus.ecommerce.dto.cart.CartDto;
-import com.webtutsplus.ecommerce.dto.cart.CartItemDto;
-import com.webtutsplus.ecommerce.dto.checkout.CheckoutItemDto;
 import com.webtutsplus.ecommerce.enums.OrderStatus;
-import com.webtutsplus.ecommerce.exceptions.OrderNotFoundException;
-import com.webtutsplus.ecommerce.model.Order;
-import com.webtutsplus.ecommerce.model.OrderItem;
-import com.webtutsplus.ecommerce.repository.OrderItemsRepository;
-import com.webtutsplus.ecommerce.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.OrderItemsRepository;
+import tn.esprit.pibakcend.Repository.OrderRepository;
+import tn.esprit.pibakcend.dto.cart.CartDto;
+import tn.esprit.pibakcend.dto.cart.CartItemDto;
+import tn.esprit.pibakcend.dto.checkout.CheckoutItemDto;
+import tn.esprit.pibakcend.dto.exceptions.OrderNotFoundException;
+import tn.esprit.pibakcend.entities.Order;
+import tn.esprit.pibakcend.entities.OrderItem;
+import tn.esprit.pibakcend.entities.User;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class OrderService {
 
     @Autowired
     OrderItemsRepository orderItemsRepository;
-
+//URLbase fil POM.XML
     @Value("${baseURL}")
     private String baseURL;
 
@@ -53,7 +54,7 @@ public class OrderService {
                         SessionCreateParams.LineItem.PriceData.ProductData.builder()
                                 .setName(checkoutItemDto.getProductName())
                                 .build())
-                .build();
+                                 .build();
     }
 
     // build each product in the stripe checkout page
@@ -106,7 +107,7 @@ public class OrderService {
         newOrder.setSessionId(sessionId);
         newOrder.setUser(user);
         newOrder.setTotalPrice(cartDto.getTotalCost());
-        newOrder.setStatus(OrderStatus.PENDING);//set status of  order  for  processing   order
+        //newOrder.setStatus(OrderStatus.PENDING);//set status of  order  for  processing   order
         orderRepository.save(newOrder);
 
         for (CartItemDto cartItemDto : cartItemDtoList) {
@@ -125,12 +126,12 @@ public class OrderService {
     }
 
     public List<Order> listOrders(User user) {
-        return orderRepository.findAllByUserOrderByCreatedDateDesc(user)
-                .stream()
-                .map(order -> {order.setStatus(order.getOrderStatus());
-                    return order;
-                        })
-                .collect(Collectors.toList());
+        return orderRepository.findAllByUserOrderByCreatedDateDesc(user);
+                //.stream()
+               // .map(order -> {order.setStatus(order.getOrderStatus());
+                  //  return order;
+                   //     })
+              //  .collect(Collectors.toList());
     }
 
 

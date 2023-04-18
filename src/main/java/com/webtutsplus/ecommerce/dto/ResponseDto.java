@@ -1,5 +1,4 @@
-package com.webtutsplus.ecommerce.dto;
-
+package tn.esprit.pibakcend.dto;
 
 public class ResponseDto {
     private String status;

@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.dto.checkout;
+package tn.esprit.pibakcend.dto.checkout;
 
 public class CheckoutItemDto {
 

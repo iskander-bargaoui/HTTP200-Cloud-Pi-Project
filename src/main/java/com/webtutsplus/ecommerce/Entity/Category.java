@@ -1,4 +1,4 @@
-package com.webtutsplus.ecommerce.Entity;
+package tn.esprit.pibakcend.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
