@@ -6,6 +6,46 @@
   <component name="ChangeListManager">
     <list default="true" id="cd0da826-5dfa-4fd0-9e8e-fa8237c3815e" name="Changes" comment="Initial commit">
       <changelist_data name="iskander" email="92636106+iskander-bargaoui@users.noreply.github.com" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/ConfirmationTokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/RoleRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/SocialLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/UserRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/ERole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/ConfirmationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/JwtLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/PasswordRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/SignupRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/MessageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/TokenDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/IRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/IUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/RoleServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +73,7 @@
         <entry key="$PROJECT_DIR$/HTTP200-Cloud-Pi-Project" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/HTTP200-Cloud-Pi-Project" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -47,6 +87,9 @@
         <option name="url" value="https://github.com/iskander-bargaoui/HTTP200-Cloud-Pi-Project.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-facebook/2.0.3.RELEASE/spring-social-facebook-2.0.3.RELEASE.jar!/org/springframework/social/facebook/api/User.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,14 +111,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/iskan/IdeaProjects/usersManagement/src/main/java/project/management/security/services&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/iskan/Desktop/PI Final/Pi-bakcend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4fa1f5a5ef35fbe923b6ba99cc2a6476&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;ebac755bda80ebb60d519cfda93b4b5f&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -90,11 +134,11 @@
       <recent name="project.management.usersmanagement.Config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\Pi-bakcend-mail-complet\Pi-bakcend\src\main\java\tn\esprit\pibakcend" />
       <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\security\services" />
       <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\security\jwt" />
       <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\repository" />
       <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\payload\response" />
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\payload\request" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\Config" />
@@ -107,10 +151,24 @@
       <recent name="project.management.security" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UsersManagementApplication">
+    <configuration name="PiBakcendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Pi-bakcend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.pibakcend.PiBakcendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsersManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="usersManagement" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="project.management.usersmanagement.UsersManagementApplication" />
+      <module name="Pi-bakcend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.pibakcend.PiBakcendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,6 +210,8 @@
       <workItem from="1681704210513" duration="5907000" />
       <workItem from="1681757383239" duration="3243000" />
       <workItem from="1681763641056" duration="2415000" />
+      <workItem from="1681780111247" duration="110000" />
+      <workItem from="1681780288731" duration="820000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1680603961609</created>
@@ -165,6 +225,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 1 - Crud + Token + Authentication" />
