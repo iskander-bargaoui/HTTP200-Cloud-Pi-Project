@@ -35,4 +35,4 @@ public class Profile implements Serializable {
     @OneToMany(mappedBy = "profile", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Feedback> feedbackList = new ArrayList<>();
-}
+    }

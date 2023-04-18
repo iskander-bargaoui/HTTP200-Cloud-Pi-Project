@@ -1,13 +1,20 @@
 package tn.esprit.pibakcend.Service;
 import lombok.AllArgsConstructor;
-import org.apache.commons.lang.ArrayUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 import tn.esprit.pibakcend.Repository.FeedbackRepository;
 import tn.esprit.pibakcend.Repository.ProfileRepository;
 import tn.esprit.pibakcend.entities.Categorie;
 import tn.esprit.pibakcend.entities.Feedback;
+import tn.esprit.pibakcend.entities.FileUploadUtil;
 import tn.esprit.pibakcend.entities.Profile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 
 @Service
@@ -87,4 +94,24 @@ public class ProfileServiceImpl implements IProfile {
             return bestProfile;
         }
 
+    public String saveImage(MultipartFile file, Integer id) throws Exception {
+        try {
+            String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+
+            Profile profile = profileRepository.findById(id)
+                    .orElseThrow(() -> new Exception("Profile not found with id " + id));
+
+            String uploadDir = "profile-images/" + profile.getUsername();
+
+            FileUploadUtil.saveFile(uploadDir, fileName, file);
+
+            String imagePath = uploadDir + "/" + fileName;
+            profile.setPhotoprofile(imagePath);
+            profileRepository.save(profile);
+
+            return imagePath;
+        } catch (IOException ex) {
+            throw new Exception("Could not save image: " + ex.getMessage());
+        }
+    }
 }
