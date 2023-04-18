@@ -1,5 +1,8 @@
 package tn.esprit.pibakcend.dto.exceptions;
 
+package com.webtutsplus.ecommerce.exceptions;
+
+import com.webtutsplus.ecommerce.common.ApiResponse;
 import org.springframework.core.NestedExceptionUtils;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
