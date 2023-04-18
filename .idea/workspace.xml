@@ -4,167 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd0da826-5dfa-4fd0-9e8e-fa8237c3815e" name="Changes" comment="Initial commit">
-      <changelist_data name="iskander" email="92636106+iskander-bargaoui@users.noreply.github.com" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8dd0fc28-6ddb-4618-b305-6b0792412e1b/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/ConfirmationTokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/RoleRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/SocialLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/UserRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/ERole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/ConfirmationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/JwtLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/PasswordRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/request/SignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/payload/response/TokenDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/IRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/IUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/RoleServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="b6e2388c-99ac-4f56-9a7a-48446e415ab9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Rebase.Settings">
-    <option name="NEW_BASE" value="GestionUsers-_Iskander" />
-  </component>
-  <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="iskander &lt;92636106+iskander-bargaoui@users.noreply.github.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/HTTP200-Cloud-Pi-Project" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/HTTP200-Cloud-Pi-Project" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="d0204588-a0a0-43a7-a289-a1f99509fb7c" />
-        <option name="url" value="https://github.com/iskander-bargaoui/HTTP200-Cloud-Pi-Project.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="2NfrrduSLiRoY2Umk1CUaYQwRwF" />
+  <component name="ProjectId" id="2OZrAZXw8VllLmBqZZHWKhZXvYD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/USER/Desktop/sprong bac/Pi-bakcend-mail-complet/Pi-bakcend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "4fa1f5a5ef35fbe923b6ba99cc2a6476",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Gestion de commande/ecommerce-backend-master&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="project.management.usersmanagement.Auth" />
-      <recent name="project.management.usersmanagement.Config" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\USER\Desktop\Pi-bakcend-mail-complet\Pi-bakcend\src\main\java\tn\esprit\pibakcend" />
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\security\services" />
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\security\jwt" />
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\repository" />
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\payload\response" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement\Config" />
-      <recent name="C:\Users\iskan\IdeaProjects\usersManagement\src\main\java\project\management\usersmanagement" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="project.management.usersmanagement" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="project.management.security" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.UsersManagementApplication">
-    <configuration name="PiBakcendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Pi-bakcend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.pibakcend.PiBakcendApplication" />
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ecommerce-backend-master" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Pi-bakcend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.pibakcend.PiBakcendApplication" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ecommerce-backend-master" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EcommerceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ecommerce-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.webtutsplus.ecommerce.EcommerceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,77 +64,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cd0da826-5dfa-4fd0-9e8e-fa8237c3815e" name="Changes" comment="" />
-      <created>1680066178807</created>
+      <changelist id="b6e2388c-99ac-4f56-9a7a-48446e415ab9" name="Changes" comment="" />
+      <created>1681778802738</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1680066178807</updated>
-      <workItem from="1680066179919" duration="14986000" />
-      <workItem from="1680121036929" duration="3133000" />
-      <workItem from="1680125222460" duration="933000" />
-      <workItem from="1680127176613" duration="625000" />
-      <workItem from="1680219019495" duration="2263000" />
-      <workItem from="1680309175134" duration="248000" />
-      <workItem from="1680326522724" duration="7000" />
-      <workItem from="1680326555675" duration="1000" />
-      <workItem from="1680332193086" duration="98000" />
-      <workItem from="1680332787730" duration="66000" />
-      <workItem from="1680333556765" duration="1027000" />
-      <workItem from="1680483504166" duration="1863000" />
-      <workItem from="1680485846934" duration="826000" />
-      <workItem from="1680594989323" duration="911000" />
-      <workItem from="1680596632748" duration="218000" />
-      <workItem from="1680603488752" duration="2108000" />
-      <workItem from="1680671621844" duration="328000" />
-      <workItem from="1680672073708" duration="309000" />
-      <workItem from="1680673861698" duration="13000" />
-      <workItem from="1680681550798" duration="2705000" />
-      <workItem from="1681048110451" duration="26000" />
-      <workItem from="1681575428900" duration="6720000" />
-      <workItem from="1681596304528" duration="6727000" />
-      <workItem from="1681620425074" duration="24216000" />
-      <workItem from="1681697916538" duration="5266000" />
-      <workItem from="1681704210513" duration="5907000" />
-      <workItem from="1681757383239" duration="3243000" />
-      <workItem from="1681763641056" duration="2415000" />
+      <updated>1681778802738</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1680603961609</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680603961609</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit 1 - Crud + Token + Authentication" />
-    <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="5" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
