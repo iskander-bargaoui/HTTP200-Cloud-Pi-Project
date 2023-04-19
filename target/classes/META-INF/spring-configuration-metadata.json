@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "twilio",
+      "type": "tn.esprit.pibakcend.config.TwilioConfiguration",
+      "sourceType": "tn.esprit.pibakcend.config.TwilioConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "twilio.account-sid",
+      "type": "java.lang.String",
+      "sourceType": "tn.esprit.pibakcend.config.TwilioConfiguration"
+    },
+    {
+      "name": "twilio.auth-token",
+      "type": "java.lang.String",
+      "sourceType": "tn.esprit.pibakcend.config.TwilioConfiguration"
+    },
+    {
+      "name": "twilio.trial-number",
+      "type": "java.lang.String",
+      "sourceType": "tn.esprit.pibakcend.config.TwilioConfiguration"
+    }
+  ],
+  "hints": []
+}

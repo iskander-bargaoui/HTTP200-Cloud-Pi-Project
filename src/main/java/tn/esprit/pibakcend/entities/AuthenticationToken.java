@@ -1,9 +1,5 @@
 
-package com.webtutsplus.ecommerce.model;
-
 package tn.esprit.pibakcend.entities;
-import tn.esprit.pibakcend.entities.User;
-package tn.esprit.pibakcend.model;
 import tn.esprit.pibakcend.entities.User;
 
 import javax.persistence.*;

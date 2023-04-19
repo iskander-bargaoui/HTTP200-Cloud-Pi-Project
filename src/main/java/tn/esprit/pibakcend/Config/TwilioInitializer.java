@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.Config;
+package tn.esprit.pibakcend.config;
 
 import com.twilio.Twilio;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.repository;
+package tn.esprit.pibakcend.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

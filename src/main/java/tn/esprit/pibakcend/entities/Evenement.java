@@ -28,9 +28,9 @@ public class Evenement implements Serializable {
     private String Lieu;
 
 
-    @ManyToMany (mappedBy = "evenements")
+  /*  @ManyToMany (mappedBy = "evenements")
     private Set<User> utilisateurs;
 
     @ManyToMany
-    private Set<Formation> formations;
+    private Set<Formation> formations;*/
 }

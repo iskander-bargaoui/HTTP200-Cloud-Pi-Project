@@ -1,5 +1,4 @@
 package tn.esprit.pibakcend.dto.exceptions;
-package com.webtutsplus.ecommerce.exceptions;
 
 public class ValidationException extends RuntimeException{
 	private static final long serialVersionUID = 6064663768170825752L;

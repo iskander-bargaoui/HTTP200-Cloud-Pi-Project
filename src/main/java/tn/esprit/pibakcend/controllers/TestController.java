@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tn.esprit.pibakcend.entities.User;
-import tn.esprit.pibakcend.security.services.IUser;
+import tn.esprit.pibakcend.Service.IUser;
 
 import java.util.List;
 

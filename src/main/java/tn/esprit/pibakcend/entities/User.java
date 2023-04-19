@@ -41,16 +41,13 @@ public class User {
 
     @NotBlank
     @Size(max = 20)
-    @NotNull
     String username;
     //private boolean stateUser;
 
     @Email
     @Size(max=50)
-    @NotNull
     private String email;
 
-    @NotNull
     @Size(min = 4 , max = 20 )
     private String password;
     //protected String confirmPasswordUser;
@@ -116,8 +113,5 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "id_Pub"))//badlt houni
     private Set<Publication> favoritePublications = new HashSet<>();
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Activity> activities = new HashSet<>();
 
 }

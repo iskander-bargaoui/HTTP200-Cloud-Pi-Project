@@ -1,12 +1,14 @@
 package tn.esprit.pibakcend.controllers;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.User;
 import tn.esprit.pibakcend.payload.request.PasswordRequest;
-import tn.esprit.pibakcend.security.services.IUser;
+import tn.esprit.pibakcend.Service.IUser;
 
 import java.util.List;
 
@@ -14,11 +16,9 @@ import java.util.List;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@AllArgsConstructor
 public class UserRestController {
-
-    @Autowired
     IUser iUser;
-
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/addUser")
@@ -55,5 +55,14 @@ public class UserRestController {
     @GetMapping("/sendme/{emailUser}")
     public void forgotpass(@PathVariable("emailUser") String emailUser) {
         iUser.forgotpass(emailUser);
+    }
+
+    @PutMapping("/toggleFavoritePublication/{idUser}/{idPub}")
+    public User toggleFavoritePublication(@PathVariable ("idUser") Long idUser, @PathVariable("idPub") Integer idPub) {
+        return iUser.toggleFavoritePublication(idUser, idPub);
+    }
+    @GetMapping("/getFavoritePublicationsByUserId/{idUser}")
+    public List<Publication> getFavoritePublicationsByUserId(@PathVariable("idUser") Long idUser) {
+        return iUser.getFavoritePublicationsByUserId(idUser);
     }
 }

@@ -1,15 +1,15 @@
-package tn.esprit.pibakcend.restController;
+package tn.esprit.pibakcend.RestController;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.entities.*;
-import tn.esprit.pibakcend.repository.CommentaireRepository;
-import tn.esprit.pibakcend.repository.LikeRepository;
-import tn.esprit.pibakcend.repository.PublicationRepository;
-import tn.esprit.pibakcend.repository.UserRepository;
-import tn.esprit.pibakcend.service.ILike;
-import tn.esprit.pibakcend.service.LikeServiceImp;
+import tn.esprit.pibakcend.Repository.CommentaireRepository;
+import tn.esprit.pibakcend.Repository.LikeRepository;
+import tn.esprit.pibakcend.Repository.PublicationRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.Service.ILike;
+import tn.esprit.pibakcend.Service.LikeServiceImp;
 
 import java.util.List;
 

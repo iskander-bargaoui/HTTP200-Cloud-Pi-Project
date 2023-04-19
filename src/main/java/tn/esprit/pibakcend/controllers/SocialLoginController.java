@@ -16,7 +16,7 @@ import tn.esprit.pibakcend.payload.request.JwtLogin;
 import tn.esprit.pibakcend.payload.response.LoginResponse;
 import tn.esprit.pibakcend.payload.response.TokenDto;
 import tn.esprit.pibakcend.security.jwt.JwtUtils;
-import tn.esprit.pibakcend.security.services.IUser;
+import tn.esprit.pibakcend.Service.IUser;
 
 import java.io.IOException;
 import java.util.Collections;

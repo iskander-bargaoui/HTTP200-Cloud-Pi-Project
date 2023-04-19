@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 
 import tn.esprit.pibakcend.entities.Like;
 import tn.esprit.pibakcend.entities.Publication;

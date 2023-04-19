@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,10 +6,9 @@ import org.springframework.stereotype.Service;
 import tn.esprit.pibakcend.entities.Commentaire;
 import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.User;
-import tn.esprit.pibakcend.repository.CommentaireRepository;
-import tn.esprit.pibakcend.repository.PublicationRepository;
-import tn.esprit.pibakcend.repository.UserRepository;
-
+import tn.esprit.pibakcend.Repository.CommentaireRepository;
+import tn.esprit.pibakcend.Repository.PublicationRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,7 +50,7 @@ public class CommentaireServiceImp implements ICommentaire{
             User pubUser = publication.getUser();
             if (pubUser != null) {
                 String message = String.format("%s commented on your publication '%s'", user.getUsername(), publication.getTitrePub());
-                SmsRequest smsRequest = new SmsRequest(pubUser.getTelNumber(), message);
+                SmsRequest smsRequest = new SmsRequest(pubUser.getPhoneNumber(), message);
                 twillioSmsSender.sendSms(smsRequest);
             }
             return comm;

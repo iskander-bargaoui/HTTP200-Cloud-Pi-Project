@@ -1,11 +1,11 @@
-package tn.esprit.pibakcend.restController;
+package tn.esprit.pibakcend.RestController;
 
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.entities.Commentaire;
 import tn.esprit.pibakcend.entities.Publication;
-import tn.esprit.pibakcend.service.ICommentaire;
+import tn.esprit.pibakcend.Service.ICommentaire;
 
 import java.util.List;
 @RestController

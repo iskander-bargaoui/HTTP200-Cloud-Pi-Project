@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 
 import org.springframework.data.jpa.repository.Query;
 import tn.esprit.pibakcend.entities.Commentaire;

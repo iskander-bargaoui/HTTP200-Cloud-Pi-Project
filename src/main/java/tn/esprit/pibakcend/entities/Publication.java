@@ -59,8 +59,6 @@ public class Publication implements Serializable {
     @JsonIgnore
     @ManyToMany(mappedBy = "favoritePublications")
     private Set<User> favoriteUsers = new HashSet<>();
-    @JsonIgnore
-    @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
-    private Set<Activity> activities = new HashSet<>();
+
 
 }

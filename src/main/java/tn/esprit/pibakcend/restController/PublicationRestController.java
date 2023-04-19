@@ -1,14 +1,9 @@
-package tn.esprit.pibakcend.restController;
+package tn.esprit.pibakcend.RestController;
 
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.pibakcend.entities.Activity;
-import tn.esprit.pibakcend.entities.ActivityType;
 import tn.esprit.pibakcend.entities.Publication;
-import tn.esprit.pibakcend.repository.ActivityRepository;
-import tn.esprit.pibakcend.service.IActivity;
-import tn.esprit.pibakcend.service.IPublication;
+import tn.esprit.pibakcend.Service.IPublication;
 
 import java.util.List;
 
@@ -17,9 +12,6 @@ import java.util.List;
 
 public class PublicationRestController {
     IPublication iPublication;
-
-    IActivity iActivity;
-
     //ActivityRepository activityRepository;
 
     @PostMapping("/AddPublication/{idUser}")

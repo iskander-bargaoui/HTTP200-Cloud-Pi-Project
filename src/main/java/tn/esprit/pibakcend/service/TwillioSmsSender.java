@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.rest.api.v2010.account.MessageCreator;
 import com.twilio.type.PhoneNumber;
@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tn.esprit.pibakcend.Config.TwilioConfiguration;
+import tn.esprit.pibakcend.config.TwilioConfiguration;
 
 @Service("twilio")
 

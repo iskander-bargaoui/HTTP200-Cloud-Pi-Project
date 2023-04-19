@@ -1,13 +1,13 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.webjars.NotFoundException;
 import tn.esprit.pibakcend.entities.*;
-import tn.esprit.pibakcend.repository.CommentaireRepository;
-import tn.esprit.pibakcend.repository.LikeRepository;
-import tn.esprit.pibakcend.repository.PublicationRepository;
-import tn.esprit.pibakcend.repository.UserRepository;
+import tn.esprit.pibakcend.Repository.CommentaireRepository;
+import tn.esprit.pibakcend.Repository.LikeRepository;
+import tn.esprit.pibakcend.Repository.PublicationRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;

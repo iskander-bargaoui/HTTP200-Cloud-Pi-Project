@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

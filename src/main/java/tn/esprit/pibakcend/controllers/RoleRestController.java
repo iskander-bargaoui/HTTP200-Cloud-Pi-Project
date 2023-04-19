@@ -1,10 +1,11 @@
 package tn.esprit.pibakcend.controllers;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.entities.Role;
-import tn.esprit.pibakcend.security.services.IRole;
+import tn.esprit.pibakcend.Service.IRole;
 
 import java.util.List;
 
@@ -12,10 +13,9 @@ import java.util.List;
 @RequestMapping("/role")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
-
+@AllArgsConstructor
 public class RoleRestController {
 
-    @Autowired
     IRole iRole;
 
     // URL : http://localhost:8080/role/addRole

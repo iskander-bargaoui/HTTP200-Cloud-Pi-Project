@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.security;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,9 +16,10 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import tn.esprit.pibakcend.security.jwt.AuthEntryPointJwt;
 import tn.esprit.pibakcend.security.jwt.AuthTokenFilter;
-import tn.esprit.pibakcend.security.services.UserDetailsServiceImpl;
+import tn.esprit.pibakcend.Service.UserDetailsServiceImpl;
 
 @Configuration
+@AllArgsConstructor
 @EnableGlobalMethodSecurity(
         // securedEnabled = true,
         // jsr250Enabled = true,

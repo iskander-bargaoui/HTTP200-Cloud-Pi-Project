@@ -1,11 +1,10 @@
-package tn.esprit.pibakcend.service;
+package tn.esprit.pibakcend.Service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.pibakcend.entities.*;
-import tn.esprit.pibakcend.repository.ActivityRepository;
-import tn.esprit.pibakcend.repository.PublicationRepository;
-import tn.esprit.pibakcend.repository.UserRepository;
+import tn.esprit.pibakcend.Repository.PublicationRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -17,8 +16,6 @@ public class PublicationServiceImp implements IPublication{
     PublicationRepository publicationRepository;
     UserRepository userRepository;
 
-    IActivity iActivity;
-    ActivityRepository activityRepository;
 
     @Override
     public Publication addPub(Publication pub, Long idUser) {
