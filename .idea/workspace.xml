@@ -4,196 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6e2388c-99ac-4f56-9a7a-48446e415ab9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b6e2388c-99ac-4f56-9a7a-48446e415ab9" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Config/SWConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Config/SWConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Config/TwilioConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Config/TwilioConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Config/TwilioInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Config/TwilioInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/PiBakcendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/PiBakcendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/Service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/config/documentation/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/RoleRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/RoleRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/SocialLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/SocialLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/controllers/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/AuthenticationFailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/AuthenticationFailException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CartItemNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CartItemNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionHandlerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ExceptionHandlerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/OrderNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/OrderNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ProductNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ProductNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/StorageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/StorageException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/UpdateFailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/UpdateFailException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/dto/exceptions/ValidationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Activity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/ActivityType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/AuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/AuthenticationToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Commentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Commentaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Evenement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Produit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/ActivityRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/CommentaireRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/CommentaireRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/LikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/PublicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/repository/PublicationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/ActivityRestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/CommentaireRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/CommentaireRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/LikeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/LikeRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/PublicationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/PublicationRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/restController/UserRestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/jwt/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/IRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/IUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/RoleServiceImplementation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserDetailsImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserDetailsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/security/services/UserServiceImplementation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/ActivityServiceImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/CommentaireServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/CommentaireServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/IActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/ICommentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/ICommentaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/ILike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/ILike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/IPublication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/IPublication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/IUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/IUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/LikeServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/LikeServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/PublicationServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/PublicationServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/SmsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/SmsRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/SmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/SmsSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/TwillioSmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/TwillioSmsSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/pibakcend/service/UserServiceImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/enums/OrderStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/enums/OrderStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/enums/ResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webtutsplus/ecommerce/enums/ResponseStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events_list.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/events_list.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/PiBakcendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/PiBakcendApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/CartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/CartRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/Categoryrepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/Categoryrepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ChatMessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ChatMessageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ConfirmationTokenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ConfirmationTokenRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/NotificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/NotificationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/OrderItemsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/OrderItemsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/OrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ReservationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/ReservationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/RoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/TokenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/TokenRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/WishListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Repository/WishListRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/RestController/ChatControoler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/RestController/ChatControoler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/RestController/NotificationRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/RestController/NotificationRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/RestController/ReservationRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/RestController/ReservationRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/AuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/ChatMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/ChatMessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/EmailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/IChatMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/IChatMessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/INotification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/INotification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/IReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/IReservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/NotificationServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/NotificationServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/OrderItemsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/OrderItemsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/ReservationServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/ReservationServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/WishListService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/Service/WishListService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/common/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/common/ApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/MessageStrings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/MessageStrings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/Webconfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/Webconfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/Webconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/Webconfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/config/documentation/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/configuration/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/configuration/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/configuration/WebSocketEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/configuration/WebSocketEventListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/RoleRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/RoleRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/SocialLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/SocialLoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/UserRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/UserRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/WishListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/controllers/WishListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/ResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/ResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/cart/AddToCartDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/cart/AddToCartDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/cart/CartDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/cart/CartDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/cart/CartItemDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/cart/CartItemDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/checkout/CheckoutItemDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/checkout/CheckoutItemDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/checkout/StripeResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/checkout/StripeResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/AuthenticationFailException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/AuthenticationFailException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/CartItemNotExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/CartItemNotExistException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/CustomException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/CustomException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ExceptionControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ExceptionControllerAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ExceptionHandlerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ExceptionHandlerAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/OrderNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/OrderNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ProductNotExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ProductNotExistException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/StorageException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/StorageException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/UpdateFailException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/UpdateFailException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ValidationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/exceptions/ValidationException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/order/OrderDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/order/OrderDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/order/OrderItemsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/order/OrderItemsDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/product/ProductDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/dto/product/ProductDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/AuthenticationToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/AuthenticationToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Categorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Categorie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/CategorieProduit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/CategorieProduit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/ChatMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/ChatMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Commentaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Commentaire.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/ERole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/ERole.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Evenement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Evenement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Feedback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/FileInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/FileInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Formation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Formation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Notification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/OrderItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Produit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Publication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Publication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/RoleEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/RoleEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Visibilite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/Visibilite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/WishList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/entities/WishList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/ConfirmationToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/ConfirmationToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/JwtLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/JwtLogin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/PasswordRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/PasswordRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/SignupRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/request/SignupRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/JwtResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/JwtResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/LoginResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/MessageResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/TokenDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/payload/response/TokenDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/jwt/AuthEntryPointJwt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/jwt/AuthEntryPointJwt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/jwt/AuthTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/jwt/AuthTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/jwt/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/jwt/JwtUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/IRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/IUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/RoleServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/UserDetailsImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/UserServiceImplementation$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/security/services/UserServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/utils/Helper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/pibakcend/utils/Helper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ecommerce-backend-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ecommerce-backend-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,11 +43,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -236,9 +51,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-facebook/2.0.3.RELEASE/spring-social-facebook-2.0.3.RELEASE.jar!/org/springframework/social/facebook/api/User.class" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -246,13 +58,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="2OZrAZXw8VllLmBqZZHWKhZXvYD" />
@@ -261,37 +67,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Desktop/Pi-bakcend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "ebac755bda80ebb60d519cfda93b4b5f",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -340,8 +120,9 @@
       </method>
     </configuration>
     <configuration name="PiBakcendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Pi-bakcend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.pibakcend.PiBakcendApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -399,6 +180,8 @@
       <workItem from="1681854641390" duration="3096000" />
       <workItem from="1681858234083" duration="208000" />
       <workItem from="1681858586618" duration="4423000" />
+      <workItem from="1681866478434" duration="40000" />
+      <workItem from="1681866550849" duration="3720000" />
     </task>
     <servers />
   </component>
@@ -415,6 +198,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 1 - Crud + Token + Authentication" />
