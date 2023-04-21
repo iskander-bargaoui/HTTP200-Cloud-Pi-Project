@@ -1,6 +1,7 @@
-package project.management.usersmanagement.payload.request;
+package project.management.usersmanagement.entities;
 
-import project.management.usersmanagement.entities.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,6 +9,9 @@ import java.util.UUID;
 
 @Entity
 @Table(name="confirmationToken")
+@Getter
+@Setter
+
 public class ConfirmationToken {
 
     @Id
@@ -23,12 +27,12 @@ public class ConfirmationToken {
 
     @OneToOne(targetEntity = User.class, fetch = FetchType.EAGER)
     @JoinColumn(nullable = false, name = "user_id")
-    private User user;
+    private User userEntity;
 
     public ConfirmationToken() {}
 
-    public ConfirmationToken(User user) {
-        this.user = user;
+    public ConfirmationToken(User userEntity) {
+        this.userEntity = userEntity;
         createdDate = new Date();
         confirmationToken = UUID.randomUUID().toString();
     }

@@ -2,7 +2,7 @@ package project.management.usersmanagement.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import project.management.usersmanagement.payload.request.ConfirmationToken;
+import project.management.usersmanagement.entities.ConfirmationToken;
 
 @Repository("confirmationTokenRepository")
 public interface ConfirmationTokenRepository extends CrudRepository<ConfirmationToken, String> {

@@ -28,13 +28,13 @@ public class User {
     private String nom;
 
     @Size(max = 20)
+    // Control de saisie : Not a Number
     private String prenom;
 
     @NotBlank
     @Size(max = 20)
     @NotNull
     String username;
-    //private boolean stateUser;
 
     @Email
     @Size(max=50)
@@ -43,8 +43,8 @@ public class User {
 
     @NotNull
     @Size(min = 4 , max = 20 )
+    // Control de saisie
     private String password;
-    //protected String confirmPasswordUser;
 
     @Size (max = 50)
     private String address;
@@ -59,7 +59,9 @@ public class User {
 
     private boolean connected;
 
-   // private boolean isEnabled;
+    private boolean isEnabled;
+
+    private boolean stateUser;
 
     // Relation Many to Many with
 
@@ -87,6 +89,7 @@ public class User {
         this.phoneNumber = tel;
         this.nom = nom;
         this.prenom = prenom;
+        //Control de saisie : <18 ans
         this.birthDate=birthDate;
 
     }

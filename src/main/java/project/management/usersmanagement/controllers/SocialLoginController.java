@@ -90,7 +90,7 @@ public class SocialLoginController {
     public LoginResponse loginWithFacebook(@RequestBody TokenDto tokenDto) {
         Facebook facebook = new FacebookTemplate(tokenDto.getValue());
         String[] data = { "email", "name", "picture", "first_name", "last_name", };
-        User userFacebook = facebook.fetchObject("me", User.class, data);
+        User    userFacebook = facebook.fetchObject("me", User.class, data);
         // String
 
 

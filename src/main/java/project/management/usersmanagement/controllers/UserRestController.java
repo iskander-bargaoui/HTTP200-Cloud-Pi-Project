@@ -5,7 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import project.management.usersmanagement.entities.ConfirmationToken;
+import project.management.usersmanagement.entities.EmailService;
 import project.management.usersmanagement.payload.request.PasswordRequest;
+import project.management.usersmanagement.repository.ConfirmationTokenRepository;
 import project.management.usersmanagement.repository.UserRepository;
 import project.management.usersmanagement.security.services.IUser;
 import project.management.usersmanagement.entities.User;
@@ -20,7 +23,10 @@ public class UserRestController {
 
     @Autowired
     IUser iUser;
-
+    @Autowired
+    EmailService emailService;
+    @Autowired
+    ConfirmationTokenRepository confirmationTokenRepository;
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/addUser")

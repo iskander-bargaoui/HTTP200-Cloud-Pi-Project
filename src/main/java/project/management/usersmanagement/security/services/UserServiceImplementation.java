@@ -78,12 +78,17 @@ import java.util.*;
         return null;
     }
 
+
+    // Nombre de users connected
+
     @Override
     @Scheduled(fixedDelay = 1000)
-
     public long retrieveUserByCount() {
-       log.info("nb users : "+userRepository.count());
-        return userRepository.count();
+        List<User> connectedUsers = userRepository.findByStateUser(true);
+        long count = connectedUsers.size();
+        log.info("Connected Users : " +count);
+        System.out.println("Connected Users : " + count);
+        return count;
     }
 
     @Override
