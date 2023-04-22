@@ -1,4 +1,5 @@
-package project.management.usersmanagement.security.services;
+package tn.esprit.pibakcend.security.services;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,8 +7,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import project.management.usersmanagement.entities.User;
-import project.management.usersmanagement.repository.UserRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.entities.User;
+
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

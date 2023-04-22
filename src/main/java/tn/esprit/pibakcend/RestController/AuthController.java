@@ -1,4 +1,4 @@
-package project.management.usersmanagement.controllers;
+package tn.esprit.pibakcend.RestController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,17 +9,17 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.entities.*;
 import project.management.usersmanagement.payload.request.LoginRequest;
-import project.management.usersmanagement.payload.request.SignupRequest;
-import project.management.usersmanagement.payload.response.JwtResponse;
-import project.management.usersmanagement.payload.response.MessageResponse;
-import project.management.usersmanagement.repository.ConfirmationTokenRepository;
-import project.management.usersmanagement.repository.RoleRepository;
-import project.management.usersmanagement.repository.UserRepository;
-import project.management.usersmanagement.security.jwt.JwtUtils;
-import project.management.usersmanagement.security.services.IUser;
-import project.management.usersmanagement.security.services.UserDetailsImpl;
+import tn.esprit.pibakcend.Repository.ConfirmationTokenRepository;
+import tn.esprit.pibakcend.Repository.RoleRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.entities.*;
+import tn.esprit.pibakcend.payload.request.SignupRequest;
+import tn.esprit.pibakcend.payload.response.JwtResponse;
+import tn.esprit.pibakcend.payload.response.MessageResponse;
+import tn.esprit.pibakcend.security.jwt.JwtUtils;
+import tn.esprit.pibakcend.security.services.IUser;
+import tn.esprit.pibakcend.security.services.UserDetailsImpl;
 
 import javax.validation.Valid;
 import java.util.HashSet;

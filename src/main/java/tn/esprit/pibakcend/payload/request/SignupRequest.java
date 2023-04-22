@@ -1,5 +1,4 @@
-package project.management.usersmanagement.payload.request;
-
+package tn.esprit.pibakcend.payload.request;
 import lombok.*;
 
 import javax.validation.constraints.Email;

@@ -1,15 +1,12 @@
-package project.management.usersmanagement.controllers;
+package tn.esprit.pibakcend.RestController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import project.management.usersmanagement.entities.User;
-import project.management.usersmanagement.repository.RoleRepository;
-import project.management.usersmanagement.repository.UserRepository;
-import project.management.usersmanagement.security.services.IUser;
+import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.security.services.IUser;
 
 import java.util.List;
 

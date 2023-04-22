@@ -1,4 +1,4 @@
-package project.management.usersmanagement.entities;
+package tn.esprit.pibakcend.entities;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -13,11 +13,13 @@ public class EmailService {
 
     @Autowired
     public EmailService(JavaMailSender javaMailSender) {
+
         this.javaMailSender = javaMailSender;
     }
 
     @Async
     public void sendEmail(SimpleMailMessage email) {
+
         javaMailSender.send(email);
     }
 }

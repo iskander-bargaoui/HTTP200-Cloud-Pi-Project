@@ -1,4 +1,4 @@
-package project.management.usersmanagement.security.jwt;
+package tn.esprit.pibakcend.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;

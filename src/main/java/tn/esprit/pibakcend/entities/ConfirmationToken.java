@@ -1,4 +1,4 @@
-package project.management.usersmanagement.entities;
+package tn.esprit.pibakcend.entities;
 
 import lombok.Getter;
 import lombok.Setter;

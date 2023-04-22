@@ -1,9 +1,9 @@
-package project.management.usersmanagement.repository;
+package tn.esprit.pibakcend.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import project.management.usersmanagement.entities.Role;
-import project.management.usersmanagement.entities.ERole;
+import tn.esprit.pibakcend.entities.ERole;
+import tn.esprit.pibakcend.entities.Role;
 
 import java.util.Optional;
 

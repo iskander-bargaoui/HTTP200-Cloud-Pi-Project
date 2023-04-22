@@ -1,7 +1,7 @@
-package project.management.usersmanagement.security.services;
+package tn.esprit.pibakcend.security.services;
 
-import project.management.usersmanagement.entities.ERole;
-import project.management.usersmanagement.entities.User;
+import tn.esprit.pibakcend.entities.ERole;
+import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
 

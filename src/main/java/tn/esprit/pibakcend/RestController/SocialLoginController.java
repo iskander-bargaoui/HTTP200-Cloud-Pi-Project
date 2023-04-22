@@ -1,4 +1,4 @@
-package project.management.usersmanagement.controllers;
+package tn.esprit.pibakcend.RestController;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
@@ -12,12 +12,12 @@ import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.User;
 import org.springframework.social.facebook.api.impl.FacebookTemplate;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.payload.request.JwtLogin;
-import project.management.usersmanagement.payload.response.LoginResponse;
-import project.management.usersmanagement.payload.response.TokenDto;
-import project.management.usersmanagement.repository.UserRepository;
-import project.management.usersmanagement.security.jwt.JwtUtils;
-import project.management.usersmanagement.security.services.IUser;
+import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.payload.request.JwtLogin;
+import tn.esprit.pibakcend.payload.response.LoginResponse;
+import tn.esprit.pibakcend.payload.response.TokenDto;
+import tn.esprit.pibakcend.security.jwt.JwtUtils;
+import tn.esprit.pibakcend.security.services.IUser;;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -100,10 +100,10 @@ public class SocialLoginController {
     }
 
     //
-    private LoginResponse login(String email, String username, String prenom ,String nom) {
+    private LoginResponse login(String email, String username, String prenom , String nom) {
         boolean result = iUser.ifEmailExist(email); // t // f
         if (!result) {
-            project.management.usersmanagement.entities.User user = new project.management.usersmanagement.entities.User();
+            tn.esprit.pibakcend.entities.User user = new tn.esprit.pibakcend.entities.User();
             user.setEmail(email);
             user.setPassword(encoder.encode("root1234"));
             user.setUsername(username);

@@ -1,10 +1,10 @@
-package project.management.usersmanagement.security.services;
+package tn.esprit.pibakcend.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import project.management.usersmanagement.entities.User;
+import tn.esprit.pibakcend.entities.User;
 
 import java.util.Collection;
 import java.util.List;

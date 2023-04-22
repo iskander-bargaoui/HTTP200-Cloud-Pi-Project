@@ -1,4 +1,4 @@
-package project.management.usersmanagement.payload.response;
+package tn.esprit.pibakcend.payload.response;
 
 public class MessageResponse {
   private String message;

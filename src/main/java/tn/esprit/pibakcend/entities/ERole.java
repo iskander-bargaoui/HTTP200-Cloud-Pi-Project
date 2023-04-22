@@ -1,4 +1,4 @@
-package project.management.usersmanagement.entities;
+package tn.esprit.pibakcend.entities;
 
 public enum ERole {
 

@@ -1,14 +1,14 @@
-package project.management.usersmanagement.security.services;
+package tn.esprit.pibakcend.security.services;
 
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import project.management.usersmanagement.entities.ERole;
-import project.management.usersmanagement.entities.User;
-import project.management.usersmanagement.repository.RoleRepository;
-import project.management.usersmanagement.repository.UserRepository;
-import project.management.usersmanagement.entities.Role;
+import tn.esprit.pibakcend.Repository.RoleRepository;
+import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.entities.ERole;
+import tn.esprit.pibakcend.entities.Role;
+import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
 

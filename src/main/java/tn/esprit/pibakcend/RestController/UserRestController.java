@@ -1,17 +1,14 @@
-package project.management.usersmanagement.controllers;
+package tn.esprit.pibakcend.RestController;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.entities.ConfirmationToken;
-import project.management.usersmanagement.entities.EmailService;
-import project.management.usersmanagement.payload.request.PasswordRequest;
-import project.management.usersmanagement.repository.ConfirmationTokenRepository;
-import project.management.usersmanagement.repository.UserRepository;
-import project.management.usersmanagement.security.services.IUser;
-import project.management.usersmanagement.entities.User;
+import tn.esprit.pibakcend.Repository.ConfirmationTokenRepository;
+import tn.esprit.pibakcend.entities.EmailService;
+import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.payload.request.PasswordRequest;
+import tn.esprit.pibakcend.security.services.IUser;
 
 import java.util.List;
 

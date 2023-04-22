@@ -1,4 +1,4 @@
-package project.management.usersmanagement.security.jwt;
+package tn.esprit.pibakcend.security.jwt;
 
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
@@ -11,9 +11,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-import project.management.usersmanagement.payload.request.JwtLogin;
-import project.management.usersmanagement.payload.response.LoginResponse;
-import project.management.usersmanagement.security.services.UserDetailsImpl;
+import tn.esprit.pibakcend.payload.request.JwtLogin;
+import tn.esprit.pibakcend.payload.response.LoginResponse;
+import tn.esprit.pibakcend.security.services.UserDetailsImpl;
 
 import java.util.Date;
 

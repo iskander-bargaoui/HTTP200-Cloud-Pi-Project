@@ -1,4 +1,4 @@
-package project.management.usersmanagement.security.jwt;
+package tn.esprit.pibakcend.security.jwt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
-import project.management.usersmanagement.security.services.UserDetailsServiceImpl;
+import tn.esprit.pibakcend.security.services.UserDetailsServiceImpl;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -24,7 +25,7 @@ public long idmessage ;
     public Long senderId;
     public Long receiverId;
 
-    public LocalDateTime time;
+    public Date time;
     @OneToMany
     public List<User> users ;
 

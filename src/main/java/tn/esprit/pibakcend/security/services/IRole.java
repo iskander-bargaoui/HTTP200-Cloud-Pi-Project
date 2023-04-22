@@ -1,6 +1,6 @@
-package project.management.usersmanagement.security.services;
+package tn.esprit.pibakcend.security.services;
 
-import project.management.usersmanagement.entities.Role;
+import tn.esprit.pibakcend.entities.Role;
 
 import java.util.List;
 

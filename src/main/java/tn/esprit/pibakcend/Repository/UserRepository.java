@@ -1,9 +1,8 @@
-package project.management.usersmanagement.repository;
+package tn.esprit.pibakcend.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import project.management.usersmanagement.entities.User;
+import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
 import java.util.Optional;

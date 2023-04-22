@@ -1,12 +1,11 @@
-package project.management.usersmanagement.controllers;
+package tn.esprit.pibakcend.RestController;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.security.services.IRole;
-import project.management.usersmanagement.entities.Role;
+import tn.esprit.pibakcend.entities.Role;
+import tn.esprit.pibakcend.security.services.IRole;
 
 import java.util.List;
 
