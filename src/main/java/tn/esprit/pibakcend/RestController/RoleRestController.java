@@ -52,5 +52,4 @@ public class RoleRestController {
         return iRole.assignRoleToUser(username,roleName);
     }
 
-
 }

@@ -23,9 +23,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-
 public class ChatControoler {
-
     public IChatMessageService messageService;
     public INotification  notificationService ;
     @MessageMapping("/chat.sendMessage")

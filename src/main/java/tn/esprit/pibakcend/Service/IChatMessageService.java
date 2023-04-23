@@ -1,7 +1,7 @@
 package tn.esprit.pibakcend.Service;
 
 import tn.esprit.pibakcend.entities.ChatMessage;
-// import tn.esprit.pibakcend.entities.User;
+import tn.esprit.pibakcend.entities.User;
 
 import javax.jws.soap.SOAPBinding;
 import java.util.List;

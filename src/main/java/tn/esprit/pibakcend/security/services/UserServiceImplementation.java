@@ -9,9 +9,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.PublicationRepository;
 import tn.esprit.pibakcend.Repository.RoleRepository;
 import tn.esprit.pibakcend.Repository.UserRepository;
 import tn.esprit.pibakcend.entities.ERole;
+import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.Role;
 import tn.esprit.pibakcend.entities.User;
 
@@ -19,16 +21,19 @@ import tn.esprit.pibakcend.entities.User;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.transaction.Transactional;
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
 @AllArgsConstructor
 @Slf4j
 
-    public class UserServiceImplementation implements IUser, UserDetailsService{
+public class UserServiceImplementation implements IUser, UserDetailsService{
 
     UserRepository userRepository;
     RoleRepository roleRepository;
+    PublicationRepository publicationRepository;
 
     @Override
     public User addUser(User user) { return userRepository.save(user); }
@@ -100,7 +105,7 @@ import java.util.*;
         }
         else
         {return "Password Doesn't Match";}
-            userRepository.save(u.get());
+        userRepository.save(u.get());
         return "User Password Updated";
     }
 
@@ -161,5 +166,55 @@ import java.util.*;
         return new org.springframework.security.core.userdetails.User(user.get().getUsername(),
                 user.get().getPassword(),
                 authorities);
+    }
+
+    // RAED METHODS
+
+    @Override
+    public User toggleFavoritePublication(Long idUser, Integer idPub) {
+        User user = userRepository.findById(idUser).orElse(null);
+        Publication publication =  publicationRepository.findById(idPub).orElse(null);
+        Set<Publication> favoritePublications = user.getFavoritePublications();
+        if (favoritePublications.contains(publication)) {
+            favoritePublications.remove(publication);
+            publication.setFavorite(false);
+            publication.setFavoriteDate(null);
+        } else {
+            publication.setFavorite(true);
+            publication.setFavoriteDate(LocalDateTime.now());
+            favoritePublications.add(publication);
+        }
+        user.setFavoritePublications(favoritePublications);
+        userRepository.save(user);
+        return user;
+    }
+
+    @Override
+    public List<Publication> getFavoritePublicationsByUserId(Long idUser) {
+        User user = userRepository.findById(idUser).orElse(null);
+        return new ArrayList<>(user.getFavoritePublications());
+
+    }
+    @Transactional
+    @Scheduled(fixedRate = 60000)
+    //@Scheduled(cron = "0 0 0 1 */3 *")
+    @Override
+    public void deleteExpiredFavoritePublications() {
+        LocalDateTime expirationTime = LocalDateTime.now().minusMinutes(1);
+        List<Publication> expiredPublications = publicationRepository.findByIsFavoriteTrueAndFavoriteDateBefore(expirationTime);
+
+        for (Publication publication : expiredPublications) {
+            Set<User> favoriteUsers = publication.getFavoriteUsers();
+            for (User user : favoriteUsers) {
+                Set<Publication> favoritePublications = user.getFavoritePublications();
+                favoritePublications.remove(publication);
+                user.setFavoritePublications(favoritePublications);
+                userRepository.save(user);
+            }
+            publication.setFavoriteUsers(new HashSet<>());
+            publication.setFavorite(false);
+            publication.setFavoriteDate(null);
+            publicationRepository.save(publication);
+        }
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.Repository.ConfirmationTokenRepository;
 import tn.esprit.pibakcend.entities.EmailService;
+import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.User;
 import tn.esprit.pibakcend.payload.request.PasswordRequest;
 import tn.esprit.pibakcend.security.services.IUser;
@@ -54,11 +55,21 @@ public class UserRestController {
 
     @PutMapping("/updatepassword/{emailUser}")
     String updatePassword(@PathVariable("emailUser") String emailUser, @RequestBody PasswordRequest Password) {
-      return  iUser.updatePassword(emailUser, Password.getCurrentPassword(), Password.getNewPassword());
+        return  iUser.updatePassword(emailUser, Password.getCurrentPassword(), Password.getNewPassword());
     }
 
     @GetMapping("/sendme/{emailUser}")
     public void forgotpass(@PathVariable("emailUser") String emailUser) {
         iUser.forgotpass(emailUser);
+    }
+
+    // RAED METHODS
+    @PutMapping("/toggleFavoritePublication/{idUser}/{idPub}")
+    public User toggleFavoritePublication(@PathVariable ("idUser") Long idUser, @PathVariable("idPub") Integer idPub) {
+        return iUser.toggleFavoritePublication(idUser, idPub);
+    }
+    @GetMapping("/getFavoritePublicationsByUserId/{idUser}")
+    public List<Publication> getFavoritePublicationsByUserId(@PathVariable("idUser") Long idUser) {
+        return iUser.getFavoritePublicationsByUserId(idUser);
     }
 }

@@ -1,6 +1,7 @@
 package tn.esprit.pibakcend.security.services;
 
 import tn.esprit.pibakcend.entities.ERole;
+import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.User;
 
 import java.util.List;
@@ -26,5 +27,10 @@ public interface IUser {
     String updatePassword(String emailUser, String newPassword, String confirmPassword);
     // Mot de passe oublié
     void forgotpass(String emailuser);
+    public User toggleFavoritePublication(Long idUser, Integer idPub);
+
+    public List<Publication> getFavoritePublicationsByUserId(Long idUser);
+
+    public void deleteExpiredFavoritePublications();
 
 }

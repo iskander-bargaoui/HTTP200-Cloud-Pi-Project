@@ -93,4 +93,27 @@ public class User {
         this.birthDate=birthDate;
 
     }
+    // Ghazi Updates To User
+    @ManyToOne
+    public ChatMessage message ;
+    @OneToMany
+    public List <Reservation> reservations ;
+
+    // Raed Updates to User
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Set<Publication> publications ;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Commentaire> commentaires;
+
+    @ManyToMany
+    @JsonIgnore
+    @JoinTable(
+            name = "favorite_publications",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "id_Pub"))//badlt houni
+    private Set<Publication> favoritePublications = new HashSet<>();
 }

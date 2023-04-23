@@ -13,13 +13,11 @@ public class EmailService {
 
     @Autowired
     public EmailService(JavaMailSender javaMailSender) {
-
         this.javaMailSender = javaMailSender;
     }
 
     @Async
     public void sendEmail(SimpleMailMessage email) {
-
         javaMailSender.send(email);
     }
 }

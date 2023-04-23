@@ -21,17 +21,19 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class ReservationServiceImp implements IReservation{
-    ReservationRepository reservationRepository ;
+ReservationRepository reservationRepository ;
+
+
     private JavaMailSender mailSender;
 
     public void sendHtmlEmail(Reservation A) throws MessagingException {
         MimeMessage message = mailSender.createMimeMessage();
-        message.setFrom(new InternetAddress("http200pi@gmail.com"));
-        // Send to user Mail
+
+        message.setFrom(new InternetAddress("ghazi.griguich@esprit.tn"));
         message.setRecipients(MimeMessage.RecipientType.TO, "ghazi.griguich@esprit.tn");
         message.setSubject("Reservation");
 
-        // format de la date de reservation
+        // forma du date de reservation
         Date date = A.dateReservetion;
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String dateString = dateFormat.format(date);
@@ -74,3 +76,4 @@ public class ReservationServiceImp implements IReservation{
     @Override
     public List<Reservation> findReservationsBefore24Hours () { return   reservationRepository.findReservationsBefore24Hours() ; }
 }
+

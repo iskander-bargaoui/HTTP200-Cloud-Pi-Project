@@ -1,7 +1,5 @@
 package tn.esprit.pibakcend.payload.response;
 
-import lombok.Data;
-
 import java.util.List;
 
 

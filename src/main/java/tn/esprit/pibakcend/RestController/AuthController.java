@@ -9,11 +9,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import project.management.usersmanagement.payload.request.LoginRequest;
 import tn.esprit.pibakcend.Repository.ConfirmationTokenRepository;
 import tn.esprit.pibakcend.Repository.RoleRepository;
 import tn.esprit.pibakcend.Repository.UserRepository;
 import tn.esprit.pibakcend.entities.*;
+import tn.esprit.pibakcend.payload.request.LoginRequest;
 import tn.esprit.pibakcend.payload.request.SignupRequest;
 import tn.esprit.pibakcend.payload.response.JwtResponse;
 import tn.esprit.pibakcend.payload.response.MessageResponse;
@@ -60,26 +60,26 @@ public class AuthController {
   @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) throws Exception {
     Authentication authentication = authenticationManager.authenticate(
-        new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
+            new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
 
     SecurityContextHolder.getContext().setAuthentication(authentication);
     String jwt = jwtUtils.generateJwtToken(authentication);
-    
+
     UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
     List<String> roles = userDetails.getAuthorities().stream()
-        .map(item -> item.getAuthority())
-        .collect(Collectors.toList());
+            .map(item -> item.getAuthority())
+            .collect(Collectors.toList());
 
     // Les paramétres de Connexion
 
     return ResponseEntity.ok(new JwtResponse(jwt,
-                         userDetails.getUser().getId(),
-                         userDetails.getUsername(),
-                         userDetails.getUser().getEmail(),
-                         roles,
-                         userDetails.getUser().getNom(),
-                         userDetails.getUser().getPrenom(),
-                         userDetails.getUser().getPhoneNumber()));
+            userDetails.getUser().getId(),
+            userDetails.getUsername(),
+            userDetails.getUser().getEmail(),
+            roles,
+            userDetails.getUser().getNom(),
+            userDetails.getUser().getPrenom(),
+            userDetails.getUser().getPhoneNumber()));
 
   }
 

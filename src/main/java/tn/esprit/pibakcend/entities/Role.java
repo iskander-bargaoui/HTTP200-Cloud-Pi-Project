@@ -1,10 +1,9 @@
 package tn.esprit.pibakcend.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 
 @Data // @Getter + Setter + ToString + Equals and HashCode + RequiredArgsConstructor
