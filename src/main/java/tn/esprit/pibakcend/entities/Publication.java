@@ -45,7 +45,7 @@ public class Publication implements Serializable {
     @Column(name = "favorite_date")
     private LocalDateTime favoriteDate;
     @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     private User user;
     @JsonIgnore

@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.Repository.ConfirmationTokenRepository;
+import tn.esprit.pibakcend.Service.IUser;
 import tn.esprit.pibakcend.entities.EmailService;
 import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.entities.User;
 import tn.esprit.pibakcend.payload.request.PasswordRequest;
-import tn.esprit.pibakcend.security.services.IUser;
 
 import java.util.List;
 

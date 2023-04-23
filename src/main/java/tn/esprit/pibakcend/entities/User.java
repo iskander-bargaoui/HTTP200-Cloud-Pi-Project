@@ -10,7 +10,10 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.*;
 
-@Data // @Getter + Setter + ToString + Equals and HashCode + RequiredArgsConstructor
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode// @Getter + Setter + ToString + Equals and HashCode + RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -102,7 +105,7 @@ public class User {
     // Raed Updates to User
 
     @JsonIgnore
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Set<Publication> publications ;
 
     @JsonIgnore

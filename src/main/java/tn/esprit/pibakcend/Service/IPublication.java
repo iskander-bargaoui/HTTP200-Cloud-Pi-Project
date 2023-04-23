@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.Service;
 
+import org.springframework.security.core.Authentication;
 import tn.esprit.pibakcend.entities.Publication;
 import java.util.List;
 
@@ -13,13 +14,5 @@ public interface IPublication {
     void deletePublication(Integer idPub);
     List<Publication> retrievePublicationUserById (Long idUser);
     //Publication assignPublicationToUser (Integer idPub, Long idUser);
-
-
-
-
-
-
-
-
 
 }

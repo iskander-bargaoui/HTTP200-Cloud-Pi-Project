@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.Repository.ConfirmationTokenRepository;
 import tn.esprit.pibakcend.Repository.RoleRepository;
 import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.Service.IUser;
 import tn.esprit.pibakcend.entities.*;
 import tn.esprit.pibakcend.payload.request.LoginRequest;
 import tn.esprit.pibakcend.payload.request.SignupRequest;
 import tn.esprit.pibakcend.payload.response.JwtResponse;
 import tn.esprit.pibakcend.payload.response.MessageResponse;
 import tn.esprit.pibakcend.security.jwt.JwtUtils;
-import tn.esprit.pibakcend.security.services.IUser;
-import tn.esprit.pibakcend.security.services.UserDetailsImpl;
+import tn.esprit.pibakcend.Service.UserDetailsImpl;
 
 import javax.validation.Valid;
 import java.util.HashSet;

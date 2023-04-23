@@ -1,4 +1,4 @@
-package tn.esprit.pibakcend.security.services;
+package tn.esprit.pibakcend.Service;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,6 +20,7 @@ public class UserDetailsImpl implements UserDetails {
                          Collection<? extends GrantedAuthority> authorities) {
     this.user = user;
     this.authorities = authorities;
+
   }
 
 

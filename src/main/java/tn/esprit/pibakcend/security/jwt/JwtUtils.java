@@ -13,7 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import tn.esprit.pibakcend.payload.request.JwtLogin;
 import tn.esprit.pibakcend.payload.response.LoginResponse;
-import tn.esprit.pibakcend.security.services.UserDetailsImpl;
+import tn.esprit.pibakcend.Service.UserDetailsImpl;
 
 import java.util.Date;
 

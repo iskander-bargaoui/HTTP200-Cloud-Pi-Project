@@ -1,11 +1,10 @@
 package tn.esprit.pibakcend.RestController;
 
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.entities.Role;
-import tn.esprit.pibakcend.security.services.IRole;
+import tn.esprit.pibakcend.Service.IRole;
 
 import java.util.List;
 

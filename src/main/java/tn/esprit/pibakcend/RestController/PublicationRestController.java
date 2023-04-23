@@ -1,6 +1,7 @@
 package tn.esprit.pibakcend.RestController;
 
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.entities.Publication;
 import tn.esprit.pibakcend.Service.IPublication;
@@ -54,5 +55,6 @@ public class PublicationRestController {
         List<Activity> userActivity = activityRepository.findByUserIdOrderByActivityTimeDesc(userId);
         return ResponseEntity.ok(userActivity);
     }*/
+
 
 }

@@ -13,11 +13,12 @@ import org.springframework.social.facebook.api.User;
 import org.springframework.social.facebook.api.impl.FacebookTemplate;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.pibakcend.Repository.UserRepository;
+import tn.esprit.pibakcend.Service.IUser;
 import tn.esprit.pibakcend.payload.request.JwtLogin;
 import tn.esprit.pibakcend.payload.response.LoginResponse;
 import tn.esprit.pibakcend.payload.response.TokenDto;
 import tn.esprit.pibakcend.security.jwt.JwtUtils;
-import tn.esprit.pibakcend.security.services.IUser;;
+;
 
 import java.io.IOException;
 import java.util.Collections;

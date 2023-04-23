@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import tn.esprit.pibakcend.security.jwt.AuthEntryPointJwt;
 import tn.esprit.pibakcend.security.jwt.AuthTokenFilter;
-import tn.esprit.pibakcend.security.services.UserDetailsServiceImpl;
+import tn.esprit.pibakcend.Service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableGlobalMethodSecurity(
