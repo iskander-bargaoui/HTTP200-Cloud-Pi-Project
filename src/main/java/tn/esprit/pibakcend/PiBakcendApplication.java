@@ -11,5 +11,4 @@ public class PiBakcendApplication {
     public static void main(String[] args) {
         SpringApplication.run(PiBakcendApplication.class, args);
     }
-
 }
