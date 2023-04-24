@@ -34,10 +34,12 @@ public class Evenement implements Serializable {
     @JsonIgnore
     private Set<User> utilisateurs;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "evenements")
+    @JsonIgnore
     private Set<Formation> formations;
 
     @OneToMany(mappedBy = "event")
+    @JsonIgnore
     private List<Rating> ratings = new ArrayList<>();
 
     @Column(nullable = false)

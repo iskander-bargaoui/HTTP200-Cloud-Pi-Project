@@ -119,4 +119,8 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "id_Pub"))//badlt houni
     private Set<Publication> favoritePublications = new HashSet<>();
+
+    @ManyToMany
+    @JsonIgnore
+    private Set<Evenement> evenements;
 }

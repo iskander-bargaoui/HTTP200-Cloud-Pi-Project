@@ -3,6 +3,7 @@ package tn.esprit.pibakcend.Service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tn.esprit.pibakcend.Repository.EvenementRepository;
 import tn.esprit.pibakcend.Repository.FormationRepository;
 import tn.esprit.pibakcend.entities.Evenement;
 import tn.esprit.pibakcend.entities.Formation;
@@ -15,6 +16,8 @@ import java.util.List;
 public class FormationServiceImp implements IFormation{
     @Autowired
     FormationRepository formationRepository;
+
+    EvenementRepository evenementRepository;
 
     @Override
     public Formation addFormation(Formation Fo) {
@@ -54,4 +57,16 @@ public class FormationServiceImp implements IFormation{
         forma.rate(value);
         formationRepository.save(forma);
     }
+
+   /* @Override
+    public void assignFormationsToEvenements(List<Integer> formationIds, List<Integer> evenementIds) {
+        List<Formation> formations = formationRepository.findAllById(formationIds);
+        List<Evenement> evenements = evenementRepository.findAllById(evenementIds);
+        for (Formation formation : formations) {
+            formation.getEvenements().addAll(evenements);
+        }
+        formationRepository.saveAll(formations);
+    }*/
+
+
 }

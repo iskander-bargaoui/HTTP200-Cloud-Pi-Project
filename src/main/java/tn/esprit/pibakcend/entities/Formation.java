@@ -30,11 +30,12 @@ public class Formation implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateFinFor;
 
-    @ManyToMany (mappedBy = "formations")
+    @ManyToMany
     @JsonIgnore
-    private Set<Evenement> evenementss;
+    private Set<Evenement> evenements;
 
     @OneToMany(mappedBy = "formationn")
+    @JsonIgnore
     private List<Rating> ratings = new ArrayList<>();
 
     @Column(nullable = false)

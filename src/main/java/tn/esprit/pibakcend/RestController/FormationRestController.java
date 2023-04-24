@@ -46,4 +46,9 @@ public class FormationRestController {
         return ResponseEntity.ok().build();
     }
 
+   /* @PostMapping("/Formation/assignFormationToEvenement")
+    public void assignFormationsToEvenements(@RequestParam List<Integer> formationIds, @RequestParam List<Integer> evenementIds){
+        iFormation.assignFormationsToEvenements(formationIds, evenementIds);
+    }*/
+
 }
