@@ -49,11 +49,9 @@ public class Evenement implements Serializable {
                 .mapToInt(Rating::getValue)
                 .average()
                 .orElse(0);
-
         double expectedScore = 1.0 / (1 + Math.pow(10, (avgRating - value) / 400.0));
         double kFactor = 32 - Math.min(numRatings, 10) * 2.5;
         double newRating = this.rating + kFactor * (value - expectedScore);
-
         this.rating = (int) Math.round(newRating);
     }
 
