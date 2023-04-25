@@ -31,7 +31,6 @@ import java.util.stream.Collectors;
 public class FeedbackServiceImpl implements IFeedback{
     
     FeedbackRepository feedbackRepository;
-    private static List<String> BAD_WORDS = loadBadWordsFromFile("C:/Users/HP/Desktop/Pi-bakcend/src/main/java/tn/esprit/pibakcend/Service/bad_words.txt");
     @Override
     public Feedback addFeedback(Feedback Feedback) throws IOException {
             String message = Feedback.getMessage();
@@ -134,21 +133,6 @@ public class FeedbackServiceImpl implements IFeedback{
         return false;
     }
 */
-
-    private static List<String> loadBadWordsFromFile(String filename) {
-        List<String> badWords = new ArrayList<>();
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(filename));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                badWords.add(line.trim().toLowerCase());
-            }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return badWords;
-    }
 
     @Override
     public Double getAverageRatingByProfile(Profile profile) {
