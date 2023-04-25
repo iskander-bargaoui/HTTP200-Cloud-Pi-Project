@@ -22,7 +22,8 @@ import java.util.List;
 @AllArgsConstructor
 public class ReservationServiceImp implements IReservation{
 ReservationRepository reservationRepository ;
-    @Autowired
+
+
     private JavaMailSender mailSender;
 
     public void sendHtmlEmail(Reservation A) throws MessagingException {

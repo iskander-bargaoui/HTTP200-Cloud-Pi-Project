@@ -1,9 +1,11 @@
 package tn.esprit.pibakcend.entities;
 
-public enum RoleEnum {
-    ROLE_USER,
+public enum ERole {
+
     ROLE_ADMIN,
+    ROLE_GUEST,
     ROLE_WORKER,
     ROLE_ENTREPRISE,
-    ROLE_GUEST
+    //ROLE_USER
+
 }

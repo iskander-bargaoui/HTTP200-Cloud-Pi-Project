@@ -17,6 +17,8 @@ import tn.esprit.pibakcend.entities.ChatMessage;
 import tn.esprit.pibakcend.entities.Reservation;
 
 import javax.mail.MessagingException;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -27,6 +29,7 @@ public class ChatControoler {
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
+        chatMessage.setTime(Date.from(Instant.now()));
         messageService.saveMessage(chatMessage);
         return chatMessage;
     }
