@@ -2,6 +2,7 @@ package tn.esprit.pibakcend.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -30,15 +31,23 @@ public class Evenement implements Serializable {
     private Date dateFin;
     private String Lieu;
 
-    @ManyToMany (mappedBy = "evenements")
-    @JsonIgnore
-    private Set<User> utilisateurs;
 
-    @ManyToMany
+    @OneToMany(mappedBy = "event" , cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Set<Formation> formations;
 
+    /*
+    @OneToMany(mappedBy = "eventt", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private Set<Formation> formations;
+
+     */
+
+    /*
     @OneToMany(mappedBy = "event")
     private List<Rating> ratings = new ArrayList<>();
+
+
 
     @Column(nullable = false)
     private int rating = 0;
@@ -54,6 +63,8 @@ public class Evenement implements Serializable {
         double newRating = this.rating + kFactor * (value - expectedScore);
         this.rating = (int) Math.round(newRating);
     }
+
+     */
 
 
 }

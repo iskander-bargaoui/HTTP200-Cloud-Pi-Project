@@ -25,8 +25,7 @@ public interface EvenementRepository extends JpaRepository<Evenement,Integer> , 
 
     @Query("SELECT E FROM Evenement E WHERE "
             + "lower(E.Lieu) LIKE lower(concat('%', ?1,'%')) "
-            + "OR lower(E.titreEvennement) LIKE lower(concat('%', ?1,'%')) "
-            + "OR lower(E.rating) LIKE lower(concat('%', ?1,'%')) ")
+            + "OR lower(E.titreEvennement) LIKE lower(concat('%', ?1,'%')) ")
     Page<Evenement> filterEvenementList(String filter, Pageable pageable);
 
     @Query("SELECT count(E.idEvenement) FROM Evenement E")

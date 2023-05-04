@@ -11,7 +11,7 @@ public interface IEvenement {
     Evenement retrieveEvenementById(Integer id);
     List<Evenement> retrieveAllEvenement();
     void deleteEvenement(Integer id);
-    void rateEvent(Integer id, int value);
+    //void rateEvent(Integer id, int value);
     HashMap<String,Object> eventpagination(Integer pageNo, Integer pageSize, String filter);
     List<Object[]> getEventsCountbyId(Integer id);
 }

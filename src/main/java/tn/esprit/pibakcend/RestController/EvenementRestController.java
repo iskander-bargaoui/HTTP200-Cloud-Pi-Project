@@ -1,6 +1,7 @@
 package tn.esprit.pibakcend.RestController;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,19 +33,19 @@ import java.util.List;
 import org.springframework.core.io.ByteArrayResource;
 import java.nio.file.Files;
 
-
 @RestController
+@RequestMapping("/api/evenement/")
+@CrossOrigin(origins = "http://localhost:4200")
+@AllArgsConstructor
 public class EvenementRestController {
 
-    @Autowired
     IEvenement iEvenement;
-    @Autowired
     EvenementServiceImp evenementServiceImp;
     @Autowired
     private PdfGeneratorService pdfGeneratorService;
 
     @PostMapping("addEvenement")
-    public Evenement addEvenement(@RequestBody Evenement Fo){
+    public Evenement addEvenement(@RequestBody(required=true) Evenement Fo){
         return iEvenement.addEvenement(Fo);
     }
 
@@ -57,12 +58,12 @@ public class EvenementRestController {
     public Evenement retrieveEvenementById(@PathVariable("id") Integer id){
         return iEvenement.retrieveEvenementById(id);
     }
-/*
+
     @GetMapping("listEvenement")
     public List<Evenement> retrieveAllEvenement(){
         return iEvenement.retrieveAllEvenement();
     }
-*/
+/*
     @GetMapping("/retrieve-event")
     public ResponseEntity<HashMap<String, Object>> getEventt(
         @RequestParam(defaultValue = "0") Integer pageNo,
@@ -80,13 +81,13 @@ public class EvenementRestController {
     return ResponseEntity.ok(response);
 }
 
+ */
+
     @GetMapping("/count/{idEvenement}")
     public ResponseEntity<List<Object[]>> getEventCountById(@PathVariable("idEvenement") Integer idEvenement) {
         List<Object[]> livraisonsCount = evenementServiceImp.getEventsCountbyId(idEvenement);
         return new ResponseEntity<>(livraisonsCount, HttpStatus.OK);
     }
-
-
 
 
     ////////////
@@ -108,11 +109,14 @@ public class EvenementRestController {
 
      */
 
+    /*
     @PostMapping("/Evenement/{idEvenement}/rate")
     public ResponseEntity<Void> rateEvent(@PathVariable Integer idEvenement, @RequestParam int value) {
         iEvenement.rateEvent(idEvenement, value);
         return ResponseEntity.ok().build();
     }
+
+     */
 
     @GetMapping("/events/pdf")
     public ResponseEntity<byte[]> generateEventsPDF() {

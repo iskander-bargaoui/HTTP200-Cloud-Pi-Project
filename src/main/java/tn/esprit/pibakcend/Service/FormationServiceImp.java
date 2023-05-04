@@ -12,6 +12,7 @@ import java.util.List;
 
 @Slf4j
 @Service
+
 public class FormationServiceImp implements IFormation{
     @Autowired
     FormationRepository formationRepository;
@@ -45,6 +46,7 @@ public class FormationServiceImp implements IFormation{
 
     }
 
+    /*
     @Override
     public void rateEvent(Integer id, int value) {
         Formation forma = retrieveFormationById(id);
@@ -54,4 +56,6 @@ public class FormationServiceImp implements IFormation{
         forma.rate(value);
         formationRepository.save(forma);
     }
+
+     */
 }

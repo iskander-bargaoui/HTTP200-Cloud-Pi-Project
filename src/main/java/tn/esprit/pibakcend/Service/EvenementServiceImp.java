@@ -1,5 +1,6 @@
 package tn.esprit.pibakcend.Service;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -15,8 +16,8 @@ import java.util.List;
 
 @Slf4j
 @Service
+@AllArgsConstructor
 public class EvenementServiceImp implements  IEvenement{
-    @Autowired
     EvenementRepository evenementRepository;
 
     @Override
@@ -43,6 +44,7 @@ public class EvenementServiceImp implements  IEvenement{
     public void deleteEvenement(Integer id) {
         evenementRepository.deleteById(id);
     }
+    /*
     @Override
     public void rateEvent(Integer id, int value) {
         Evenement event = retrieveEvenementById(id);
@@ -52,6 +54,8 @@ public class EvenementServiceImp implements  IEvenement{
         event.rate(value);
         evenementRepository.save(event);
     }
+
+     */
     @Override
     public List<Object[]> getEventsCountbyId(Integer id) {
         // TODO Auto-generated method stub

@@ -1,6 +1,7 @@
 package tn.esprit.pibakcend.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
@@ -14,8 +15,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
 @Data
 public class Formation implements Serializable {
@@ -30,10 +31,19 @@ public class Formation implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateFinFor;
 
-    @ManyToMany (mappedBy = "formations")
-    @JsonIgnore
-    private Set<Evenement> evenementss;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "event_id" , nullable = true )
+    @JsonBackReference
+    private Evenement event;
 
+
+    /*
+    @ManyToOne
+    @JoinColumn(name = "evenement_id", nullable = false)
+    @JsonBackReference
+    private Evenement eventt;
+*/
+    /*
     @OneToMany(mappedBy = "formationn")
     private List<Rating> ratings = new ArrayList<>();
 
@@ -54,7 +64,7 @@ public class Formation implements Serializable {
         this.rating = (int) Math.round(newRating);
     }
 
-
+*/
 
 
 }

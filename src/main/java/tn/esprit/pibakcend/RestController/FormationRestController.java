@@ -1,6 +1,7 @@
 package tn.esprit.pibakcend.RestController;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,10 @@ import tn.esprit.pibakcend.entities.Formation;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/formation/")
+@CrossOrigin(origins = "http://localhost:4200")
+@AllArgsConstructor
+
 public class FormationRestController {
     @Autowired
     IFormation iFormation;
@@ -21,7 +26,7 @@ public class FormationRestController {
     }
 
     @PutMapping("updateFormation")
-    public Formation updatePiste(@RequestBody Formation Fo){
+    public Formation updateFormation(@RequestBody Formation Fo){
         return iFormation.updateFormation(Fo);
     }
 
@@ -31,7 +36,7 @@ public class FormationRestController {
     }
 
     @GetMapping("listFormation")
-    public List<Formation> retrieveAllPiste(){
+    public List<Formation> retrieveAllFormation(){
         return iFormation.retrieveAllFormation();
     }
 
@@ -40,10 +45,13 @@ public class FormationRestController {
         iFormation.deleteFormation(id);
     }
 
+    /*
     @PostMapping("/Formation/{idFormation}/rate")
     public ResponseEntity<Void> rateEvent(@PathVariable Integer idFormation, @RequestParam int value) {
         iFormation.rateEvent(idFormation, value);
         return ResponseEntity.ok().build();
     }
+
+     */
 
 }
