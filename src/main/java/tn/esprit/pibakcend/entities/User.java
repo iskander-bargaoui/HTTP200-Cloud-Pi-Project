@@ -38,16 +38,9 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Commentaire> commentaires;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "favoriteUsers")
     @JsonIgnore
-    @JoinTable(
-            name = "favorite_publications",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "id_Pub"))//badlt houni
-    private Set<Publication> favoritePublications = new HashSet<>();
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Activity> activities = new HashSet<>();
+    private Set<Publication> favoritePublications = new HashSet<>();
 
 }

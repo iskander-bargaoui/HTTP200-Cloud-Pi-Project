@@ -56,11 +56,12 @@ public class Publication implements Serializable {
     @JsonIgnore
     @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
     private Set<Like> likes;
+    @ManyToMany
     @JsonIgnore
-    @ManyToMany(mappedBy = "favoritePublications")
+    @JoinTable(
+            name = "favorite_publications",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "id_Pub"))
     private Set<User> favoriteUsers = new HashSet<>();
-    @JsonIgnore
-    @OneToMany(mappedBy = "publication", cascade = CascadeType.ALL)
-    private Set<Activity> activities = new HashSet<>();
 
 }

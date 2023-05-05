@@ -15,6 +15,8 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping(value = "/api/likes")
+@CrossOrigin("http://localhost:4200")
 public class LikeRestController {
     LikeRepository likeRepository;
 
@@ -27,7 +29,7 @@ public class LikeRestController {
         return iLike.ToggleLikesP(idPub, likeType, idUser);
 
     }
-    @PostMapping("/Comms/{idComm}/{idUser}")
+    @PostMapping("/ToggleLikesC/{idComm}/{idUser}")
     public Commentaire ToggleLikesC(@PathVariable("idComm") Integer idComm, @RequestParam LikeType likeType, @PathVariable("idUser") Long idUser) {
         return iLike.ToggleLikesC(idComm, likeType, idUser);
 

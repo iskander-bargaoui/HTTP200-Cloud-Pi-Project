@@ -22,8 +22,7 @@ public class Profile implements Serializable {
 
     private String username;
     private String sexe;
-    @Enumerated(EnumType.STRING)
-    private Categorie categorie;
+
     private boolean isVerified;
     private String photoprofile;
 

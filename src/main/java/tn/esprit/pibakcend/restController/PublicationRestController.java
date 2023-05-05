@@ -1,27 +1,36 @@
 package tn.esprit.pibakcend.restController;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.pibakcend.entities.Activity;
-import tn.esprit.pibakcend.entities.ActivityType;
+import org.springframework.web.multipart.MultipartFile;
 import tn.esprit.pibakcend.entities.Publication;
-import tn.esprit.pibakcend.repository.ActivityRepository;
-import tn.esprit.pibakcend.service.IActivity;
+import tn.esprit.pibakcend.entities.User;
 import tn.esprit.pibakcend.service.IPublication;
 
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
-
+@RequestMapping(value = "/api/publications")
+@CrossOrigin("http://localhost:4200")
 public class PublicationRestController {
     IPublication iPublication;
 
-    IActivity iActivity;
 
     //ActivityRepository activityRepository;
 
+    @PostMapping("/uploadImage")
+    public ResponseEntity<?> uploadImage(@RequestParam("file") MultipartFile file) {
+        try {
+            String imagePath = iPublication.saveImage(file);
+            return ResponseEntity.ok().body("Image uploaded successfully. Image Path : " + imagePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
     @PostMapping("/AddPublication/{idUser}")
     public Publication addPub(@RequestBody Publication pub,@PathVariable("idUser") Long idUser) {
         return iPublication.addPub(pub,idUser);
@@ -49,6 +58,15 @@ public class PublicationRestController {
     @GetMapping("/RetrievePublicationUserById/{idUser}")
     public List<Publication> retrievePublicationUserById (@PathVariable ("idUser") Long idUser){
     return iPublication.retrievePublicationUserById(idUser);
+    }
+
+    @PutMapping("/toggleFavoritePublication/{idUser}/{idPub}")
+    public Publication toggleFavoritePublication(@PathVariable ("idUser") Long idUser, @PathVariable("idPub") Integer idPub) {
+        return iPublication.toggleFavoritePublication(idUser, idPub);
+    }
+    @GetMapping("/getFavoritePublicationsByUserId/{idUser}")
+    public List<Publication> getFavoritePublicationsByUserId(@PathVariable("idUser") Long idUser) {
+        return iPublication.getFavoritePublicationsByUserId(idUser);
     }
 /*
     @PostMapping("/publications")

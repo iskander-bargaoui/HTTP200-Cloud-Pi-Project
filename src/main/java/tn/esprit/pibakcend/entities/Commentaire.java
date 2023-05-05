@@ -43,9 +43,6 @@ public class Commentaire implements Serializable {
     @OneToMany(mappedBy = "commentaire", cascade = CascadeType.ALL)
     private Set<Like> likes;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "commentaire", cascade = CascadeType.ALL)
-    private Set<Activity> activities = new HashSet<>();
 
 
 }

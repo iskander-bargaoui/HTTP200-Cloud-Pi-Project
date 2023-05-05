@@ -48,14 +48,15 @@ public class CommentaireServiceImp implements ICommentaire{
             comm.setUser(user);
             commentaireRepository.save(comm);
             // Send SMS notification to the user who created the publication
-            User pubUser = publication.getUser();
+           /* User pubUser = publication.getUser();
             if (pubUser != null) {
                 String message = String.format("%s commented on your publication '%s'", user.getUsername(), publication.getTitrePub());
                 SmsRequest smsRequest = new SmsRequest(pubUser.getTelNumber(), message);
                 twillioSmsSender.sendSms(smsRequest);
-            }
+            }*/
             return comm;
         }
+
         return null;
 
     }
