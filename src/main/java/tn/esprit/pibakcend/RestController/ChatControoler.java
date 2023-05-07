@@ -1,32 +1,31 @@
 package tn.esprit.pibakcend.RestController;
 
 import lombok.AllArgsConstructor;
-import org.springframework.data.repository.query.Param;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.pibakcend.Service.ChatMessageService;
-import tn.esprit.pibakcend.Service.IChatMessageService;
-import tn.esprit.pibakcend.Service.INotification;
+import tn.esprit.pibakcend.security.services.IChatMessageService;
+import tn.esprit.pibakcend.security.services.INotification;
 import tn.esprit.pibakcend.entities.ChatMessage;
-import tn.esprit.pibakcend.entities.Reservation;
 
-import javax.mail.MessagingException;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins = "//localhost:4200")
+@RequestMapping("")
 public class ChatControoler {
     public IChatMessageService messageService;
     public INotification  notificationService ;
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage) {
+        chatMessage.setTime(Date.from(Instant.now()));
+        messageService.retrieveByIds(chatMessage.getSenderId(), chatMessage.getReceiverId());
         messageService.saveMessage(chatMessage);
         return chatMessage;
     }
@@ -37,7 +36,7 @@ public class ChatControoler {
                                SimpMessageHeaderAccessor headerAccessor) {
         // Add username in web socket session
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
-       // List<ChatMessage> messages = messageService.getAllMessages();
+       List<ChatMessage> messages = messageService.retrieveByIds(chatMessage.getSenderId(), chatMessage.getReceiverId());
         return chatMessage;
     }
 

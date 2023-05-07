@@ -1,6 +1,5 @@
 package tn.esprit.pibakcend.entities;
 
-import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,22 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.security.Timestamp;
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Getter
@@ -31,17 +15,20 @@ import java.util.Set;
 //// Constructor par defaults
 @NoArgsConstructor
 @ToString
+
 public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long idReservation ;
+    public String nameR ;
     @Temporal(TemporalType.DATE)
-    public Date dateReservetion;
-
-//ksdhgcxvb lcsjhdxc kjsl,d
-    @ManyToOne
-    public User UserR ;
-
+    public Date dateReservetionR;
     @ManyToOne
     public Notification notification;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User userrr;
+
+
 }

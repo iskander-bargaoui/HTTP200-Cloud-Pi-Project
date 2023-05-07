@@ -27,7 +27,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: #128ff2;
+    background: #5dc947;
     content: "";
     z-index: 0;
 }
@@ -68,7 +68,7 @@ h1 {
 }
 
 a {
-    color: #128ff2;
+    color: #5dc947;
 }
 
 button {
@@ -93,7 +93,7 @@ button.default {
 }
 
 button.primary {
-    background-color: #128ff2;
+    background-color: #5dc947;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
     color: #fff;
 }
@@ -295,4 +295,5 @@ button.accent {
     .chat-header h2 {
         font-size: 1.1em;
     }
+
 }

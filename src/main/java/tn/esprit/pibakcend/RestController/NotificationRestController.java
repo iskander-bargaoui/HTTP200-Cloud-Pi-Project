@@ -3,13 +3,16 @@ package tn.esprit.pibakcend.RestController;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.pibakcend.Service.INotification;
+import tn.esprit.pibakcend.security.services.INotification;
 import tn.esprit.pibakcend.entities.Notification;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "//localhost:4200")
+@RequestMapping("/api")
 @AllArgsConstructor
+
 public class NotificationRestController {
     INotification iNotification;
 
