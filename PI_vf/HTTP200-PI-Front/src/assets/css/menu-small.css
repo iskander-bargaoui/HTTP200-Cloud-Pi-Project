@@ -1,0 +1,180 @@
+/* Theme Name: Alita - A Responsive Multipurpose HTML Template
+   Author: Shreethemes
+   Version: 1.0.0
+   Created: March 2019
+   File Description: Main Navbar file of the template
+*/
+
+/* ============
+    Navbar
+===============*/
+.navbar-custom {
+    padding: 20px 0px;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 999;
+    margin-bottom: 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-social li a {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav li a {
+    line-height: 26px;
+    color: rgba(255, 255, 255);
+    font-size: 15px;
+    transition: all 0.5s;
+    background-color: transparent !important;
+    padding: 6px 0;
+    margin: 0 15px;
+}
+
+.navbar-custom .navbar-nav li:last-of-type > a {
+    margin-right: 0;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.navbar-toggler {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+
+.logo {
+    color: #fff !important;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.navbar-custom .navbar-nav li.active a,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active {
+    color: #fff !important;
+}
+
+.navbar-toggle {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+    background-color: transparent;
+    border-color: #337ab7;
+}
+
+.navbar-custom .navbar-toggles {
+    padding: .25rem .75rem;
+    font-size: 18px;
+    background: 0 0;
+    border: 1px solid transparent;
+    color: #fff;
+    outline: 0;
+}
+
+.navbar-custom .navbar-toggles-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+.menu-toggle {
+    padding: 4.5px 10px !important;
+}
+
+.menu-toggle span {
+    line-height: 27px;
+}
+
+
+/*---NAVBAR STICKY--*/
+
+.nav-sticky.navbar-custom {
+    margin-top: 0px;
+    padding: 10px 0px;
+    background-color: #FFF;
+    box-shadow: 0 10px 33px rgba(0, 0, 0, .1);
+    color: #000 !important;
+}
+
+.nav-sticky.navbar-custom.sticky-dark {
+    background-color: #000;
+}
+
+.nav-sticky .navbar-nav li a {
+    color: #fff !important;
+}
+
+.nav-sticky.navbar-custom .navbar-toggles {
+    padding: .25rem .75rem;
+    border: 1px solid transparent;
+    outline: 0;
+}
+
+.nav-sticky .navbar-nav {
+    margin-top: 0px;
+}
+
+.nav-sticky.navbar-custom.sticky-dark {
+    background-color: #fff;
+}
+
+.nav-sticky .navbar-brand {
+    color: #000 !important;
+}
+
+.nav-sticky .navbar-nav li a {
+    color: #000 !important;
+}
+
+.nav-sticky .nav-social li a {
+    color: #000 !important;
+}
+
+/*****Responsive*****/
+@media (min-width: 200px) and (max-width: 767px) {
+    .navbar-custom {
+        margin-top: 0px;
+        padding: 10px 0px !important;
+        background-color: #000 !important;
+        box-shadow: 0 10px 33px rgba(0, 0, 0, .1);
+        color: #fff !important;
+    }
+    .navbar-custom .navbar-nav li a {
+        transition: all 0.4s;
+        color: #fff !important;
+        margin: 0px;
+    }
+    .navbar-custom>.container {
+        width: 90%;
+    }
+    .navbar-custom .navbar-nav li.active a {
+        border-color: transparent;
+    }
+    .navbar-nav {
+        margin-top: 0px;
+    }
+    .navbar-toggler {
+        font-size: 24px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ffffff !important;
+    }
+    .nav-sticky.navbar-custom .logo {
+        color: #fff !important;
+    }
+
+}

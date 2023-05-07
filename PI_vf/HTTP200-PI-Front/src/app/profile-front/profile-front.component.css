@@ -1,0 +1,252 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom right, #FFC0CB, #87CEEB);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px;
+  max-width: 400px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+  
+.profile button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.profile button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-username {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .profile-user-handle {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0 20px;
+    text-align: center;
+  }
+  
+  .profile-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn--primary {
+    background-color: #1da1f2;
+    color: #fff;
+  }
+  
+  .btn--primary:hover {
+    background-color: #0c84c4;
+  }
+  
+  .btn--icon {
+    background-color: transparent;
+    margin-left: 10px;
+  }
+  
+  .btn--icon i {
+    font-size: 20px;
+    color: #888;
+  }
+  
+  .btn--icon:hover i {
+    color: #1da1f2;
+  }
+  
+  .profile-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .link i {
+    font-size: 20px;
+    color: #888;
+  }
+  
+  .link:hover {
+    background-color: #eee;
+  }
+  
+  .link:hover i {
+    color: #1da1f2;
+  }   .rating-list li {
+  float: right;
+  color: #ddd;
+  padding: 10px 5px;
+
+}
+
+.rating-list li:hover,
+.rating-list li:hover ~ li, .rating-list li.selected {
+  color: #ffd700;
+}
+
+.rating-list {
+  display: inline-block;
+  list-style: none;
+} 
+
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* optional, centers the profiles horizontally */
+}
+
+.profile {
+  flex-basis: 25%; /* adjust as needed, this sets each profile to take up 25% of the container */
+  margin: 10px; /* optional, adds some spacing between the profiles */
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.table-container {
+  margin: auto;
+  display: block;
+}
+
+.parent-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-details {
+  background-color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.profile-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.profile-label {
+  flex-basis: 150px;
+  font-weight: bold;
+}
+
+.profile-value {
+  flex-grow: 1;
+}
+label[for="photoprofile"] {
+  color: black;
+  left: 0px;
+}
+
+.favorite-publications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.favorite-publication-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.publication-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.publication-content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.publication-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.publication-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #999;
+}
+
+.favorite-date {
+  margin-right: 10px;
+}
+
+.publication-views {
+  margin-left: 10px;
+}

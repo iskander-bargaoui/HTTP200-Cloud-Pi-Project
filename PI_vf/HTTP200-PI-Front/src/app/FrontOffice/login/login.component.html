@@ -1,0 +1,117 @@
+
+<!-- Navigation Bar-->
+<section class="bg-home" style="background-image: url('/assets/images/home/bg-login.jpg');">
+  <div class="bg-overlay"></div>
+  <div class="home-center">
+      <div class="home-desc-center">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-md-6 col-lg-4">
+                      <div class="bg-white p-30 rounded box-shadow">
+                          <div class="text-center">
+                              <h4 routerLink="/user/home"><img src="/assets/images/profile.png" height="60" alt="logo" width="60"></h4>
+                              <div class="spacer-15"></div>
+                              <h4 style="color: blue;"><b style="color: blue;">Login</b></h4>                                    </div>
+
+
+                              <form class="login-form" *ngIf="!isLoggedIn && !isSuccessful"
+                              name="form"
+                              (ngSubmit)="f.form.valid && onSubmit()"
+                              #f="ngForm"
+                              novalidate
+                            >
+                              <div class="row">
+                                  <!-- Login : Username -->
+                                  <div class="col-lg-12 mt-2">
+                                      <label class="f-12"><b>Username</b></label>
+                                      <input
+                                  type="text"
+                                  placeholder="Username"
+                                  class="form-control"
+                                  name="username"
+                                  [(ngModel)]="form.username"
+                                  required
+                                  minlength="3"
+                                  maxlength="20"
+                                  #username="ngModel"
+                                  [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+                                />
+                                <div class="invalid-feedback" *ngIf="username.errors && f.submitted">
+                                  <div *ngIf="username.errors['required']">Username is required ⚠</div>
+                                  <div *ngIf="username.errors['minlength']">
+                                    Username must be at least 3 characters
+                                  </div>
+                                  <div *ngIf="username.errors['maxlength']">
+                                    Username must be at most 20 characters
+                                  </div>
+                                </div>  
+                                  </div>
+                                   <!-- Login : Password -->
+                                  <div class="col-lg-12 mt-2">
+                                      <label class=""><b>Password</b></label>
+                                      <input
+                                      type="password"
+                                      placeholder="Password"
+                                      class="form-control"
+                                      name="password"
+                                      [(ngModel)]="form.password"
+                                      required
+                                      minlength="6"
+                                      #password="ngModel"
+                                      [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+                                    />
+                                    <!-- To add toggle password visibility -->
+                                    
+                                    <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
+                                      <div *ngIf="password.errors['required']">Password is required ⚠</div>
+                                      <div *ngIf="password.errors['minlength']">
+                                        Password must be at least 6 characters
+                                      </div>
+                                    </div>  
+                                    <br>                              
+                                              </div>
+                                              <form style="margin-left: 9px;" [formGroup]="aFormGroup">
+                                                  <ngx-recaptcha2 #captchaElem 
+                                                    [siteKey]="siteKey"
+                                                    formControlName="recaptcha" required>
+                                                  </ngx-recaptcha2>
+                                                  <div *ngIf="aFormGroup.get('recaptcha')?.invalid && aFormGroup.get('recaptcha')?.touched">
+                                                    Recaptcha is required.
+                                                  </div>
+                                                </form>
+                                                <div class="col-lg-12 mt-3 mb-4">
+                                                  <button type="submit" class="btn btn-custom w-100" [disabled]="!aFormGroup.valid">Sign in</button>
+                                                </div>
+                                                
+                              <!-- Login : forgot password -->
+                                  <div class="mx-auto">
+                                      <p class="mb-3 mt-2"><a routerLink="/ForgotPassword" class="text-dark font-weight-bold">Forgot your password ?</a></p>
+                                  </div>
+                                  <!-- Register -->
+                                  <div class="mx-auto">
+                                      <p class="mb-0 mt-2"><small class="text-dark mr-2">Don't have an account ?</small> <a style="color: blue;" routerLink="/register" class="text-dark font-weight-bold" 
+                                        style="color: blue;"><b style="color: blue;"><u>Sign Up</u></b></a></p>
+                                  </div>
+                                  <!-- Return to home page -->
+                                  <div class="mx-auto">
+                                      <p class="mb-0 mt-2" ><a routerLink="/user/home" class="text-dark font-weight-bold"><b style="color: blue;">
+                                        <u>Return to Home Page</u></b></a></p>
+                                  </div>
+                                  <br>
+                                  <div class="alert alert-warning" *ngIf="f.submitted && isSigninFailed">
+                                      Sign In Failed!{{ errorMessage }}
+                                    </div>
+                              </div>
+                          </form>
+                          <div class="alert alert-success" *ngIf="isSuccessful">
+                              Logged in Successfully!
+                              <br>
+                                    Redirecting !
+                          </div>
+                      </div>
+                  </div> 
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

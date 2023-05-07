@@ -1,0 +1,42 @@
+
+<section class="section">
+    <div class="col-md-8">
+       <div class="mt-5">
+                   <h4>Enter The Data Of Sender</h4>
+                   <span class="bar"></span>
+
+                   <div class="mt-4">
+                       <div class="custom-form">
+                           <form  #form="ngForm" (ngSubmit)="AddRes(form.value)">
+                               <div class="row">
+                                   <div class="col-lg-4">
+                                       <div class="form-group app-label">
+                                           <input name="nameR" id="nameR" type="text" class="form-control bg-grey" placeholder="User Name" [(ngModel)]="newReservation.nameR">
+                                       </div>
+                                   </div>
+                                   <div class="col-lg-4">
+                                       <div class="form-group app-label">
+                                           <input name="dateReservation" id="dateReservation" type="date" class="form-control bg-grey" [(ngModel)]="newReservation.dateReservetionR">
+                                       </div>
+                                   </div>
+                                   <div class="col-md-4">
+                                       <input type="submit" id="submit" name="Send Email" class="submitBnt btn btn-custom" value="Send Email" >
+                                   </div>
+                                   
+                               </div>
+                           </form>
+                       
+                       </div>
+                   </div>
+       </div>  
+       
+   </div>
+  
+</section>
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+/* Form styling */
+
+.custom-form {
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #d9d9d9;
+  }
+  
+  .custom-form label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .custom-form input[type="text"],
+  .custom-form select {
+    width: 100%;
+    height: 50px;
+    padding: 20 20px;
+    border-radius: 3px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px #d9d9d9;
+  }
+  
+  .custom-form input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .custom-form input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  .custom-form button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .custom-form button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Section styling */
+  
+  .section {
+    padding: 100px 0;
+  }
+  
+  /* Title heading styling */
+  
+  .title-heading h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .title-heading p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: #6c757d;
+  }
+  
+  /* Background overlay styling */
+  
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  .profile-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .profile-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .profile-value {
+    font-size: 1.2em;
+  }
+  
+  

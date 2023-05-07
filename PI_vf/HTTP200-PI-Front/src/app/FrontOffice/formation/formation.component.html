@@ -1,0 +1,174 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Multipurpose HTML5 Business Template">
+    <meta name="author" content="Shreethemes">
+
+    <link rel="shortcut icon" href="/HTTP200-PI-Front-Ghazi/src/assets/images/favicon.ico" >
+
+    <title>Alita - A Responsive Multipurpose HTML Template</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Magnificpopup Css -->
+    <link rel="stylesheet" type="text/css" href="/HTTP200-PI-Front-Ghazi/src/assets/css/magnific-popup.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/fontawesome.css" rel="stylesheet">
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/pe-icon-7-stroke.css" rel="stylesheet">
+
+    <!--Slider-->
+    <link rel="stylesheet" href="/HTTP200-PI-Front-Ghazi/src/assets/css/owl.carousel.min.css"/> 
+    <link rel="stylesheet" href="/HTTP200-PI-Front-Ghazi/src/assets/css/owl.theme.css"/> 
+    <link rel="stylesheet" href="/HTTP200-PI-Front-Ghazi/src/assets/css/owl.transitions.css"/>
+    <link rel="stylesheet" href="/HTTP200-PI-Front-Ghazi/src/assets/css/slick.css"/> 
+    <link rel="stylesheet" href="/HTTP200-PI-Front-Ghazi/src/assets/css/slick-theme.css"/> 
+
+    <!-- Custom styles for this template -->
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/style.css" rel="stylesheet">
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/menu-small.css" rel="stylesheet">
+    <link href="/HTTP200-PI-Front-Ghazi/src/assets/css/default.css" rel="stylesheet">
+
+</head>
+<section class="bg-home" style="background-image: url('/assets/images/home/Workshops.jpg');" id="home">
+    <div class="bg-overlay"></div>
+    <div class="home-center">
+        <div class="home-desc-center">
+            <div class="container title-perticle">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="title-heading text-center">
+                            <h3 class="text-white-50 font-20 mt-3"> </h3>
+                            <h1 class="font-36">Hey , Welcome to our Solution ! <span class="element" data-elements=" Richard Marlaws , Designer , UX/UI Designer "></span></h1>
+                            <p class="text-white-50 mx-auto">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-custom mr-3">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="business-home-shape">
+                        <img src="images/shape-r1.png" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- CTA 1 START -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="cta-1">
+                    <div class="title-heading text-center">
+                        <h3 class="text-capitalize">You want to enjoy Together. Let's Start work!</h3>
+                        <p class="mx-auto mt-3">It is a long established fact that a reader will be distracted by the
+                            readable content of a page when looking at its layout.</p>
+                        <div class="text-center pt-3">
+                            <button (click)="onIA()">Use our IA-VOICE(BETA) </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="title-heading text-center">
+                    <h3 class="">Are You Ready ? <br> Create yours Formation Now  ! </h3>           
+                    <div class="pt-3">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-white" data-toggle="modal"
+                            data-target="#exampleModalCenter">Create your Formation </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                            aria-labelledby="addformationModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <form [formGroup]="formationForm" (ngSubmit)="addFormation()">
+                                        
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="titreFormation">titreFormation:</label>
+                                                <input type="text" id="titreFormation" class="form-control" formControlName="titreFormation"
+                                                    required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dateDebutFor">Start date:</label>
+                                                <input type="date" id="dateDebutFor" class="form-control"
+                                                    formControlName="dateDebutFor" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dateFinFor">End date:</label>
+                                                <input type="date" id="dateFinFor" class="form-control"
+                                                    formControlName="dateFinFor" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="description">Description:</label>
+                                                <input type="text" id="description" class="form-control"
+                                                    formControlName="description" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="organisateur">organisateur:</label>
+                                                <input type="text" id="organisateur" class="form-control"
+                                                    formControlName="organisateur" required>
+                                                
+                                            </div>
+                                            <!-- <div class="form-group">
+                                                <label for="event">Event number :</label>
+                                                <input type="text" id="event" class="form-control"
+                                                    formControlName="event" required>
+                                            </div>-->
+                                            
+                                            
+                                            
+                                           
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary" id="addEventBtn" [disabled]="!formationForm.valid">Add Formation </button>
+                                        </div> 
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!--  -->

@@ -1,0 +1,81 @@
+<link rel="stylesheet" type="text/css" href="file:///C:/Users/ibrahim/Downloads/HTTP200-PI-Front-Ghazi%20(1)/HTTP200-PI-Front-Ghazi/src/app/FrontOffice/Models/evenement-backend/evenement-backend.component.css">
+<section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div>
+            <h4>Event List</h4>
+            <span class="bar"></span>
+            <div class="mt-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>lieu</th>
+                    <th>dateDebut</th>
+                    <th>dateFin</th>
+                    <th>description</th>
+                    <th>titreEvennement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let evenement of evenements">
+                    <td>{{ evenement.lieu }}</td>
+                    <td>{{ evenement.dateDebut }}</td>
+                    <td>{{ evenement.dateFin }}</td>
+                    <td>{{ evenement.description }}</td>
+                    <td>{{ evenement.titreEvennement }}</td>
+
+                    <td>
+                      <button class="btn btn-primary" (click)="selecteEvent(evenement)">Edit</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div *ngIf="selectedEvent">
+            <h4>Edit Event</h4>
+            <span class="bar"></span>
+            <div class="mt-6">
+              <div class="custom-form">
+                <form (ngSubmit)="updateEvenement()">
+                  <div class="form-group">
+                    <label for="lieu">lieu:</label>
+                    <input type="text" name="lieu" id="lieu" class="form-control"
+                      [(ngModel)]="selectedEvent.lieu" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateDebut">dateDebut:</label>
+                    <input type="date" name="dateDebut" id="dateDebut" class="form-control"
+                      [(ngModel)]="selectedEvent.dateDebut" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateFin">dateFin:</label>
+                    <input type="date" name="dateFin" id="dateFin" class="form-control"
+                      [(ngModel)]="selectedEvent.dateFin" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="description">description:</label>
+                    <input type="text" name="description" id="description" class="form-control"
+                      [(ngModel)]="selectedEvent.description" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="titreEvennement">titreEvennement:</label>
+                    <input type="text" name="titreEvennement" id="titreEvennement" class="form-control"
+                      [(ngModel)]="selectedEvent.titreEvennement" required>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Update Event</button>
+                  <button class="btn btn-danger" (click)="selectedEvent.idEvenement !== undefined && deleteEvent(selectedEvent.idEvenement)">Delete</button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+

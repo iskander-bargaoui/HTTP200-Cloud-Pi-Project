@@ -1,0 +1,153 @@
+<section class="bg-home" style="background-image: url('/assets/images/home/Forum.jpg');" id="home">
+    <div class="bg-overlay"></div>
+    <div class="home-center">
+        <div class="home-desc-center">
+            <div class="container title-perticle">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="title-heading text-center">
+                            <h3 class="text-white-50 font-20 mt-3"> </h3>
+                            <h1 class="font-36">Hey , Welcome to our Solution ! <span class="element" data-elements=" Richard Marlaws , Designer , UX/UI Designer "></span></h1>
+                            <p class="text-white-50 mx-auto">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-custom mr-3">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="business-home-shape">
+                        <img src="images/shape-r1.png" alt="" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- CTA 1 START -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="cta-1">
+                    <div class="title-heading text-center">
+                        <h3 class="text-capitalize">Let's Start !</h3>
+                        <p class="mx-auto mt-3">It is a long established fact that a reader will be distracted by the
+                            readable content of a page when looking at its layout.</p>
+                        <div class="text-center pt-3">
+                            <a class="btn btn-custom">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="title-heading text-center">
+                    <h3 class="">Are You Ready To Enjoy? Create your Event ! </h3>    
+                    <button (click)="onCapture()">You Can implement here your CV  </button>       
+                    <div class="pt-3">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-white" data-toggle="modal"
+                            data-target="#exampleModalCenter">Create your event </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                            aria-labelledby="addEventModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <form [formGroup]="evenementForm" (ngSubmit)="addEvenement()">
+                                        
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="lieu">Location:</label>
+                                                <input type="text" id="lieu" class="form-control" formControlName="lieu"
+                                                    required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="date_debut">Start date:</label>
+                                                <input type="date" id="date_debut" class="form-control"
+                                                    formControlName="dateDebut" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="date_fin">End date:</label>
+                                                <input type="date" id="date_fin" class="form-control"
+                                                    formControlName="dateFin" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="description">Description:</label>
+                                                <input type="text" id="description" class="form-control"
+                                                    formControlName="description" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="titre_evenemnt">Event title:</label>
+                                                <input type="text" id="titre_evenemnt" class="form-control"
+                                                    formControlName="titreEvennement" required>
+                                            </div>
+                                           
+                                           
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary" id="addEventBtn" >Add Event </button>
+                                        </div> 
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-cta-img">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cta-heading text-center text-white">
+                    <h3>Trending ideas and inventions always make us feel proud</h3>
+                    <p class="mx-auto cta_details text-white-50">It is a long established fact that a reader will be
+                        distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="watch-video text-center">
+                    <div class="project-video">
+                        <div class="project-video-border">
+                            <div class="project-video-icon">
+                                <a href="https://www.youtube.com/watch?v=ToizAqT4Fw0"
+                                    class="video-play-icon text-white text-center" title="Watch Now"><i
+                                        class="mdi mdi-play play-icon play h2 mb-0 mx-auto"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA 3 START -->
+
+

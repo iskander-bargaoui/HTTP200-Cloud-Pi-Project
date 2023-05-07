@@ -1,0 +1,72 @@
+
+<head>
+  <title>Your Title Here</title>
+  <link rel="stylesheet" type="text/css" href="allres.component.css">
+</head>
+<div class="main-content">
+    <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div>
+                <h4>Reservation List</h4>
+                <span class="bar"></span>
+                <div class="mt-4">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Date</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let reservation of reservations">
+                        <td>{{ reservation.nameR }}</td>
+                        <td>{{ reservation.dateReservetionR }}</td>
+                        <td>
+                          <button class="btn btn-primary" (click)="selecteReservation(reservation)">Edit</button>
+                          <button class="btn btn-danger" (click)="deleteRes(reservation.idReservation)">Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div> 
+            <div class="col-md-4">
+              <div *ngIf="selectedReservation">
+                <h4>Edit Reservation</h4>
+                <span class="bar"></span>
+                <div class="mt-4">
+                  <div class="custom-form">
+                    <form (ngSubmit)="updateRes()">
+                      <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="form-control" [(ngModel)]="selectedReservation.nameR" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="sex">Date</label>
+                        <div class="form-check">
+                          <input type="date" name="date" id="date" [(ngModel)]="selectedReservation.dateReservetionR" value="dateReservetionR" required>
+                          
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Update Reservation</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>    
+      </section>
+        
+      </div>
+    
+    
+    
+    
+    
+    
+    

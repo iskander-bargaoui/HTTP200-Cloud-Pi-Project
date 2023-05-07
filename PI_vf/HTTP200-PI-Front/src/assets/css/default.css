@@ -1,0 +1,132 @@
+/*  Theme Name: Alita - A Responsive Multipurpose HTML Template
+    Author: Shreethemes
+    Version: 1.0.0
+    File Description: Main CSS file of the template
+*/
+
+.text-custom,
+.navbar-light .navbar-nav li a:hover,
+.navbar-light .navbar-nav li a:active,
+.navbar-light .navbar-nav li.active a,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active,
+.navbar-custom .navbar-nav li.active a,
+.footer-subscribe i:hover,
+.company-sub-menu li a:hover {
+    color: #a3c85e !important;
+}
+
+
+.btn,
+.btn:focus,
+button,
+.form-control:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent;
+    !important;
+}
+
+.bg-custom,
+.btn-custom,
+.main-slider .flex-control-paging li a.flex-active,
+.team-social li a:hover,
+.contact-border,
+.back-to-top:hover,
+.social .social-icon:hover,
+#carouselExampleIndicators .carousel-indicators .active {
+    background-color: #a3c85e;
+}
+
+.btn-custom,
+.registration-input-box:focus,
+.form-control:focus,.team-social li a:hover,
+.testi-icon,
+.social .social-icon:hover,
+.main-slider .flex-control-paging li a,
+#carouselExampleIndicators .carousel-control-prev span,
+#carouselExampleIndicators .carousel-control-next span  {
+    border-color: #a3c85e;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom,
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active,
+.btn-outline-white.active,
+.btn-outline-white.focus,
+.btn-outline-white:active,
+.btn-outline-white:focus,
+.btn-outline-white:hover,
+.open > .dropdown-toggle.btn-outline-white,
+.btn-outline-custom:hover,
+.btn-outline-custom:focus,
+.btn-outline-custom:active,
+.btn-outline-custom.active,
+.btn-outline-custom.focus,
+.btn-outline-custom:active,
+.btn-outline-custom:focus,
+.btn-outline-custom:hover,
+.open > .dropdown-toggle.btn-outline-custom {
+    border-color: #a3c85e;
+    background-color: #a3c85e;
+    color: #ffffff;
+}
+
+.btn-custom-white:hover,
+.btn-custom-white:focus,
+.btn-custom-white:active,
+.btn-custom-white.active,
+.btn-custom-white.focus,
+.btn-custom-white:active,
+.btn-custom-white:focus,
+.btn-custom-white:hover,
+.open > .dropdown-toggle.btn-custom-white {
+    background-color: #ffffff;
+    color: #a3c85e;
+}
+
+.team-box-border {
+    border-image: linear-gradient(to left, rgba(255, 255, 255, 0), #3879dc, rgba(255, 255, 255, 0)) 100% 0% 100%;
+}
+
+.plan-price,
+#carouselExampleIndicators .carousel-indicators li {
+    background-color: rgba(63, 135, 245, 0.2);
+}
+
+.services-box .services-icon i {
+    background: linear-gradient(to left, #ffffff 50%, rgba(63, 135, 245, 0.05) 0%);
+}
+.services-box {
+    background-color: rgba(63, 135, 245, 0.05);
+}
+
+.bg-gradient-custom {
+    background: #56ab2f;
+    background: -webkit-linear-gradient(to right, #56ab2f, #a3c85e, #56ab2f);
+    background: linear-gradient(to right, #56ab2f, #a3c85e, #56ab2f);
+}
+
+.bg-navyblue {
+    background-color: #243B55;
+}
+
+.bg-gradient-nblue {
+    background: #1c2e42;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #1c2e42,#243B55,);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #1c2e42, #243B55,); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text-lightan {
+    color: #c1c1c1 !important;
+}

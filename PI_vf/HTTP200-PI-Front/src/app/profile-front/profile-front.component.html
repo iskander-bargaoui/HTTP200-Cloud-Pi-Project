@@ -1,0 +1,182 @@
+<section class="bg-half">
+  <div class="bg-overlay"></div>
+  <div class="home-center">
+    <div class="home-desc-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="page-next-level text-white">
+              <h4 class="text-uppercase">Four Column Work</h4>
+              <div class="page-next"> <a href="index-2.html">Home</a><i class="mdi mdi-chevron-right"></i> &nbsp;<a
+                  href="#">About</a> <i class="mdi mdi-chevron-right"></i> &nbsp;<a href="#">Work</a> <i
+                  class="mdi mdi-chevron-right"></i> &nbsp;<span>Four Column Work</span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="profile-container">
+  <section *ngFor="let profile of profiles" class="profile">
+    <div class="profile-image">
+      <img src="{{profile.photoprofile}}" />
+    </div>
+    <h2 class="profile-username">Username</h2>
+    <small class="profile-user-handle">{{ '@' + profile.username.toLowerCase().replace(' ', '_') }}</small>
+    <h2 class="profile-username">Gender</h2>
+    <small class="profile-user-handle">{{profile.sexe}}</small>
+    <h2 class="profile-username">Categorie</h2>
+    <small class="profile-user-handle">{{profile.categorie}}</small>
+    <div class="profile-actions">
+      <button class="btn btn--primary" data-toggle="modal" data-target="#exampleModal"
+        (click)="selectProfile(profile)">Details</button>
+
+      <br>
+      <button class="btn btn--primary" data-toggle="modal" data-target="#exampleModal1"
+        (click)="feedbackAnalysis(profile.username)">Stats</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Feedbacks</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="profile-image-container">
+                <img class="profile-image" src="{{selectedProfile.photoprofile}}" />
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Feedback</th>
+                    <th scope="col">Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let feedback of selectedProfile.feedbackList">
+                    <td>{{ feedback.message }}</td>
+                    <td>
+                      <div class="profile-rating">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <ul class="list-inline rating-list" *ngFor="let star of stars"
+                              style="display: inline-block">
+                              <li [ngClass]="{'selected': (star <= feedback.rating)}">
+                                <i class="fa fa-star"></i>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <form (ngSubmit)="addFeedback()">
+                <div class="form-group">
+                  <label for="message">Enter your feedback here:</label>
+                  <input type="text" [(ngModel)]="newFeedback.message" name="message" id="message" class="form-control"
+                    required>
+                </div>
+
+                <div class="form-group">
+                  <div class="profile-rating">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <ul class="list-inline rating-list" *ngFor="let star of stars">
+                          <li (click)="countStar(star,newFeedback)"
+                            [ngClass]="{'selected': (star <= newFeedback.rating)}">
+                            <i class="fa fa-star"></i>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)="editProfile()">Edit Profile</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="photoprofile">Username:</label>
+                <input type="text" [(ngModel)]="selectedProfile.username" name="username" id="username"
+                  class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="photoprofile">Profile Photo:</label>
+                <input type="file" (change)="onSubmit($event)" name="photoprofile" id="photoprofile"
+                  class="form-control" required>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" (click)="updateProfile()">Update Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Feedbacks</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img [src]="analysisImage" />
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn--primary ml-auto" (click)="getFavoritePublications()">Favorites</button>
+    </div>
+    <ul class="favorite-publications-list" *ngIf="favoritePublications">
+      <li *ngFor="let publication of favoritePublications" class="favorite-publication-item">
+        <div class="publication-title">{{ publication.titrePub }}</div>
+        <div class="publication-content">{{ publication.contenuPub }}</div>
+        <img [src]="publication.image" class="publication-image" />
+        <div class="publication-details">
+          <span class="favorite-date">{{ publication.favoriteDate }}</span>
+          <span class="publication-views">{{ publication.vis }}</span>
+        </div>
+      </li>
+    </ul>
+  </section>

@@ -1,0 +1,61 @@
+
+<br><br>
+<div class="row tm-content-row tm-mt-big" style="width: auto; height: auto;">
+    <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-8 tm-col">
+        <div class="bg-white tm-block h-100">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="text-center" style="color: blue;">Users Display</h2>
+
+                </div>
+                <div class="col-md-4 col-sm-12 text-right">
+                    <a [routerLink]="['/usersCreate']" class="btn btn-primary btn-primary" style="margin-top: 15px;">Add User</a>
+                    <button style="margin-left: 30px; margin-right: 20px; margin-top: 15px" (click)="exportexcel()" class="btn btn-primary">Export to Excel</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped tm-table-striped-even mt-2 " style="border: 3px solid black;" border="" id="UsersTable">
+                    <thead>
+                        <tr style="height: 60px" class="tm-bg-gray">
+                        
+                          <th scope="col" class="text-center">Username</th>
+                          <th scope="col" class="text-center">First Name</th>
+                          <th scope="col" class="text-center">Last Name</th>
+                          <th scope="col" class="text-center">Email</th>
+                          <th scope="col" class="text-center">Phone Number</th>
+                          <th scope="col" class="text-center">Birthday</th>
+                                    <th scope="col">Actions</th>
+                                    <th scope="col" class="text-center">Enabling User</th>
+                                    <th scope="col" class="text-center">Disabling User</th>
+                                    <th scope="col" class="text-center">QR Code</th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let i of user | paginate: { itemsPerPage: 5, currentPage: p, id:'first' }">
+        <td class="text-center">{{ i.username }}</td>
+        <td class="text-center">{{ i.nom }}</td>
+        <td class="text-center">{{ i.prenom }}</td>
+        <td class="text-center">{{ i.email }}</td>
+        <td class="text-center">{{ i.phoneNumber }}</td>
+        <td class="text-center">{{ i.birthDate }}</td>
+                            <td class="text-center"><i class="fas fa-trash-alt tm-trash-icon"  style="font-size: 30px;" (click) = "deleteUser(i.id)"></i>
+                                <td class="text-center"><button class="btn-primary" (click) = "enabledUser(i.id)">Enable User</button>
+                                    <td class="text-center"><button class="button btn-primary" (click) = "disableUser(i.id)">Disable User</button>
+                                        <td class="text-center" >
+                                            <ngx-qrcode 
+                                              [elementType]="elementType" 
+                                              [value]="' === User Info: ==== \n * Username: ' + i.username + '\n * First Name: ' + i.nom + '\n * Birthdate: ' + i.birthDate + '\n * Phone Number: ' + i.phoneNumber"  
+                                              [errorCorrectionLevel]="correctionLevel"
+                                              [width]="100">
+                                            </ngx-qrcode>                                          
+                                     </td>
+                                </tr>
+                         </tbody>
+                    </table> 
+                <pagination-controls (pageChange)="p = $event" id="first"></pagination-controls>
+            </div> 
+        </div>
+    </div>

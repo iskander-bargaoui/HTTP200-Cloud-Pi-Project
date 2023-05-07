@@ -1,0 +1,60 @@
+/* Style for table header */
+.table-reservations th {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Style for Edit and Delete buttons */
+.btn {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style for Edit and Delete buttons when hovering */
+.btn:hover {
+  background-color: #d81b60;
+}
+
+/* Style for form labels */
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for form inputs */
+input[type=text],
+input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style for form submit button */
+button[type=submit] {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style for form submit button when hovering */
+button[type=submit]:hover {
+  background-color: #00a5c8;
+}

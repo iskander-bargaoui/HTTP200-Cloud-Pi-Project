@@ -1,0 +1,71 @@
+
+<head>
+    <title>Your Title Here</title>
+    <link rel="stylesheet" type="text/css" href="allnot.component.css">
+  </head>
+  <div class="main-content">
+      <section class="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <div>
+                  <h4>Notification List</h4>
+                  <span class="bar"></span>
+                  <div class="mt-4">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Username</th>
+                          <th>Date</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let notification of notifications">
+                          <td>{{ notification.namen }}</td>
+                          <td>{{ notification.dateNotification }}</td>
+                          <td>
+                            <button class="btn btn-primary" (click)="selecteNotification(notification)">Edit</button>
+                            <button class="btn btn-danger" (click)="deleteNot(notification.idNotification)">Delete</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-md-4">
+                <div *ngIf="selectedNotification">
+                  <h4>Edit Notification </h4>
+                  <span class="bar"></span>
+                  <div class="mt-4">
+                    <div class="custom-form">
+                      <form (ngSubmit)="updateNot()">
+                        <div class="form-group">
+                          <label for="username">Username</label>
+                          <input type="text" name="username" id="username" class="form-control" [(ngModel)]="selectedNotification.name" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="sex">Date</label>
+                          <div class="form-check">
+                            <input type="date" name="date" id="date" [(ngModel)]="selectedNotification.dateNotification" value="dateNotification" required>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Notification</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>    
+        </section>
+          
+        </div>
+      
+      
+      
+      
+      
+      
+      

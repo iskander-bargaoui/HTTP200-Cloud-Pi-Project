@@ -1,0 +1,109 @@
+<div class="main-content">
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4" *ngFor="let event of evenements">
+          <article class="post blog-post">
+            <div class="post-preview">
+              <a href="#"><img src="images/blog/blog-1.jpg" alt="" class="img-fluid mx-auto d-block"></a>
+            </div>
+            <div class="post-header">
+              <h4 class="post-title"><a href="#"><label>Title Of Event : </label> <br> {{ event.titreEvennement }}</a>
+              </h4>
+              <ul class="post-meta">
+                <li><i class="mdi mdi-tag-text-outline"></i><label>Location : </label> <small>{{ event.lieu }}</small>
+                </li>
+                <li><i class="mdi mdi-calendar"></i><a href="#"><label>Start Date : </label><small>{{
+                      event.dateDebut}}</small></a></li>
+                <li><i class="mdi mdi-calendar"></i><a href="#"><label>End Date : </label> <small>{{
+                      event.dateFin}}</small></a></li>
+
+              </ul>
+            </div>
+            <span class="bar"></span>
+            <div class="post-footer">
+              <div class="likes">
+                <ul class="post-meta">
+                  <li><i class="post-title"></i><label> description : </label> <small>{{ event.description }} </small>
+                  </li>
+
+                </ul>
+                <li style="display: inline-block;"><a href="#" (click)="rateEvent(1)"><i
+                      class="fas fa-star fa-xs"></i></a></li>
+                <li style="display: inline-block;"><a href="#" (click)="rateEvent(2)"><i
+                      class="fas fa-star fa-xs"></i></a></li>
+                <li style="display: inline-block;"><a href="#" (click)="rateEvent(3)"><i
+                      class="fas fa-star fa-xs"></i></a></li>
+                <li style="display: inline-block;"><a href="#" (click)="rateEvent(4)"><i
+                      class="fas fa-star fa-xs"></i></a></li>
+
+              </div>
+
+
+              <div class="pt-3">
+                <!-- Button trigger modal -->
+
+
+                <button type="button" class="btn btn-outline-white" data-toggle="modal"
+                  data-target="#exampleModalCenter" (click)="selecteEvent(event)">Update Your Event </button>
+                <!-- Modal -->
+                <button class="btn btn-danger"
+                  (click)="event.idEvenement !== undefined && deleteEvent(event.idEvenement)">Delete</button>
+
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                  aria-labelledby="updayeEventModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="documentt">
+                    <div class="modal-content">
+                      <!-- Hereee i'm testing  -->
+
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="lieu"> Title of Event:</label>
+                          <input type="text" id="lieu" class="form-control" [(ngModel)]="selectedEvent.titreEvennement">
+                        </div>
+                        <div class="form-group">
+                          <label for="date_debut">Start date:</label>
+                          <input type="date" id="date_debut" class="form-control" [(ngModel)]="selectedEvent.dateDebut">
+                        </div>
+                        <div class="form-group">
+                          <label for="date_fin">End date:</label>
+                          <input type="date" id="date_fin" class="form-control" [(ngModel)]="selectedEvent.dateFin">
+                        </div>
+                        <div class="form-group">
+                          <label for="description">Description:</label>
+                          <input type="text" id="description" class="form-control"
+                            [(ngModel)]="selectedEvent.description">
+                        </div>
+                        <div class="form-group">
+                          <label for="titre_evenemnt"> Location </label>
+                          <input type="text" id="titre_evenemnt" class="form-control" [(ngModel)]="selectedEvent.lieu">
+                        </div>
+                        
+                      </div>
+
+                      <!-- Hereee i'm testing  -->
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" (click)="updateEvenement()"
+                          data-dismiss="modal">Update Event </button>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+         
+        </div>
+        
+      </div>
+      <div class="text-center py-4">
+        <button class="btn btn-primary" (click)="downloadPDF()">Download My Events</button>
+      </div>
+    </div>
+  </section>
+</div>

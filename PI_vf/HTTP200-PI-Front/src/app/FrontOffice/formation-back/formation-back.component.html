@@ -1,0 +1,80 @@
+<p>formation-back works!</p>
+<section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div>
+            <h4>Formation List</h4>
+            <span class="bar"></span>
+            <div class="mt-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>titreFormation</th>
+                    <th>dateDebutFor</th>
+                    <th>dateFinFor</th>
+                    <th>description</th>
+                    <th>organisateur</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let evenement of evenements">
+                    <td>{{ evenement.titreFormation }}</td>
+                    <td>{{ evenement.dateDebutFor }}</td>
+                    <td>{{ evenement.dateFinFor }}</td>
+                    <td>{{ evenement.description }}</td>
+                    <td>{{ evenement.organisateur }}</td>
+
+                    <td>
+                      <button class="btn btn-primary" (click)="selecteEvent(evenement)">Edit</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div *ngIf="selectedEvent">
+            <h4>Edit Event</h4>
+            <span class="bar"></span>
+            <div class="mt-6">
+              <div class="custom-form">
+                <form (ngSubmit)="updateFormation()">
+                  <div class="form-group">
+                    <label for="titreFormation">titreFormation:</label>
+                    <input type="text" name="titreFormation" id="titreFormation" class="form-control"
+                      [(ngModel)]="selectedEvent.titreFormation" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateDebut">dateDebutFor:</label>
+                    <input type="date" name="dateDebutFor" id="dateDebutFor" class="form-control"
+                      [(ngModel)]="selectedEvent.dateDebutFor" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateFinFor">dateFinFor:</label>
+                    <input type="date" name="dateFinFor" id="dateFinFor" class="form-control"
+                      [(ngModel)]="selectedEvent.dateFinFor" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="description">description:</label>
+                    <input type="text" name="description" id="description" class="form-control"
+                      [(ngModel)]="selectedEvent.description" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="organisateur">organisateur:</label>
+                    <input type="text" name="organisateur" id="organisateur" class="form-control"
+                      [(ngModel)]="selectedEvent.organisateur" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update Event</button>
+                  <button class="btn btn-danger" (click)="selectedEvent.idFormation !== undefined && deleteEvent(selectedEvent.idFormation)">Delete</button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
